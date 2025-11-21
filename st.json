@@ -1,0 +1,47 @@
+
+curl 'https://zh.stripchat.com/api/front/v1/broadcasts/Lucky-xiuxiu?uniq=yl3v6nxf8zd4kr2s' \
+  -H 'authority: zh.stripchat.com' \
+  -H 'accept: */*' \
+  -H 'accept-language: zh-CN,zh-HK;q=0.9,zh;q=0.8,en-US;q=0.7,en;q=0.6' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'cookie: stripchat_com_firstVisit=2025-08-14T10%3A51%3A14Z; isRecommendationDisabled=false; mab_featured_group=4; alreadyVisited=1; isVisitorsAgreementAccepted=1; guestFavoriteIds=; guestSubscriptionIds=; guestWatchHistoryStartDate=2025-08-14T10%3A49%3A41.271Z; ABTest_ab_test_parallel_testing_1_v8_key=B_235; ABTest_ab_pls_b_v2_key=B_235; localeDomain=zh; pShowMob=true; stripchat_com_guestId=9e31ed82b020d2fc181c39eb8d5a013015a98dc164337c4f8649b802f8e8; c=%7B%22essential%22%3A%5B%22all%22%5D%2C%22thirdParties%22%3A%5B%22all%22%5D%7D; AMP_19a23394ad=JTdCJTIyZGV2aWNlSWQlMjIlM0ElMjJjYmY3ZDE3MS01NjRjLTQwNDAtYmZkNS1kYjcyZjRiNmQ3ZGIlMjIlMkMlMjJzZXNzaW9uSWQlMjIlM0ExNzYzNzEyMDY2NTAyJTJDJTIyb3B0T3V0JTIyJTNBZmFsc2UlMkMlMjJsYXN0RXZlbnRUaW1lJTIyJTNBMTc2MzcxMzIwNzI2MSUyQyUyMmxhc3RFdmVudElkJTIyJTNBNjY2JTJDJTIycGFnZUNvdW50ZXIlMjIlM0EwJTdE; baseAmpl=%7B%22platform%22%3A%22Web%22%2C%22device_id%22%3A%22cbf7d171-564c-4040-bfd5-db72f4b6d7db%22%2C%22session_id%22%3A1763712066502%2C%22up%22%3A%7B%7D%7D; __cf_bm=8ag9woz2LbYu4Q6ZdibSfJ75..4XDMoY2BxzD9LA4CA-1763713863-1.0.1.1-fKeHJ1_Jcswm3Mt2lbfkvCwVeo1OATL1DYSuvAy823bHTXYeGN3xdg.Xlw4kndoOZSYOEInQ.APCTTf9ovuT5PJTNuBncXVqazNmU0_XgHY7sNjJQTcyFW6U.xXk.1K8; _cfuvid=KHauCTNDsbLrKAuIeFqQlRuuYtJcnb6SppmVguYnbHw-1763713863252-0.0.1.1-604800000; cf_clearance=2N_zHjOZuitVyC.o1rYjnX5guReJpFBpOSjvQr1jJGc-1763713880-1.2.1.1-Y1GHmABPrcAOhICT1FG5.u0s5EQXN9FInu8ZYx74jD7pQma1MkdSO1.HLPcX4DMPZKlSUe1B4yonRxa8G6H6zGO5pyNNo4JocEatwlUf.OFytnpYzkGx6pTCBSCToQnHCYUUdhK7rL.DvwKUJSDFRiKQ_ZOVHHW9WRYr1Q5K7wEU1oJd1GMUhkxRjrmQ_jBjEgHZ5hIdIJu0gP7_AatvlTAjKPxylD4icdU4NAi2TIA' \
+  -H 'front-version: 11.4.37' \
+  -H 'pragma: no-cache' \
+  -H 'referer: https://zh.stripchat.com/Lucky-xiuxiu' \
+  -H 'sec-ch-ua: "Not-A.Brand";v="99", "Chromium";v="124"' \
+  -H 'sec-ch-ua-mobile: ?1' \
+  -H 'sec-ch-ua-platform: "Android"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'user-agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36' \
+  --compressed
+
+
+{
+  "item": {
+    "modelId": 183816238,
+    "username": "Lucky-xiuxiu",
+    "isBlocked": false,
+    "isApprovedModel": true,
+    "isDeleted": false,
+    "webRTCAppKey": "callbackApp",
+    "streamName": "183816238",
+    "status": "public",
+    "isLive": true,
+    "isNonNude": false,
+    "isMobile": false,
+    "isMicInactive": false,
+    "isBadStream": false,
+    "snapshotTimestamp": 1763713830,
+    "settings": {
+      "isSourcePreset": false,
+      "presets": ["720p60", "720p", "480p", "240p", "160p", "160p_blurred"],
+      "presets265": ["1080p60", "720p60", "720p", "480p"],
+      "fps": 60,
+      "height": 1080,
+      "width": 1920
+    }
+  }
+}

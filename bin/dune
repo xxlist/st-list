@@ -1,0 +1,6 @@
+(executable
+ (public_name st-list)
+ (name main)
+ (libraries cohttp-lwt-unix st_list)
+ (preprocess (pps ppx_deriving_yojson)))
+

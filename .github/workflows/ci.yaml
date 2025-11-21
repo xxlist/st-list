@@ -21,11 +21,11 @@ jobs:
         with:
           ocaml-compiler: 5
 
-      - run: ocaml --version
+      - run: opam install . --deps-only --with-test
 
-      - run: opam install cohttp-lwt-unix ppx_deriving_yojson logs fmt
+      # - run: opam install cohttp-lwt-unix ppx_deriving_yojson logs fmt
 
-      - run: dune exec st-list
+      - run: opam exec -- dune exec st-list
 
       - name: Git auto commit and push all changes
         uses: stefanzweifel/git-auto-commit-action@v6

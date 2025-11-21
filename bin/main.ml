@@ -1,8 +1,3 @@
-
-(* 
-   opam install cohttp-lwt-unix ppx_deriving_yojson
-*)
-
 open Printf
 open Lwt.Infix
 open Cohttp

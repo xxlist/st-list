@@ -25,6 +25,7 @@ type info = {
   isBadStream : bool;
 } [@@deriving yojson {strict=false}]
 
+
 type response = {
   item : info;
 } [@@deriving yojson {strict=false}]
@@ -109,13 +110,21 @@ let main () =
   fetch_info_list name_list >|= fun result_list ->
   let info_list = result_list |> List.filter_map Result.to_option in
   ext_m3u_of_info_list info_list
+  
+let with_out_file path f =
+    let out_c = open_out path in
+    Fun.protect ~finally:(fun () -> close_out out_c)
+    (fun () -> f out_c)
+
+let save_ext_m3u file em =
+  with_out_file file (fun out_c ->
+    let fmt = Format.formatter_of_out_channel out_c in
+    print_ext_m3u fmt em;
+  )
     
 let () = 
   setup_logs ();
   Logs.info (fun m -> m "Begin");
   let main = main () in
   let em =  Lwt_main.run main in
-  let out_c = open_out "./st.m3u" in
-  let fmt = Format.formatter_of_out_channel out_c in
-  print_ext_m3u fmt em;
-  close_out out_c
+  save_ext_m3u "st.m3u" em

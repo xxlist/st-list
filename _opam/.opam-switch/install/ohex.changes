@@ -1,0 +1,21 @@
+opam-version: "2.0"
+added: [
+  "doc/ohex" {"D"}
+  "doc/ohex/CHANGES.md" {"F:8197f9bb25fcaba1b7e18898d9706e6a"}
+  "doc/ohex/LICENSE.md" {"F:e0564496856cbcf135e013cf04e077cd"}
+  "doc/ohex/README.md" {"F:b2a0b7fa35f5d78999b190f9fb4a34c6"}
+  "lib/ohex" {"D"}
+  "lib/ohex/META" {"F:77e95e1b74c7901975e47054e5d212b0"}
+  "lib/ohex/dune-package" {"F:ee2a1a4cfb83e04005f95be6cc312d2e"}
+  "lib/ohex/ohex.a" {"F:b1702ef19d69f5d1d688be07115b7b48"}
+  "lib/ohex/ohex.cma" {"F:1fa95057dfb0bb2efafdc166fd6e9f3d"}
+  "lib/ohex/ohex.cmi" {"F:66c5d023d43958a9b8eb8cc000152c77"}
+  "lib/ohex/ohex.cmt" {"F:d49756b9f1081ec15f05fbeb125271eb"}
+  "lib/ohex/ohex.cmti" {"F:c95d2bc9bb5a893423e7f5d637e1ca46"}
+  "lib/ohex/ohex.cmx" {"F:4897398bf2f0196b36b9fc21cb9b6763"}
+  "lib/ohex/ohex.cmxa" {"F:03a7442e41417ea820f935ef0071450f"}
+  "lib/ohex/ohex.cmxs" {"F:d2c833cdf240f2e55961f6a73bacc6a9"}
+  "lib/ohex/ohex.ml" {"F:36abc8c0f96b4db7b572f3ddd0a133a2"}
+  "lib/ohex/ohex.mli" {"F:033fcc1f106c5f2ced83f7153ae0b482"}
+  "lib/ohex/opam" {"F:d8d8493de6b0bd33714d99bcf9cfe1f2"}
+]

@@ -1,0 +1,117 @@
+.TH "Atomic.Loc" 3 2025-11-21 OCamldoc "OCaml library"
+.SH NAME
+Atomic.Loc \- Atomic "locations", such as record fields.
+.SH Module
+Module   Atomic.Loc
+.SH Documentation
+.sp
+Module
+.BI "Loc"
+ : 
+.B sig end
+
+.sp
+Atomic "locations", such as record fields\&.
+
+.sp
+
+.sp
+.sp
+.I type 
+.B 'a
+.I t 
+= 
+.B 'a atomic_loc
+
+.sp
+This module exposes a dedicated type 
+.ft B
+\&'a Atomic\&.Loc\&.t
+.ft R
+for
+atomic locations (storing a value of type 
+.ft B
+\&'a
+.ft R
+) inside objects
+that may not be atomic references\&. It is used in particular for
+atomic record fields: if a record 
+.ft B
+r
+.ft R
+has an atomic field 
+.ft B
+f
+.ft R
+of
+type 
+.ft B
+foo
+.ft R
+, then 
+.ft B
+[%atomic\&.loc r\&.f]
+.ft R
+has type 
+.ft B
+foo Atomic\&.Loc\&.t
+.ft R
+\&.
+.sp
+The API below mirrors the API to access 
+.ft B
+Atomic\&.Loc\&.t
+.ft R
+,
+see the documentation above for more information\&.
+
+.sp
+
+.I val get 
+: 
+.B 'a t -> 'a
+.sp
+
+.sp
+
+.I val set 
+: 
+.B 'a t -> 'a -> unit
+.sp
+
+.sp
+
+.I val exchange 
+: 
+.B 'a t -> 'a -> 'a
+.sp
+
+.sp
+
+.I val compare_and_set 
+: 
+.B 'a t -> 'a -> 'a -> bool
+.sp
+
+.sp
+
+.I val fetch_and_add 
+: 
+.B int t -> int -> int
+.sp
+
+.sp
+
+.I val incr 
+: 
+.B int t -> unit
+.sp
+
+.sp
+
+.I val decr 
+: 
+.B int t -> unit
+.sp
+
+.sp

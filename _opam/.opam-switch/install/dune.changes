@@ -1,0 +1,59 @@
+opam-version: "2.0"
+added: [
+  "bin/dune" {"F:fe99d4b9e22a9e37f9b7d14f7decda95"}
+  "doc/dune" {"D"}
+  "doc/dune/CHANGES.md" {"F:f73a5a1da13c1afac48ae6afe3f2383a"}
+  "doc/dune/LICENSE.md" {"F:3b903cfeb2c8b8e55d6912f183cdea5b"}
+  "doc/dune/README.md" {"F:ed139e70615bb3e47a07d305035198b7"}
+  "doc/dune/odoc-pages" {"D"}
+  "doc/dune/odoc-pages/index.mld" {"F:f419293a0af86f4f25d47d2c97b40e12"}
+  "lib/dune" {"D"}
+  "lib/dune/META" {"F:da0c89996623588d963e9c988573a680"}
+  "lib/dune/dune-package" {"F:d90c37d190ffd655db270e2f39899ee7"}
+  "lib/dune/opam" {"F:c7cbaa696440c603bf6248eca9c7d28a"}
+  "man/man1/dune-build.1" {"F:e0a7d31926f630472d5739f7eb57e4cc"}
+  "man/man1/dune-cache.1" {"F:3e846b44a71b532a93c08ef3d8cec688"}
+  "man/man1/dune-clean.1" {"F:5970481778c892129f503d1a9c5abeb8"}
+  "man/man1/dune-coq.1" {"F:03fb2ecd701a49d8a57f20e733159e90"}
+  "man/man1/dune-describe.1" {"F:aaa2ce55b01301037c1ede3190bb78d0"}
+  "man/man1/dune-diagnostics.1" {"F:7f1589fec80d5f2f1c397e6d1a28af32"}
+  "man/man1/dune-exec.1" {"F:42567da73da164eaa7e152c44056fa13"}
+  "man/man1/dune-external-lib-deps.1" {"F:3164723209fbd08c265bca33ef286335"}
+  "man/man1/dune-fmt.1" {"F:81964acf660479b44ed65997f21ed8c5"}
+  "man/man1/dune-format-dune-file.1" {"F:9fab4cb31be2ff89280658cfde0cb057"}
+  "man/man1/dune-help.1" {"F:434a44a6b4efe3b9e6565166ee3b1bbb"}
+  "man/man1/dune-init.1" {"F:d2d2a41b4c16fc0cc8d26ad0a2eed7ba"}
+  "man/man1/dune-install.1" {"F:9c748b706623e5089f0c214f3df089a7"}
+  "man/man1/dune-installed-libraries.1"
+    {"F:0bc3568b44a07553e5d9cb7f238512c9"}
+  "man/man1/dune-internal.1" {"F:ff8f6b4fbd76afa908ceb0f22506637f"}
+  "man/man1/dune-monitor.1" {"F:79c0d20cedb98649e9403d0fd7dfcdc5"}
+  "man/man1/dune-ocaml-merlin.1" {"F:73b2eb08b0fe165dd9dcb4764fe57b32"}
+  "man/man1/dune-ocaml.1" {"F:bf2cfffe424f004302c90a1110898a26"}
+  "man/man1/dune-package.1" {"F:488c734806cb2a55fc8778c7570434be"}
+  "man/man1/dune-pkg.1" {"F:c8b92cf4e2efdae188d572104f24a510"}
+  "man/man1/dune-printenv.1" {"F:69adc4c8de3df302628f723edab6cdf7"}
+  "man/man1/dune-promote.1" {"F:1d9f39038d0d90aad9956ca0f22007eb"}
+  "man/man1/dune-promotion.1" {"F:8cd8caada592d94dd96a01c8e6d34bb3"}
+  "man/man1/dune-rpc.1" {"F:93a2c53b373fc90ee5585cc825f9b885"}
+  "man/man1/dune-rules.1" {"F:c7ed29c7aa3894e95de009a327a2d67b"}
+  "man/man1/dune-runtest.1" {"F:d67e19e93c076434dac3305c5f37baa6"}
+  "man/man1/dune-show.1" {"F:9d9b1aab98adc8ea59b1bf1e8ad2956f"}
+  "man/man1/dune-shutdown.1" {"F:6ba904314bcb0b80fc46ea8b120b3378"}
+  "man/man1/dune-subst.1" {"F:2e541095bac52e627089a598439da09c"}
+  "man/man1/dune-test.1" {"F:51d2ce006c73c172392977eb814dc749"}
+  "man/man1/dune-tools.1" {"F:f784eae792e819536465e4c778366183"}
+  "man/man1/dune-top.1" {"F:3f2dc4cbe81088afe24f7ee8dbbf1578"}
+  "man/man1/dune-uninstall.1" {"F:ef1fad7132365be65c29e57766027398"}
+  "man/man1/dune-upgrade.1" {"F:ce3f199be8bca18ecf099c00d99cee40"}
+  "man/man1/dune-utop.1" {"F:41a2fb024342a11616f74efb6a895e43"}
+  "man/man1/dune.1" {"F:98e2152c44e7b29af125d82d788e5d8a"}
+  "man/man5/dune-config.5" {"F:808fb5a96b03424ccdd9abe826abd114"}
+  "share/emacs" {"D"}
+  "share/emacs/site-lisp" {"D"}
+  "share/emacs/site-lisp/dune-flymake.el"
+    {"F:35013737d7343153eee66b816ef20bbb"}
+  "share/emacs/site-lisp/dune-watch.el"
+    {"F:1818f1923844c52b3a899ac47e0e33ea"}
+  "share/emacs/site-lisp/dune.el" {"F:ddca8abb0a36bdf0c409523e9db0079e"}
+]

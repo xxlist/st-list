@@ -1,0 +1,145 @@
+.TH "Pqueue.Max" 3 2025-11-21 OCamldoc "OCaml library"
+.SH NAME
+Pqueue.Max \- Output signature of the functor Pqueue.MakeMax.
+.SH Module type
+Module type   Pqueue.Max
+.SH Documentation
+.sp
+Module type
+.BI "Max"
+ = 
+.B sig end
+
+.sp
+Output signature of the functor 
+.ft B
+Pqueue\&.MakeMax
+.ft R
+\&.
+
+.sp
+
+.sp
+.sp
+.I type t 
+
+.sp
+
+.sp
+.I type elt 
+
+.sp
+
+.sp
+
+.I val create 
+: 
+.B unit -> t
+.sp
+
+.sp
+
+.I val length 
+: 
+.B t -> int
+.sp
+
+.sp
+
+.I val is_empty 
+: 
+.B t -> bool
+.sp
+
+.sp
+
+.I val add 
+: 
+.B t -> elt -> unit
+.sp
+
+.sp
+
+.I val add_iter 
+: 
+.B t -> ((elt -> unit) -> 'x -> unit) -> 'x -> unit
+.sp
+
+.sp
+
+.I val max_elt 
+: 
+.B t -> elt option
+.sp
+
+.sp
+
+.I val get_max_elt 
+: 
+.B t -> elt
+.sp
+
+.sp
+
+.I val pop_max 
+: 
+.B t -> elt option
+.sp
+
+.sp
+
+.I val remove_max 
+: 
+.B t -> unit
+.sp
+
+.sp
+
+.I val clear 
+: 
+.B t -> unit
+.sp
+
+.sp
+
+.I val copy 
+: 
+.B t -> t
+.sp
+
+.sp
+
+.I val of_array 
+: 
+.B elt array -> t
+.sp
+
+.sp
+
+.I val of_list 
+: 
+.B elt list -> t
+.sp
+
+.sp
+
+.I val of_iter 
+: 
+.B ((elt -> unit) -> 'x -> unit) -> 'x -> t
+.sp
+
+.sp
+
+.I val iter_unordered 
+: 
+.B (elt -> unit) -> t -> unit
+.sp
+
+.sp
+
+.I val fold_unordered 
+: 
+.B ('acc -> elt -> 'acc) -> 'acc -> t -> 'acc
+.sp
+
+.sp

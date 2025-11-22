@@ -1,0 +1,18 @@
+version = "v6.1.1"
+description = "Lwt backend"
+requires =
+"cohttp
+ http
+ http.__private__.http_bytebuffer
+ ipaddr
+ logs
+ logs.lwt
+ lwt
+ ppx_sexp_conv.runtime-lib
+ sexplib0
+ uri
+ uri.services"
+archive(byte) = "cohttp_lwt.cma"
+archive(native) = "cohttp_lwt.cmxa"
+plugin(byte) = "cohttp_lwt.cma"
+plugin(native) = "cohttp_lwt.cmxs"

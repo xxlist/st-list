@@ -1,0 +1,123 @@
+opam-version: "2.0"
+added: [
+  "bin/cmdliner" {"F:f25adacb04ae2225bb58866f240b0dc6"}
+  "doc/cmdliner" {"D"}
+  "doc/cmdliner/CHANGES.md" {"F:0e0c4f5b84ff5e7bc56523e7a1acf231"}
+  "doc/cmdliner/LICENSE.md" {"F:f26690a89d0463684e0280e56699b5c5"}
+  "doc/cmdliner/README.md" {"F:234aa826fe0f15b8555631fa456a5b8f"}
+  "doc/cmdliner/odoc-pages" {"D"}
+  "doc/cmdliner/odoc-pages/cli.mld" {"F:b9c6b554add02bc857b3b692fcb506bf"}
+  "doc/cmdliner/odoc-pages/cookbook.mld"
+    {"F:9b4354e1f0fb50b4fabfd3c3e43e6c63"}
+  "doc/cmdliner/odoc-pages/examples.mld"
+    {"F:08e0f0d2f5b2edda19da3aa86969d561"}
+  "doc/cmdliner/odoc-pages/index.mld" {"F:dbd407a7e89b656157dec233d51aea7b"}
+  "doc/cmdliner/odoc-pages/tool_man.mld"
+    {"F:7ace986de86c615ca2d984a43dfde196"}
+  "doc/cmdliner/odoc-pages/tutorial.mld"
+    {"F:486ebdc2e0ec26ae1c5c47cba2b865fe"}
+  "lib/cmdliner" {"D"}
+  "lib/cmdliner/META" {"F:6ef5f340f0febec10d0ae3ad0e52c10c"}
+  "lib/cmdliner/cmdliner.a" {"F:1900cc2e096fa99a4cad92096483c24c"}
+  "lib/cmdliner/cmdliner.cma" {"F:6a3344365632d6b7251d2b192214c7c1"}
+  "lib/cmdliner/cmdliner.cmi" {"F:493bb4a6c65733d0b9f902fc168a7044"}
+  "lib/cmdliner/cmdliner.cmt" {"F:395e85de251a8cbd6b46cf1ab9749f4c"}
+  "lib/cmdliner/cmdliner.cmti" {"F:024d828be35cf1cc954857bbb78047c9"}
+  "lib/cmdliner/cmdliner.cmx" {"F:bb78a7cfd418558e7c129423afc2d7c0"}
+  "lib/cmdliner/cmdliner.cmxa" {"F:3eef7ae137bc6809150d7ca8f12ea807"}
+  "lib/cmdliner/cmdliner.cmxs" {"F:b4fda8bcbec5a29b348226c854034efe"}
+  "lib/cmdliner/cmdliner.ml" {"F:2923e5ca9294d32ad2f0d4a2df4935d7"}
+  "lib/cmdliner/cmdliner.mli" {"F:2e5b7dc113602d3d67afd559732cf199"}
+  "lib/cmdliner/cmdliner_arg.cmt" {"F:68319b80bc3cdd13e70000c91acdd881"}
+  "lib/cmdliner/cmdliner_arg.cmti" {"F:d6187e83aa3355a4b80575ce9c59eb88"}
+  "lib/cmdliner/cmdliner_arg.cmx" {"F:d454dd8781dac6b5a24183bb4dcb37ea"}
+  "lib/cmdliner/cmdliner_arg.ml" {"F:2d5c6fa12fb614ce319fdfdc52ca91bd"}
+  "lib/cmdliner/cmdliner_arg.mli" {"F:9cfcac31524ee456e6d82dfd73a8d582"}
+  "lib/cmdliner/cmdliner_base.cmt" {"F:2764007bd4b019cf600d7cecfd866fd7"}
+  "lib/cmdliner/cmdliner_base.cmti" {"F:1b53efc92c654f919dfd29f0a9fb023e"}
+  "lib/cmdliner/cmdliner_base.cmx" {"F:cfc4e8e9d1c3675b91fe74160e5f2cdc"}
+  "lib/cmdliner/cmdliner_base.ml" {"F:6c1d072fd78f40bca1891e57852a5795"}
+  "lib/cmdliner/cmdliner_base.mli" {"F:dfbdf96a776903a108bbc3a6dce30414"}
+  "lib/cmdliner/cmdliner_cline.cmt" {"F:8ab65689d4176726f14c0bebb3842632"}
+  "lib/cmdliner/cmdliner_cline.cmti" {"F:e76cee794dd80088dc4b706be501f640"}
+  "lib/cmdliner/cmdliner_cline.cmx" {"F:19741d0a2bd3c1ab78c670005088141f"}
+  "lib/cmdliner/cmdliner_cline.ml" {"F:db0827d72d9ea9fe8119e52e10477efa"}
+  "lib/cmdliner/cmdliner_cline.mli" {"F:b391a16b26389ed451d7eacfbab309eb"}
+  "lib/cmdliner/cmdliner_cmd.cmt" {"F:92e4eb8e9bc77bfbef5b5cb10dc12818"}
+  "lib/cmdliner/cmdliner_cmd.cmti" {"F:c563d712b5995ef81d3c4d5130d4a45c"}
+  "lib/cmdliner/cmdliner_cmd.cmx" {"F:a8d363704accc0adfcd38616936018fd"}
+  "lib/cmdliner/cmdliner_cmd.ml" {"F:da74320a3b5ee3618dc611d23a23b03c"}
+  "lib/cmdliner/cmdliner_cmd.mli" {"F:db0ab59eec588e058557c1b633971d04"}
+  "lib/cmdliner/cmdliner_completion.cmt"
+    {"F:48284f11d299cb6cf3dc1e2f07aa17c5"}
+  "lib/cmdliner/cmdliner_completion.cmti"
+    {"F:9d4ef5893a66b3657485ad6fb9e2804c"}
+  "lib/cmdliner/cmdliner_completion.cmx"
+    {"F:1b1f74f45029ca252fdcde149e929195"}
+  "lib/cmdliner/cmdliner_completion.ml"
+    {"F:e8dfe75a52855ba27e429ac2effaa372"}
+  "lib/cmdliner/cmdliner_completion.mli"
+    {"F:0da6c72fbf520c1a552ee34db9210959"}
+  "lib/cmdliner/cmdliner_def.cmt" {"F:f0a0aa4863a5663cc01604f5df8640d1"}
+  "lib/cmdliner/cmdliner_def.cmti" {"F:30ec1ba46bceea41681bbac35967e210"}
+  "lib/cmdliner/cmdliner_def.cmx" {"F:e785f67fdb69e22033e8bc47007e3b09"}
+  "lib/cmdliner/cmdliner_def.ml" {"F:80f3b4548e2028ebc009b347fd225fdb"}
+  "lib/cmdliner/cmdliner_def.mli" {"F:63448ecbb5654e79abb7c504b7ecf97c"}
+  "lib/cmdliner/cmdliner_docgen.cmt" {"F:09d44ef52be08aa235dc90bcbc19c1f6"}
+  "lib/cmdliner/cmdliner_docgen.cmti" {"F:3efce93691fb398a22d771ff7990c3a0"}
+  "lib/cmdliner/cmdliner_docgen.cmx" {"F:e8eb65dabb8431f655669b4b8e9fdbd9"}
+  "lib/cmdliner/cmdliner_docgen.ml" {"F:0d9a9dca5e94fe994a1620948eee1d51"}
+  "lib/cmdliner/cmdliner_docgen.mli" {"F:767a2425614b6138e6abdffb474277c5"}
+  "lib/cmdliner/cmdliner_eval.cmt" {"F:c079312619a4caef96f1ea8e5c125ea7"}
+  "lib/cmdliner/cmdliner_eval.cmti" {"F:04b8381461c3a9f66bbbcec6db0f15e4"}
+  "lib/cmdliner/cmdliner_eval.cmx" {"F:def5d37a99085f229e1d80a934bf830a"}
+  "lib/cmdliner/cmdliner_eval.ml" {"F:5f05349d586f6bd39e736f38d0cf136d"}
+  "lib/cmdliner/cmdliner_eval.mli" {"F:185249ba1c5078fd6771d700d8f71a09"}
+  "lib/cmdliner/cmdliner_manpage.cmt" {"F:c8ea31730daf9889c0fc166a555a9554"}
+  "lib/cmdliner/cmdliner_manpage.cmti" {"F:cdc489c83a6a4c3e0c19c34c51aeff96"}
+  "lib/cmdliner/cmdliner_manpage.cmx" {"F:cf2fd6a6f1bd472d5346edbd06dc2d2c"}
+  "lib/cmdliner/cmdliner_manpage.ml" {"F:cbc9154e20ca113c41a9a9ba8c9e0f53"}
+  "lib/cmdliner/cmdliner_manpage.mli" {"F:410f9f3e3578f053a392888b4b604661"}
+  "lib/cmdliner/cmdliner_msg.cmt" {"F:8e923100b0c482ceceb1d4b8c10e33cd"}
+  "lib/cmdliner/cmdliner_msg.cmti" {"F:fc2c1d0f0232f55ca0d25373311f032b"}
+  "lib/cmdliner/cmdliner_msg.cmx" {"F:4fd2f79d772e3ea23941bae851fd887f"}
+  "lib/cmdliner/cmdliner_msg.ml" {"F:a1aed6c0931eeb6a6547dd4d395eb5ca"}
+  "lib/cmdliner/cmdliner_msg.mli" {"F:9806ae097ce0f0da680d8ed92eff2412"}
+  "lib/cmdliner/cmdliner_term.cmt" {"F:5036c689b4d213431c98c6dc0b4593ec"}
+  "lib/cmdliner/cmdliner_term.cmti" {"F:9e3c0af0daf0b36baa6d4d1911c88d20"}
+  "lib/cmdliner/cmdliner_term.cmx" {"F:73c93f91ff13d2f8e03888ad0d8d5f87"}
+  "lib/cmdliner/cmdliner_term.ml" {"F:25517d9a42817f19787b7a47cb1c9785"}
+  "lib/cmdliner/cmdliner_term.mli" {"F:74c0b94689fe126b32445b8144db172e"}
+  "lib/cmdliner/cmdliner_trie.cmt" {"F:c02c2d89b251c4cc6f1f19e859448139"}
+  "lib/cmdliner/cmdliner_trie.cmti" {"F:c22e26526bf8aef2aa949f8b4f2bb44e"}
+  "lib/cmdliner/cmdliner_trie.cmx" {"F:bcf805751caf403a2ec77e136e91aff7"}
+  "lib/cmdliner/cmdliner_trie.ml" {"F:4070c62b32f3afe606b5c084346bbcb0"}
+  "lib/cmdliner/cmdliner_trie.mli" {"F:6322d313d56a1132af8e8fb7d53427cf"}
+  "lib/cmdliner/opam" {"F:5ba70e2f604252d1bcd4c19835f1980c"}
+  "man/man1/cmdliner-generic-completion.1"
+    {"F:7c3b26f9fa9df4ba7c8be03d342d8301"}
+  "man/man1/cmdliner-install-generic-completion.1"
+    {"F:a845a1471fd216415029b1ebddd2f36f"}
+  "man/man1/cmdliner-install-tool-completion.1"
+    {"F:dbcd412f93b387a3b277db21e67884a7"}
+  "man/man1/cmdliner-install-tool-manpages.1"
+    {"F:75deecf12245dc63970b374d6850c5f6"}
+  "man/man1/cmdliner-install-tool-support.1"
+    {"F:d57b5b1f2afff3c034a462497bef904b"}
+  "man/man1/cmdliner-install.1" {"F:28056c49088d84981f70db8f0e4ccee2"}
+  "man/man1/cmdliner-tool-commands.1" {"F:5868ad99c78e60ed27898a12b2ab340a"}
+  "man/man1/cmdliner-tool-completion.1"
+    {"F:5dfbbf9a0d1bd02c16c5226aaffdb971"}
+  "man/man1/cmdliner.1" {"F:6d511c1735b5a952064edf718b4a86b5"}
+  "share/bash-completion" {"D"}
+  "share/bash-completion/completions" {"D"}
+  "share/bash-completion/completions/_cmdliner_generic"
+    {"F:dc9a536a0143ee8758263786b734ae09"}
+  "share/bash-completion/completions/cmdliner"
+    {"F:5b261dfbcc9914e198b24c92936e47f5"}
+  "share/zsh" {"D"}
+  "share/zsh/site-functions" {"D"}
+  "share/zsh/site-functions/_cmdliner" {"F:cd0beac485144a964c6b301c0a4bfac3"}
+  "share/zsh/site-functions/_cmdliner_generic"
+    {"F:3fcb8abad66cc69f05ef13714a28f372"}
+]

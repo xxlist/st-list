@@ -1,0 +1,26 @@
+opam-version: "2.0"
+added: [
+  "doc/bigstringaf" {"D"}
+  "doc/bigstringaf/CHANGES.md" {"F:b7b510f4d62df2818d41ed64a1bb5277"}
+  "doc/bigstringaf/LICENSE" {"F:5a498d1dd2462c99c0a2b6ded2d6cb06"}
+  "doc/bigstringaf/README.md" {"F:a19d59a51c897a3da68735beac117fba"}
+  "lib/bigstringaf" {"D"}
+  "lib/bigstringaf/META" {"F:fbfcceedc4dd14f078095686e12bf4a4"}
+  "lib/bigstringaf/bigstringaf.a" {"F:34db19f168384d408a3535eb06c3c9c2"}
+  "lib/bigstringaf/bigstringaf.cma" {"F:1b3112cef55231ade9082c0bff848630"}
+  "lib/bigstringaf/bigstringaf.cmi" {"F:b04b24d25fc91eca41b9e2e427821082"}
+  "lib/bigstringaf/bigstringaf.cmt" {"F:84186cbf52b1b74986c3a0817ee27d3c"}
+  "lib/bigstringaf/bigstringaf.cmti" {"F:1efdaa303c00c7de4f82b55751c70122"}
+  "lib/bigstringaf/bigstringaf.cmx" {"F:dee93601352282ca1f65ed0c422fdd83"}
+  "lib/bigstringaf/bigstringaf.cmxa" {"F:67b6155995eefd55d64f21c054298969"}
+  "lib/bigstringaf/bigstringaf.cmxs" {"F:bf4cce8c194ca79ab668801c7cd1e50c"}
+  "lib/bigstringaf/bigstringaf.ml" {"F:6f53148f9974d5dda5a74f2b792c46a4"}
+  "lib/bigstringaf/bigstringaf.mli" {"F:345b8592b02d9fc1cdb9507438d48b1a"}
+  "lib/bigstringaf/dune-package" {"F:a78b53c4f514bdefce4d1e735d9d4407"}
+  "lib/bigstringaf/libbigstringaf_stubs.a"
+    {"F:369211d2b90e817ce2fb18efa0b9154b"}
+  "lib/bigstringaf/opam" {"F:d697567b9d0b70680680f72966eb6a3d"}
+  "lib/bigstringaf/runtime.js" {"F:289af931a351e57ba315af79d76d5c68"}
+  "lib/stublibs/dllbigstringaf_stubs.so"
+    {"F:4c30a8a1602c7ab0fe60c72bfc761186"}
+]

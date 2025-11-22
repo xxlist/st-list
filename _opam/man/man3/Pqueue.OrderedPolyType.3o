@@ -1,0 +1,51 @@
+.TH "Pqueue.OrderedPolyType" 3 2025-11-21 OCamldoc "OCaml library"
+.SH NAME
+Pqueue.OrderedPolyType \- Input signature of the functors Pqueue.MakeMinPoly and Pqueue.MakeMaxPoly.
+.SH Module type
+Module type   Pqueue.OrderedPolyType
+.SH Documentation
+.sp
+Module type
+.BI "OrderedPolyType"
+ = 
+.B sig end
+
+.sp
+Input signature of the functors 
+.ft B
+Pqueue\&.MakeMinPoly
+.ft R
+and 
+.ft B
+Pqueue\&.MakeMaxPoly
+.ft R
+\&.
+
+.sp
+
+.sp
+.sp
+.I type 
+.B 'a
+.I t 
+
+.sp
+The polymorphic type of elements\&.
+
+.sp
+
+.I val compare 
+: 
+.B 'a t -> 'b t -> int
+.sp
+
+.ft B
+compare
+.ft R
+is a total order on values of type 
+.ft B
+Pqueue\&.OrderedPolyType\&.t
+.ft R
+\&.
+
+.sp

@@ -1,0 +1,84 @@
+.TH "Clflags.Dump_option" 3 2025-11-21 OCamldoc "OCaml library"
+.SH NAME
+Clflags.Dump_option \- no description
+.SH Module
+Module   Clflags.Dump_option
+.SH Documentation
+.sp
+Module
+.BI "Dump_option"
+ : 
+.B sig end
+
+.sp
+
+.sp
+
+.sp
+.sp
+.I type t 
+=
+ | Source
+ | Parsetree
+ | Typedtree
+ | Shape
+ | Match_comp
+ | Raw_lambda
+ | Lambda
+ | Instr
+ | Raw_clambda
+ | Clambda
+ | Raw_flambda
+ | Flambda
+ | Cmm
+ | Selection
+ | Combine
+ | CSE
+ | Live
+ | Spill
+ | Split
+ | Interf
+ | Prefer
+ | Regalloc
+ | Scheduling
+ | Linear
+ | Interval
+ 
+.sp
+
+.sp
+
+.I val compare 
+: 
+.B t -> t -> int
+.sp
+
+.sp
+
+.I val of_string 
+: 
+.B string -> t option
+.sp
+
+.sp
+
+.I val to_string 
+: 
+.B t -> string
+.sp
+
+.sp
+
+.I val flag 
+: 
+.B t -> bool ref
+.sp
+
+.sp
+
+.I val available 
+: 
+.B t -> (unit, string) Result.t
+.sp
+
+.sp

@@ -1,0 +1,1133 @@
+.TH "Stdlib.Iarray" 3 2025-11-21 OCamldoc "OCaml library"
+.SH NAME
+Stdlib.Iarray \- no description
+.SH Module
+Module   Stdlib.Iarray
+.SH Documentation
+.sp
+Module
+.BI "Iarray"
+ : 
+.B (module Stdlib__Iarray)
+
+.sp
+
+.sp
+
+.sp
+.sp
+
+.PP
+Operations on immutable arrays\&.  This module mirrors the API of 
+.ft B
+Array
+.ft R
+, but
+omits functions that assume mutability; in addition to obviously mutating
+functions, it omits 
+.ft B
+copy
+.ft R
+along with the functions 
+.ft B
+make
+.ft R
+, 
+.ft B
+create_float
+.ft R
+,
+and 
+.ft B
+make_matrix
+.ft R
+that produce all\-constant arrays\&.  The exception is the
+sorting functions, which are given a copying API to replace the in\-place
+one\&.
+.PP
+.I type 
+.B 'a
+.I t 
+= 
+.B 'a iarray
+
+.sp
+An alias for the type of immutable arrays\&.
+
+.sp
+
+.I val length 
+: 
+.B 'a iarray -> int
+.sp
+Return the length (number of elements) of the given immutable array\&.
+
+.sp
+
+.I val get 
+: 
+.B 'a iarray -> int -> 'a
+.sp
+
+.ft B
+get a n
+.ft R
+returns the element number 
+.ft B
+n
+.ft R
+of immutable array 
+.ft B
+a
+.ft R
+\&.
+The first element has number 0\&.
+The last element has number 
+.ft B
+length a \- 1
+.ft R
+\&.
+
+.sp
+.B "Raises Invalid_argument"
+if 
+.ft B
+n
+.ft R
+is outside the range 0 to 
+.ft B
+(length a \- 1)
+.ft R
+\&.
+
+.sp
+
+.I val init 
+: 
+.B int -> (int -> 'a) -> 'a iarray
+.sp
+
+.ft B
+init n f
+.ft R
+returns a fresh immutable array of length 
+.ft B
+n
+.ft R
+,
+with element number 
+.ft B
+i
+.ft R
+initialized to the result of 
+.ft B
+f i
+.ft R
+\&.
+In other terms, 
+.ft B
+init n f
+.ft R
+tabulates the results of 
+.ft B
+f
+.ft R
+applied to the integers 
+.ft B
+0
+.ft R
+to 
+.ft B
+n\-1
+.ft R
+\&.
+
+.sp
+.B "Raises Invalid_argument"
+if 
+.ft B
+n < 0
+.ft R
+or 
+.ft B
+n > Sys\&.max_array_length
+.ft R
+\&.
+If the return type of 
+.ft B
+f
+.ft R
+is 
+.ft B
+float
+.ft R
+, then the maximum
+size is only 
+.ft B
+Sys\&.max_array_length / 2
+.ft R
+\&.
+
+.sp
+
+.I val append 
+: 
+.B 'a iarray -> 'a iarray -> 'a iarray
+.sp
+
+.ft B
+append v1 v2
+.ft R
+returns a fresh immutable array containing the
+concatenation of the immutable arrays 
+.ft B
+v1
+.ft R
+and 
+.ft B
+v2
+.ft R
+\&.
+
+.sp
+.B "Raises Invalid_argument"
+if
+.ft B
+length v1 + length v2 > Sys\&.max_array_length
+.ft R
+\&.
+
+.sp
+
+.I val concat 
+: 
+.B 'a iarray list -> 'a iarray
+.sp
+Same as 
+.ft B
+Iarray\&.append
+.ft R
+, but concatenates a list of immutable arrays\&.
+
+.sp
+
+.I val sub 
+: 
+.B 'a iarray -> pos:int -> len:int -> 'a iarray
+.sp
+
+.ft B
+sub a ~pos ~len
+.ft R
+returns a fresh immutable array of length 
+.ft B
+len
+.ft R
+,
+containing the elements number 
+.ft B
+pos
+.ft R
+to 
+.ft B
+pos + len \- 1
+.ft R
+of immutable array 
+.ft B
+a
+.ft R
+\&.  This creates a copy of the selected
+portion of the immutable array\&.
+
+.sp
+.B "Raises Invalid_argument"
+if 
+.ft B
+pos
+.ft R
+and 
+.ft B
+len
+.ft R
+do not
+designate a valid subarray of 
+.ft B
+a
+.ft R
+; that is, if
+.ft B
+pos < 0
+.ft R
+, or 
+.ft B
+len < 0
+.ft R
+, or 
+.ft B
+pos + len > length a
+.ft R
+\&.
+
+.sp
+
+.I val to_list 
+: 
+.B 'a iarray -> 'a list
+.sp
+
+.ft B
+to_list a
+.ft R
+returns the list of all the elements of 
+.ft B
+a
+.ft R
+\&.
+
+.sp
+
+.I val of_list 
+: 
+.B 'a list -> 'a iarray
+.sp
+
+.ft B
+of_list l
+.ft R
+returns a fresh immutable array containing the elements
+of 
+.ft B
+l
+.ft R
+\&.
+
+.sp
+.B "Raises Invalid_argument"
+if the length of 
+.ft B
+l
+.ft R
+is greater than
+.ft B
+Sys\&.max_array_length
+.ft R
+\&.
+
+.sp
+
+.PP
+.SS Converting to and from mutable arrays
+
+.PP
+
+.I val to_array 
+: 
+.B 'a iarray -> 'a array
+.sp
+
+.ft B
+to_array a
+.ft R
+returns a mutable copy of the immutable array 
+.ft B
+a
+.ft R
+; that is, a
+fresh (mutable) array containing the same elements as 
+.ft B
+a
+.ft R
+
+
+.sp
+
+.I val of_array 
+: 
+.B 'a array -> 'a iarray
+.sp
+
+.ft B
+of_array ma
+.ft R
+returns an immutable copy of the mutable array 
+.ft B
+ma
+.ft R
+; that is,
+a fresh immutable array containing the same elements as 
+.ft B
+ma
+.ft R
+
+
+.sp
+
+.PP
+.SS Comparison
+
+.PP
+
+.I val equal 
+: 
+.B ('a -> 'a -> bool) -> 'a iarray -> 'a iarray -> bool
+.sp
+
+.ft B
+eq [|a1; \&.\&.\&.; an|] [|b1; \&.\&.; bm|]
+.ft R
+holds when the two input immutable
+arrays have the same length, and for each pair of elements 
+.ft B
+ai, bi
+.ft R
+at the
+same position we have 
+.ft B
+eq ai bi
+.ft R
+\&.
+
+.sp
+
+.I val compare 
+: 
+.B ('a -> 'a -> int) -> 'a iarray -> 'a iarray -> int
+.sp
+Provided the function 
+.ft B
+cmp
+.ft R
+defines a preorder on elements,
+.ft B
+compare cmp a b
+.ft R
+compares first 
+.ft B
+a
+.ft R
+and 
+.ft B
+b
+.ft R
+by their length, and then, if
+equal, by their elements according to the lexicographic preorder\&.
+.sp
+For more details on comparison functions, see 
+.ft B
+Iarray\&.sort
+.ft R
+\&.
+
+.sp
+
+.PP
+.SS Iterators
+
+.PP
+
+.I val iter 
+: 
+.B ('a -> unit) -> 'a iarray -> unit
+.sp
+
+.ft B
+iter f a
+.ft R
+applies function 
+.ft B
+f
+.ft R
+in turn to all
+the elements of 
+.ft B
+a
+.ft R
+\&.  It is equivalent to
+.ft B
+f (get a 0); f (get a 1); \&.\&.\&.; f (get a (length a \- 1)); ()
+.ft R
+\&.
+
+.sp
+
+.I val iteri 
+: 
+.B (int -> 'a -> unit) -> 'a iarray -> unit
+.sp
+Same as 
+.ft B
+Iarray\&.iter
+.ft R
+, but the
+function is applied to the index of the element as first argument,
+and the element itself as second argument\&.
+
+.sp
+
+.I val map 
+: 
+.B ('a -> 'b) -> 'a iarray -> 'b iarray
+.sp
+
+.ft B
+map f a
+.ft R
+applies function 
+.ft B
+f
+.ft R
+to all the elements of 
+.ft B
+a
+.ft R
+,
+and builds an immutable array with the results returned by 
+.ft B
+f
+.ft R
+:
+.ft B
+[| f (get a 0); f (get a 1); \&.\&.\&.; f (get a (length a \- 1)) |]
+.ft R
+\&.
+
+.sp
+
+.I val mapi 
+: 
+.B (int -> 'a -> 'b) -> 'a iarray -> 'b iarray
+.sp
+Same as 
+.ft B
+Iarray\&.map
+.ft R
+, but the
+function is applied to the index of the element as first argument,
+and the element itself as second argument\&.
+
+.sp
+
+.I val fold_left 
+: 
+.B ('a -> 'b -> 'a) -> 'a -> 'b iarray -> 'a
+.sp
+
+.ft B
+fold_left f init a
+.ft R
+computes
+.ft B
+f (\&.\&.\&. (f (f init (get a 0)) (get a 1)) \&.\&.\&.) (get a n\-1)
+.ft R
+,
+where 
+.ft B
+n
+.ft R
+is the length of the immutable array 
+.ft B
+a
+.ft R
+\&.
+
+.sp
+
+.I val fold_left_map 
+: 
+.B ('a -> 'b -> 'a * 'c) -> 'a -> 'b iarray -> 'a * 'c iarray
+.sp
+
+.ft B
+fold_left_map
+.ft R
+is a combination of 
+.ft B
+Iarray\&.fold_left
+.ft R
+and 
+.ft B
+Iarray\&.map
+.ft R
+that threads an
+accumulator through calls to 
+.ft B
+f
+.ft R
+\&.
+
+.sp
+
+.I val fold_right 
+: 
+.B ('b -> 'a -> 'a) -> 'b iarray -> 'a -> 'a
+.sp
+
+.ft B
+fold_right f a init
+.ft R
+computes
+.ft B
+f (get a 0) (f (get a 1) ( \&.\&.\&. (f (get a (n\-1)) init) \&.\&.\&.))
+.ft R
+,
+where 
+.ft B
+n
+.ft R
+is the length of the immutable array 
+.ft B
+a
+.ft R
+\&.
+
+.sp
+
+.PP
+.SS Iterators on two arrays
+
+.PP
+
+.I val iter2 
+: 
+.B ('a -> 'b -> unit) -> 'a iarray -> 'b iarray -> unit
+.sp
+
+.ft B
+iter2 f a b
+.ft R
+applies function 
+.ft B
+f
+.ft R
+to all the elements of 
+.ft B
+a
+.ft R
+and 
+.ft B
+b
+.ft R
+\&.
+
+.sp
+.B "Raises Invalid_argument"
+if the immutable arrays are not the same size\&.
+
+.sp
+
+.I val map2 
+: 
+.B ('a -> 'b -> 'c) -> 'a iarray -> 'b iarray -> 'c iarray
+.sp
+
+.ft B
+map2 f a b
+.ft R
+applies function 
+.ft B
+f
+.ft R
+to all the elements of 
+.ft B
+a
+.ft R
+and 
+.ft B
+b
+.ft R
+, and builds an immutable array with the results returned by 
+.ft B
+f
+.ft R
+:
+.ft B
+[| f (get a 0) (get b 0);
+.br
+\&       \&.\&.\&.;
+.br
+\&       f (get a (length a \- 1)) (get b (length b \- 1))|]
+.ft R
+\&.
+
+.sp
+.B "Raises Invalid_argument"
+if the immutable arrays are not the same size\&.
+
+.sp
+
+.PP
+.SS Array scanning
+
+.PP
+
+.I val for_all 
+: 
+.B ('a -> bool) -> 'a iarray -> bool
+.sp
+
+.ft B
+for_all f [|a1; \&.\&.\&.; an|]
+.ft R
+checks if all elements
+of the immutable array satisfy the predicate 
+.ft B
+f
+.ft R
+\&. That is, it returns
+.ft B
+(f a1) && (f a2) && \&.\&.\&. && (f an)
+.ft R
+\&.
+
+.sp
+
+.I val exists 
+: 
+.B ('a -> bool) -> 'a iarray -> bool
+.sp
+
+.ft B
+exists f [|a1; \&.\&.\&.; an|]
+.ft R
+checks if at least one element of
+the immutable array satisfies the predicate 
+.ft B
+f
+.ft R
+\&. That is, it returns
+.ft B
+(f a1) || (f a2) || \&.\&.\&. || (f an)
+.ft R
+\&.
+
+.sp
+
+.I val for_all2 
+: 
+.B ('a -> 'b -> bool) -> 'a iarray -> 'b iarray -> bool
+.sp
+Same as 
+.ft B
+Iarray\&.for_all
+.ft R
+, but for a two\-argument predicate\&.
+
+.sp
+.B "Raises Invalid_argument"
+if the two immutable arrays have different
+lengths\&.
+
+.sp
+
+.I val exists2 
+: 
+.B ('a -> 'b -> bool) -> 'a iarray -> 'b iarray -> bool
+.sp
+Same as 
+.ft B
+Iarray\&.exists
+.ft R
+, but for a two\-argument predicate\&.
+
+.sp
+.B "Raises Invalid_argument"
+if the two immutable arrays have different
+lengths\&.
+
+.sp
+
+.I val mem 
+: 
+.B 'a -> 'a iarray -> bool
+.sp
+
+.ft B
+mem a set
+.ft R
+is true if and only if 
+.ft B
+a
+.ft R
+is structurally equal
+to an element of 
+.ft B
+l
+.ft R
+(i\&.e\&. there is an 
+.ft B
+x
+.ft R
+in 
+.ft B
+l
+.ft R
+such that
+.ft B
+compare a x = 0
+.ft R
+)\&.
+
+.sp
+
+.I val memq 
+: 
+.B 'a -> 'a iarray -> bool
+.sp
+Same as 
+.ft B
+Iarray\&.mem
+.ft R
+, but uses physical equality instead of structural equality
+to compare array elements\&.
+
+.sp
+
+.I val find_opt 
+: 
+.B ('a -> bool) -> 'a iarray -> 'a option
+.sp
+
+.ft B
+find_opt f a
+.ft R
+returns the first element of the immutable array 
+.ft B
+a
+.ft R
+that
+satisfies the predicate 
+.ft B
+f
+.ft R
+, or 
+.ft B
+None
+.ft R
+if there is no value that satisfies
+.ft B
+f
+.ft R
+in the array 
+.ft B
+a
+.ft R
+\&.
+
+.sp
+
+.I val find_index 
+: 
+.B ('a -> bool) -> 'a iarray -> int option
+.sp
+
+.ft B
+find_index f a
+.ft R
+returns 
+.ft B
+Some i
+.ft R
+, where 
+.ft B
+i
+.ft R
+is the index of the first
+element of the array 
+.ft B
+a
+.ft R
+that satisfies 
+.ft B
+f x
+.ft R
+, if there is such an
+element\&.
+.sp
+It returns 
+.ft B
+None
+.ft R
+if there is no such element\&.
+
+.sp
+
+.I val find_map 
+: 
+.B ('a -> 'b option) -> 'a iarray -> 'b option
+.sp
+
+.ft B
+find_map f a
+.ft R
+applies 
+.ft B
+f
+.ft R
+to the elements of 
+.ft B
+a
+.ft R
+in order, and returns the
+first result of the form 
+.ft B
+Some v
+.ft R
+, or 
+.ft B
+None
+.ft R
+if none exist\&.
+
+.sp
+
+.I val find_mapi 
+: 
+.B (int -> 'a -> 'b option) -> 'a iarray -> 'b option
+.sp
+Same as 
+.ft B
+find_map
+.ft R
+, but the predicate is applied to the index of
+the element as first argument (counting from 0), and the element
+itself as second argument\&.
+
+.sp
+
+.PP
+.SS Arrays of pairs
+
+.PP
+
+.I val split 
+: 
+.B ('a * 'b) iarray -> 'a iarray * 'b iarray
+.sp
+
+.ft B
+split [|(a1,b1); \&.\&.\&.; (an,bn)|]
+.ft R
+is
+.ft B
+([|a1; \&.\&.\&.; an|], [|b1; \&.\&.\&.; bn|])
+.ft R
+\&.
+
+.sp
+
+.I val combine 
+: 
+.B 'a iarray -> 'b iarray -> ('a * 'b) iarray
+.sp
+
+.ft B
+combine [|a1; \&.\&.\&.; an|] [|b1; \&.\&.\&.; bn|]
+.ft R
+is 
+.ft B
+[|(a1,b1); \&.\&.\&.; (an,bn)|]
+.ft R
+\&.
+Raise 
+.ft B
+Invalid_argument
+.ft R
+if the two immutable arrays have different
+lengths\&.
+
+.sp
+
+.PP
+.SS Sorting
+
+.PP
+
+.I val sort 
+: 
+.B ('a -> 'a -> int) -> 'a iarray -> 'a iarray
+.sp
+Sort an immutable array in increasing order according to a comparison
+function\&.  The comparison function must return 0 if its arguments
+compare as equal, a positive integer if the first is greater,
+and a negative integer if the first is smaller (see below for a
+complete specification)\&.  For example, 
+.ft B
+compare
+.ft R
+is
+a suitable comparison function\&. The result of calling 
+.ft B
+sort
+.ft R
+is a fresh
+immutable array containing the same elements as the original sorted in
+increasing order\&. Other than this fresh array, 
+.ft B
+sort
+.ft R
+is guaranteed to run in
+constant heap space and (at most) logarithmic stack space\&.
+.sp
+The current implementation uses Heap Sort\&.  It runs in constant
+stack space\&.
+.sp
+Specification of the comparison function:
+Let 
+.ft B
+a
+.ft R
+be the immutable array and 
+.ft B
+cmp
+.ft R
+the comparison function\&.  The
+following must be true for all 
+.ft B
+x
+.ft R
+, 
+.ft B
+y
+.ft R
+, 
+.ft B
+z
+.ft R
+in 
+.ft B
+a
+.ft R
+:
+.sp
+\-  
+.ft B
+cmp x y
+.ft R
+> 0 if and only if 
+.ft B
+cmp y x
+.ft R
+< 0
+.sp
+\-  if 
+.ft B
+cmp x y
+.ft R
+>= 0 and 
+.ft B
+cmp y z
+.ft R
+>= 0 then 
+.ft B
+cmp x z
+.ft R
+>= 0
+
+The result of 
+.ft B
+sort
+.ft R
+, which we\&'ll call 
+.ft B
+a\&'
+.ft R
+, contains the same elements as
+.ft B
+a
+.ft R
+, reordered in such a way that for all i and j valid indices of 
+.ft B
+a
+.ft R
+(or
+equivalently, of 
+.ft B
+a\&'
+.ft R
+):
+.sp
+\-  
+.ft B
+cmp (get a\&' i) (get a\&' j)
+.ft R
+>= 0 if and only if i >= j
+
+
+.sp
+
+.I val stable_sort 
+: 
+.B ('a -> 'a -> int) -> 'a iarray -> 'a iarray
+.sp
+Same as 
+.ft B
+Iarray\&.sort
+.ft R
+, but the sorting algorithm is stable (i\&.e\&.
+elements that compare equal are kept in their original order) and
+not guaranteed to run in constant heap space\&.
+.sp
+The current implementation uses Merge Sort\&. It uses a temporary array of
+length 
+.ft B
+n/2
+.ft R
+, where 
+.ft B
+n
+.ft R
+is the length of the immutable array\&.  It is usually
+faster than the current implementation of 
+.ft B
+Iarray\&.sort
+.ft R
+\&.
+
+.sp
+
+.I val fast_sort 
+: 
+.B ('a -> 'a -> int) -> 'a iarray -> 'a iarray
+.sp
+Same as 
+.ft B
+Iarray\&.sort
+.ft R
+or 
+.ft B
+Iarray\&.stable_sort
+.ft R
+, whichever is
+faster on typical input\&.
+
+.sp
+
+.PP
+.SS Iterators
+
+.PP
+
+.I val to_seq 
+: 
+.B 'a iarray -> 'a Seq.t
+.sp
+Iterate on the immutable array, in increasing order\&.
+
+.sp
+
+.I val to_seqi 
+: 
+.B 'a iarray -> (int * 'a) Seq.t
+.sp
+Iterate on the immutable array, in increasing order, yielding indices along
+elements\&.
+
+.sp
+
+.I val of_seq 
+: 
+.B 'a Seq.t -> 'a iarray
+.sp
+Create an immutable array from the generator
+
+.sp

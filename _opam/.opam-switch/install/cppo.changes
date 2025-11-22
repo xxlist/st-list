@@ -1,0 +1,11 @@
+opam-version: "2.0"
+added: [
+  "bin/cppo" {"F:cf709f8efd9fe7af2d8a55619127d710"}
+  "doc/cppo" {"D"}
+  "doc/cppo/LICENSE.md" {"F:0f61f62a5664a00b1b22caf4094821df"}
+  "doc/cppo/README.md" {"F:222c3ed1291194ebdaa5b32e0920ba06"}
+  "lib/cppo" {"D"}
+  "lib/cppo/META" {"F:d41d8cd98f00b204e9800998ecf8427e"}
+  "lib/cppo/dune-package" {"F:1e761e1ac44ee2cf0840105064d8c8bf"}
+  "lib/cppo/opam" {"F:53de16b49b02a5e3267896e4cf794c20"}
+]

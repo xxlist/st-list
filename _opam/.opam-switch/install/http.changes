@@ -1,0 +1,52 @@
+opam-version: "2.0"
+added: [
+  "doc/http" {"D"}
+  "doc/http/CHANGES.md" {"F:d599dd13fd2935d9060dd8335e8bd8c7"}
+  "doc/http/LICENSE.md" {"F:b7faefc7f19d1dc3891d3179aa4c88e2"}
+  "doc/http/README.md" {"F:f13a80a497e665af8efa4e408ae53c22"}
+  "lib/http" {"D"}
+  "lib/http/META" {"F:e891e952c26b6ebbe63c9b6c95fdf1df"}
+  "lib/http/__private__" {"D"}
+  "lib/http/__private__/http_bytebuffer" {"D"}
+  "lib/http/__private__/http_bytebuffer/.public_cmi" {"D"}
+  "lib/http/__private__/http_bytebuffer/.public_cmi/http_bytebuffer.cmi"
+    {"F:158179bff43fc9eddfbb5ccfd81eaf9e"}
+  "lib/http/__private__/http_bytebuffer/.public_cmi/http_bytebuffer.cmt"
+    {"F:6382af742153ef40414c66b81dedf144"}
+  "lib/http/__private__/http_bytebuffer/.public_cmi/http_bytebuffer__Bytebuffer.cmi"
+    {"F:a004713d9e874bdba89c35067ebd59ae"}
+  "lib/http/__private__/http_bytebuffer/.public_cmi/http_bytebuffer__Bytebuffer.cmt"
+    {"F:b3d3ca996288e29234f8aae31026ba7b"}
+  "lib/http/__private__/http_bytebuffer/.public_cmi/http_bytebuffer__Bytebuffer.cmti"
+    {"F:e651a5c603612491c9aa1f938b91f614"}
+  "lib/http/__private__/http_bytebuffer/bytebuffer.ml"
+    {"F:8c5cb390d766292b3b9e92bce421c7b3"}
+  "lib/http/__private__/http_bytebuffer/bytebuffer.mli"
+    {"F:3c660b29bd8615e21de9c03d6534cd72"}
+  "lib/http/__private__/http_bytebuffer/http_bytebuffer.a"
+    {"F:10efa9f710e3766626ba932af65957ae"}
+  "lib/http/__private__/http_bytebuffer/http_bytebuffer.cma"
+    {"F:0c073771f48eaa9c85e83cfb30720c30"}
+  "lib/http/__private__/http_bytebuffer/http_bytebuffer.cmx"
+    {"F:753bc61836362784077ec67aada80921"}
+  "lib/http/__private__/http_bytebuffer/http_bytebuffer.cmxa"
+    {"F:4b2a02de6c01943e48f8389a3186c096"}
+  "lib/http/__private__/http_bytebuffer/http_bytebuffer.cmxs"
+    {"F:5a4388b948c0b55a5c56cb4439b99697"}
+  "lib/http/__private__/http_bytebuffer/http_bytebuffer.ml"
+    {"F:b9e80f84e0e16b4c0889408a46240fc2"}
+  "lib/http/__private__/http_bytebuffer/http_bytebuffer__Bytebuffer.cmx"
+    {"F:6c9fde26798b5f4976f05ebeaf378c9f"}
+  "lib/http/dune-package" {"F:38a602e4c6280f9f32988d42cbb21d88"}
+  "lib/http/http.a" {"F:6133ef7e9a444ddf6d31b5e69919024c"}
+  "lib/http/http.cma" {"F:d1e34a04820277a9c73602952bfb9d2c"}
+  "lib/http/http.cmi" {"F:15e2a2ceac6bb0ae18bbd858635d6ecf"}
+  "lib/http/http.cmt" {"F:03ee368f69b1b165ec9b19e8dc25cb9a"}
+  "lib/http/http.cmti" {"F:df5c928b4b5c54800e9f9ca1a97d77d3"}
+  "lib/http/http.cmx" {"F:f4d4cb80dc9c13e7d81b88fbc640dcf0"}
+  "lib/http/http.cmxa" {"F:a57e38f9a785695a5a64831eef19c193"}
+  "lib/http/http.cmxs" {"F:7b8c6b4d8eb95fff947e0dc4c298640f"}
+  "lib/http/http.ml" {"F:49acb96e0b17913e5557038cfb9619f0"}
+  "lib/http/http.mli" {"F:5f7c4f63ef26efee67efb743ea0131f4"}
+  "lib/http/opam" {"F:b39fea19e7a81dbfcc4c788238c50fec"}
+]

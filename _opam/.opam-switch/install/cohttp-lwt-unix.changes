@@ -1,0 +1,83 @@
+opam-version: "2.0"
+added: [
+  "doc/cohttp-lwt-unix" {"D"}
+  "doc/cohttp-lwt-unix/CHANGES.md" {"F:d599dd13fd2935d9060dd8335e8bd8c7"}
+  "doc/cohttp-lwt-unix/LICENSE.md" {"F:b7faefc7f19d1dc3891d3179aa4c88e2"}
+  "doc/cohttp-lwt-unix/README.md" {"F:f13a80a497e665af8efa4e408ae53c22"}
+  "lib/cohttp-lwt-unix" {"D"}
+  "lib/cohttp-lwt-unix/META" {"F:fb00f82f67f934a2437b4c2cd23ca81d"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix.a"
+    {"F:1f260fe83bcfe6c05d2007cde378579f"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix.cma"
+    {"F:1fdd76bb502e558ddf6bbccfd3d9cd26"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix.cmi"
+    {"F:904c64af152a92d7b92f7c4bca33ddc6"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix.cmt"
+    {"F:133714aabcfefc1eed05ad7925e929b1"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix.cmx"
+    {"F:85b2ad527c4888a6c3b3f8e60d637c65"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix.cmxa"
+    {"F:d874f5ea05661cf3838c3d5b29a74200"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix.cmxs"
+    {"F:ccfd4eb9d89d7de5ee3f5c90ce8975ad"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix.ml"
+    {"F:dae25688244d384268f753dad14b4d5d"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix__.cmi"
+    {"F:08fd39b8ec9a2d7976aba466c0c4df82"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix__.cmt"
+    {"F:e27305982804996ad3602d0d7ef17b48"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix__.cmx"
+    {"F:77b85ea931d583f2f85126dc07bf61d3"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix__.ml"
+    {"F:bcb8eb3897befe533857797a1f929d99"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix__Debug.cmi"
+    {"F:7f6fcddb0bd4ad3938a2cff41334f906"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix__Debug.cmt"
+    {"F:9707551be8a7415786a4a8b439ebf560"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix__Debug.cmti"
+    {"F:c4c5aa0270b8ca2b8978715bc503fc21"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix__Debug.cmx"
+    {"F:4df021b90b5468c24cf2d01be8925e77"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix__Input_channel.cmi"
+    {"F:3b2500a1bc0ff6440374765760aabe52"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix__Input_channel.cmt"
+    {"F:049b1441cce7e0cba7e261fa81eacd9f"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix__Input_channel.cmx"
+    {"F:5e2aae714af8a572af7aa07a0d49dc48"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix__Io.cmi"
+    {"F:e8fe47d8c4030d95bb4bc3f62f634797"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix__Io.cmt"
+    {"F:17d54ba3d90dcbdfad887a52ef9cf273"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix__Io.cmti"
+    {"F:a95aa988cd65d0fc9f6e570268ec5e36"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix__Io.cmx"
+    {"F:cf6a63730cb42685a91c6b05480f5f56"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix__Net.cmi"
+    {"F:5fcc822f99f42569cbb97f0510f37142"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix__Net.cmt"
+    {"F:20df5883908bfa09aebc2b02954a3042"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix__Net.cmti"
+    {"F:445e70cba1e907556c9ba07c0933fcf2"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix__Net.cmx"
+    {"F:774a16b0e40746d8a7d05592a64bb646"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix__Server.cmi"
+    {"F:e75b02d147fdc512cd97d189f8a041da"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix__Server.cmt"
+    {"F:415775b0cb675b5ea2e42b06c510bd13"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix__Server.cmti"
+    {"F:49313a666cb79de9caeb474d2d25b543"}
+  "lib/cohttp-lwt-unix/cohttp_lwt_unix__Server.cmx"
+    {"F:4003269e6d5ecc5814255dee7c76c7c6"}
+  "lib/cohttp-lwt-unix/debug.ml" {"F:d34ae96e357b187b516faf45ab34e466"}
+  "lib/cohttp-lwt-unix/debug.mli" {"F:e6ff3f9f4e2da7d2427f7ef8f37c38c9"}
+  "lib/cohttp-lwt-unix/dune-package" {"F:0d0d5ab861249705079c5aafb305a3e2"}
+  "lib/cohttp-lwt-unix/input_channel.ml"
+    {"F:c1f71b59fe669f2e6d8ef181963d93f1"}
+  "lib/cohttp-lwt-unix/io.ml" {"F:0902de1ac05268e6ea3d53f262bc6c38"}
+  "lib/cohttp-lwt-unix/io.mli" {"F:c41d57e7f3310d84c08709f65eaf0171"}
+  "lib/cohttp-lwt-unix/net.ml" {"F:42c6a59bed2dec7f0b1470a2fd115e4d"}
+  "lib/cohttp-lwt-unix/net.mli" {"F:a1b3560060f02843b3d6fe43520f098c"}
+  "lib/cohttp-lwt-unix/opam" {"F:67a0756af829d0adb0d49a4d62a91145"}
+  "lib/cohttp-lwt-unix/server.ml" {"F:7d39173d596a81b928dbd3227111ac66"}
+  "lib/cohttp-lwt-unix/server.mli" {"F:4cb4ffcc7af050f4a6f29ec5239ea206"}
+]

@@ -1,0 +1,224 @@
+opam-version: "2.0"
+added: [
+  "doc/ppx_deriving" {"D"}
+  "doc/ppx_deriving/CHANGELOG.md" {"F:b97ddb31edf2ac39336e4fd48bc5a5f5"}
+  "doc/ppx_deriving/LICENSE.txt" {"F:be3aa3567a491aa6a1193934c0b85144"}
+  "doc/ppx_deriving/README.md" {"F:d4d2c92123bc9db5b3f400db60b16e92"}
+  "lib/ppx_deriving" {"D"}
+  "lib/ppx_deriving/META" {"F:f1ac2d82adbd70c52cca08becbb4e7d2"}
+  "lib/ppx_deriving/api" {"D"}
+  "lib/ppx_deriving/api/ppx_deriving.cmi"
+    {"F:ac25ba1b9982706acb914ed240b3d45b"}
+  "lib/ppx_deriving/api/ppx_deriving.cmt"
+    {"F:0f9a1340ff5b309650ae2da46c4e441b"}
+  "lib/ppx_deriving/api/ppx_deriving.cmti"
+    {"F:5f428eeefa5f9f632ab8f7631a27c7a5"}
+  "lib/ppx_deriving/api/ppx_deriving.cmx"
+    {"F:ff87a88d0f6eae047d791b3e92f2035d"}
+  "lib/ppx_deriving/api/ppx_deriving.ml"
+    {"F:b20f6fb58296bac05aae4196a78ee7a5"}
+  "lib/ppx_deriving/api/ppx_deriving.mli"
+    {"F:3a45e44bc720b3bf55f2328d322f9e49"}
+  "lib/ppx_deriving/api/ppx_deriving_api.a"
+    {"F:994d0b9d2549e1dd6b437b3679547f88"}
+  "lib/ppx_deriving/api/ppx_deriving_api.cma"
+    {"F:4306b8b6b5df916bcab0dc28f3d61646"}
+  "lib/ppx_deriving/api/ppx_deriving_api.cmxa"
+    {"F:b0d26f8d48be5091bef916762e01a9ff"}
+  "lib/ppx_deriving/api/ppx_deriving_api.cmxs"
+    {"F:c4f8386e8667892da09e3edae5da9fb0"}
+  "lib/ppx_deriving/create" {"D"}
+  "lib/ppx_deriving/create/ppx_deriving_create.a"
+    {"F:85e6bfdd84a9f714eba3d2ead247577c"}
+  "lib/ppx_deriving/create/ppx_deriving_create.cma"
+    {"F:c9744390dea8d04dcb959b8843b700ea"}
+  "lib/ppx_deriving/create/ppx_deriving_create.cmi"
+    {"F:24a183dec39fef660bc47fccd0fc235a"}
+  "lib/ppx_deriving/create/ppx_deriving_create.cmt"
+    {"F:78ccdf21075e2a49b739ef68dc999209"}
+  "lib/ppx_deriving/create/ppx_deriving_create.cmx"
+    {"F:f410b6e8cca8d58b7cfca48c01cdc77c"}
+  "lib/ppx_deriving/create/ppx_deriving_create.cmxa"
+    {"F:7ecdbf06c1823bd5f3c0ec9b2ac6d759"}
+  "lib/ppx_deriving/create/ppx_deriving_create.cmxs"
+    {"F:6649027e32d22d8c3aad2f938d1c6201"}
+  "lib/ppx_deriving/create/ppx_deriving_create.ml"
+    {"F:db92e2fe96b2c7b075d8ebde692cfe4d"}
+  "lib/ppx_deriving/dune-package" {"F:f545d3f1c9b40201e6d48a0ea42d655f"}
+  "lib/ppx_deriving/enum" {"D"}
+  "lib/ppx_deriving/enum/ppx_deriving_enum.a"
+    {"F:c0b819314ef58b13f154a31462cfaadd"}
+  "lib/ppx_deriving/enum/ppx_deriving_enum.cma"
+    {"F:d9fdfe7713833bb78aa365970878e31f"}
+  "lib/ppx_deriving/enum/ppx_deriving_enum.cmi"
+    {"F:5217de3bda6b74cc8365b21f7fcb4223"}
+  "lib/ppx_deriving/enum/ppx_deriving_enum.cmt"
+    {"F:eea76cd98b5d7891bb8b0a7681078d2b"}
+  "lib/ppx_deriving/enum/ppx_deriving_enum.cmx"
+    {"F:fbe3a101a7b05285b565fc24bdb1776c"}
+  "lib/ppx_deriving/enum/ppx_deriving_enum.cmxa"
+    {"F:9dd00fae42bfa978469ee5c138ec46e8"}
+  "lib/ppx_deriving/enum/ppx_deriving_enum.cmxs"
+    {"F:de6d724c3ebdcb22524ca270d2759e46"}
+  "lib/ppx_deriving/enum/ppx_deriving_enum.ml"
+    {"F:e7800568698f2562b3ea3d6a11bf703c"}
+  "lib/ppx_deriving/eq" {"D"}
+  "lib/ppx_deriving/eq/ppx_deriving_eq.a"
+    {"F:3d3e214df18b9b40363e0c37a74a68a2"}
+  "lib/ppx_deriving/eq/ppx_deriving_eq.cma"
+    {"F:659fc96256a250866ae86af2f1745c98"}
+  "lib/ppx_deriving/eq/ppx_deriving_eq.cmi"
+    {"F:bc981ce7f02ec1703af3bdbe43cd7ba7"}
+  "lib/ppx_deriving/eq/ppx_deriving_eq.cmt"
+    {"F:c406c50a2b38df958daa1c67c14ec25d"}
+  "lib/ppx_deriving/eq/ppx_deriving_eq.cmx"
+    {"F:a1480282844fbdcf9002a704cf6ea2a3"}
+  "lib/ppx_deriving/eq/ppx_deriving_eq.cmxa"
+    {"F:45a5d5f7fc95340381e7078058dbb55f"}
+  "lib/ppx_deriving/eq/ppx_deriving_eq.cmxs"
+    {"F:c6b873bea967dfd6887418584b240a39"}
+  "lib/ppx_deriving/eq/ppx_deriving_eq.ml"
+    {"F:5b26c467b630eb6d58e7e6f331393d48"}
+  "lib/ppx_deriving/fold" {"D"}
+  "lib/ppx_deriving/fold/ppx_deriving_fold.a"
+    {"F:9a40d46de92c215dd406ef87b4776d47"}
+  "lib/ppx_deriving/fold/ppx_deriving_fold.cma"
+    {"F:17d41f2d858bd1c4af149ff43143e3e6"}
+  "lib/ppx_deriving/fold/ppx_deriving_fold.cmi"
+    {"F:e1493a1affaf2550c33f78464aa5fe58"}
+  "lib/ppx_deriving/fold/ppx_deriving_fold.cmt"
+    {"F:5b54dc9f4bd68bec582c9210e43533b2"}
+  "lib/ppx_deriving/fold/ppx_deriving_fold.cmx"
+    {"F:f537617b104e8a5fad07b78ceea4187b"}
+  "lib/ppx_deriving/fold/ppx_deriving_fold.cmxa"
+    {"F:5547be50c89a72981d0c7aa9d499ed39"}
+  "lib/ppx_deriving/fold/ppx_deriving_fold.cmxs"
+    {"F:8964a30ee68b71c5cf374d8f58ece641"}
+  "lib/ppx_deriving/fold/ppx_deriving_fold.ml"
+    {"F:9b1224a193f9a3fe753c3daaab42f5e1"}
+  "lib/ppx_deriving/iter" {"D"}
+  "lib/ppx_deriving/iter/ppx_deriving_iter.a"
+    {"F:8fe9e72c3ffceaebff3464011e432b51"}
+  "lib/ppx_deriving/iter/ppx_deriving_iter.cma"
+    {"F:ddd2ad4983f38ebe62214bef3fccfd56"}
+  "lib/ppx_deriving/iter/ppx_deriving_iter.cmi"
+    {"F:be904959e527f8e90b4c41e46e89e326"}
+  "lib/ppx_deriving/iter/ppx_deriving_iter.cmt"
+    {"F:854cf877c86f7b984f66ddb40235b8c5"}
+  "lib/ppx_deriving/iter/ppx_deriving_iter.cmx"
+    {"F:e28c14c1bbe194c668c13856f4e475ae"}
+  "lib/ppx_deriving/iter/ppx_deriving_iter.cmxa"
+    {"F:df86708ad98bc86de71bb1211ed3c30e"}
+  "lib/ppx_deriving/iter/ppx_deriving_iter.cmxs"
+    {"F:e4b5dd7e7594ecc02d1a0ae455144274"}
+  "lib/ppx_deriving/iter/ppx_deriving_iter.ml"
+    {"F:9ee7f786fc95e7d97f193b135c867e1e"}
+  "lib/ppx_deriving/make" {"D"}
+  "lib/ppx_deriving/make/ppx_deriving_make.a"
+    {"F:7b0496c110e61e1cb21461ba1d72bc5c"}
+  "lib/ppx_deriving/make/ppx_deriving_make.cma"
+    {"F:cde009de2b85b37f914daf410b7e6327"}
+  "lib/ppx_deriving/make/ppx_deriving_make.cmi"
+    {"F:9588ed999176355788e4d5c1650b8d3c"}
+  "lib/ppx_deriving/make/ppx_deriving_make.cmt"
+    {"F:60de188d4ba34e73c6de8321f83a1ae4"}
+  "lib/ppx_deriving/make/ppx_deriving_make.cmx"
+    {"F:a541bc78775d6ecfc65e7a8f455dae5b"}
+  "lib/ppx_deriving/make/ppx_deriving_make.cmxa"
+    {"F:80507645271cb10774eed2cbb5760b0e"}
+  "lib/ppx_deriving/make/ppx_deriving_make.cmxs"
+    {"F:8f7f811c8f169589f55d4cc6f3567640"}
+  "lib/ppx_deriving/make/ppx_deriving_make.ml"
+    {"F:7b034d6d936453c240d840be33288ca8"}
+  "lib/ppx_deriving/map" {"D"}
+  "lib/ppx_deriving/map/ppx_deriving_map.a"
+    {"F:23c8dae45c42604ed265cbf99f835822"}
+  "lib/ppx_deriving/map/ppx_deriving_map.cma"
+    {"F:14366f8d4c6270a778be4cccfea3349c"}
+  "lib/ppx_deriving/map/ppx_deriving_map.cmi"
+    {"F:2adfeaee9de6890fb41ab427a3be6ddd"}
+  "lib/ppx_deriving/map/ppx_deriving_map.cmt"
+    {"F:3a25b2ca09857df43004afdd3b44b68c"}
+  "lib/ppx_deriving/map/ppx_deriving_map.cmx"
+    {"F:727c98b11b718d837d6059736b57fded"}
+  "lib/ppx_deriving/map/ppx_deriving_map.cmxa"
+    {"F:fc1713a57349efee940c354065443220"}
+  "lib/ppx_deriving/map/ppx_deriving_map.cmxs"
+    {"F:004c7793620e58f77f43a7db12f7f077"}
+  "lib/ppx_deriving/map/ppx_deriving_map.ml"
+    {"F:bab337071ae4c9b72b98cd5901077ff9"}
+  "lib/ppx_deriving/opam" {"F:eccfa5367474cdb7f3c5ae04da3a2420"}
+  "lib/ppx_deriving/ord" {"D"}
+  "lib/ppx_deriving/ord/ppx_deriving_ord.a"
+    {"F:87936c5211d0348d60ca7aa83fff327d"}
+  "lib/ppx_deriving/ord/ppx_deriving_ord.cma"
+    {"F:84227745c3294cf964d34172fba9bf02"}
+  "lib/ppx_deriving/ord/ppx_deriving_ord.cmi"
+    {"F:4c9666feabdbb57bb1e8d7ce7b848afa"}
+  "lib/ppx_deriving/ord/ppx_deriving_ord.cmt"
+    {"F:9a01e8e917624063c5b3d85eacd50102"}
+  "lib/ppx_deriving/ord/ppx_deriving_ord.cmx"
+    {"F:e3c788c4d1c8b5ff73cfb0de277df7e1"}
+  "lib/ppx_deriving/ord/ppx_deriving_ord.cmxa"
+    {"F:0b04d2f40f93068d969c75043f085b55"}
+  "lib/ppx_deriving/ord/ppx_deriving_ord.cmxs"
+    {"F:15336342a2e54593bef56da4a559badf"}
+  "lib/ppx_deriving/ord/ppx_deriving_ord.ml"
+    {"F:4de065284a2a09dc28d921d30c6cc787"}
+  "lib/ppx_deriving/ppx_deriving" {"F:6d7df9772821f1e1fa3c613fb6be0834"}
+  "lib/ppx_deriving/runtime" {"D"}
+  "lib/ppx_deriving/runtime/ppx_deriving_runtime.a"
+    {"F:162cd3d020917660ea30cf42b011d1bf"}
+  "lib/ppx_deriving/runtime/ppx_deriving_runtime.cma"
+    {"F:c0a38d73ae083fd28ca6abdd2e45a5f7"}
+  "lib/ppx_deriving/runtime/ppx_deriving_runtime.cmi"
+    {"F:e42441a3ccd758728cd405ab17585259"}
+  "lib/ppx_deriving/runtime/ppx_deriving_runtime.cmt"
+    {"F:c99ef507a21943d25a1b4c5f08aa35c8"}
+  "lib/ppx_deriving/runtime/ppx_deriving_runtime.cmti"
+    {"F:f102b8ac9e6f020c2f4c34a4b72ec70d"}
+  "lib/ppx_deriving/runtime/ppx_deriving_runtime.cmx"
+    {"F:8f4ce0a1fd37701f674f444dbc6406af"}
+  "lib/ppx_deriving/runtime/ppx_deriving_runtime.cmxa"
+    {"F:5c72429f31a194cf26dedff88f1b3a2a"}
+  "lib/ppx_deriving/runtime/ppx_deriving_runtime.cmxs"
+    {"F:8321e99ead2cb664d5f697e2a79f7f97"}
+  "lib/ppx_deriving/runtime/ppx_deriving_runtime.ml"
+    {"F:f9afd1fd1d828fdf55e54d787b547467"}
+  "lib/ppx_deriving/runtime/ppx_deriving_runtime.mli"
+    {"F:df58611c22c848d27152b1e5bf06c9ab"}
+  "lib/ppx_deriving/show" {"D"}
+  "lib/ppx_deriving/show/ppx_deriving_show.a"
+    {"F:aac566ac01709095cbedc11503847004"}
+  "lib/ppx_deriving/show/ppx_deriving_show.cma"
+    {"F:d919b576d0c3a4ee0ad22117e0dfd6cf"}
+  "lib/ppx_deriving/show/ppx_deriving_show.cmi"
+    {"F:261b737149a7a78cbd6475adda581db5"}
+  "lib/ppx_deriving/show/ppx_deriving_show.cmt"
+    {"F:c37a8b5d81ee403171c903cb1de49915"}
+  "lib/ppx_deriving/show/ppx_deriving_show.cmx"
+    {"F:5a068aff51caa45540b5953752e87ef2"}
+  "lib/ppx_deriving/show/ppx_deriving_show.cmxa"
+    {"F:acf289200bc61d76a38bfc737dd6457d"}
+  "lib/ppx_deriving/show/ppx_deriving_show.cmxs"
+    {"F:d7d246b609642d258db2fdd84af0b1b6"}
+  "lib/ppx_deriving/show/ppx_deriving_show.ml"
+    {"F:0f55b4b0ee32eb2f463d8b0dedd6c003"}
+  "lib/ppx_deriving/std" {"D"}
+  "lib/ppx_deriving/std/ppx_deriving_std.a"
+    {"F:f83bfe0a64399caa198878984552f46d"}
+  "lib/ppx_deriving/std/ppx_deriving_std.cma"
+    {"F:c080064b4288d1d9122b136fee4f264e"}
+  "lib/ppx_deriving/std/ppx_deriving_std.cmi"
+    {"F:8cb4cdb8d6367bbcdcaaf177d3be6373"}
+  "lib/ppx_deriving/std/ppx_deriving_std.cmt"
+    {"F:a77ec17b5d091cc220295e74d52d5517"}
+  "lib/ppx_deriving/std/ppx_deriving_std.cmx"
+    {"F:3156cd690ebfbd47bec87bb42563b78f"}
+  "lib/ppx_deriving/std/ppx_deriving_std.cmxa"
+    {"F:baceb549fce3b35fb3eaa403e256f592"}
+  "lib/ppx_deriving/std/ppx_deriving_std.cmxs"
+    {"F:a6d63578985dc241ac64b7293bd74398"}
+  "lib/ppx_deriving/std/ppx_deriving_std.ml"
+    {"F:c6d03b8a2d800a8c5f6e8384f9c55bf1"}
+]

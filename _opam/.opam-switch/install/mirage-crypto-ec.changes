@@ -1,0 +1,39 @@
+opam-version: "2.0"
+added: [
+  "doc/mirage-crypto-ec" {"D"}
+  "doc/mirage-crypto-ec/CHANGES.md" {"F:957f904da1d17bf5cd9f6ef45eeb7045"}
+  "doc/mirage-crypto-ec/LICENSE.md" {"F:f594018dad54ebf2cf501cabad152b94"}
+  "doc/mirage-crypto-ec/LICENSE.md.mirage-crypto-ec"
+    {"F:316f3ecf6731aa2e3297fb77f14a563a"}
+  "doc/mirage-crypto-ec/LICENSE.md.mirage-crypto-rng-mirage"
+    {"F:6577bdc10736daf5fe891326bbc76204"}
+  "doc/mirage-crypto-ec/README.md" {"F:6fb235eb6d013cfa0d0f62d0d4f11caa"}
+  "lib/mirage-crypto-ec" {"D"}
+  "lib/mirage-crypto-ec/META" {"F:cf4239e421877714c615fded7bc42753"}
+  "lib/mirage-crypto-ec/dune-package" {"F:cf02d9d0425c78145ccd17eaff380956"}
+  "lib/mirage-crypto-ec/libmirage_crypto_ec_stubs.a"
+    {"F:d4095c15fe8f6f2f0fa846d2c28387aa"}
+  "lib/mirage-crypto-ec/mirage_crypto_ec.a"
+    {"F:262daafd510c22f47199b73f456415a9"}
+  "lib/mirage-crypto-ec/mirage_crypto_ec.cma"
+    {"F:0a3ab9c2c641faf0b42801bfd2d60697"}
+  "lib/mirage-crypto-ec/mirage_crypto_ec.cmi"
+    {"F:14ccf92234713a55b46c9d3a74ba0771"}
+  "lib/mirage-crypto-ec/mirage_crypto_ec.cmt"
+    {"F:790355a866710ec1fbc120a31a2e3e75"}
+  "lib/mirage-crypto-ec/mirage_crypto_ec.cmti"
+    {"F:3c6fb4499ef922f777e828ae104c0bca"}
+  "lib/mirage-crypto-ec/mirage_crypto_ec.cmx"
+    {"F:6b4388fc58b732f4d5810769f09e3fce"}
+  "lib/mirage-crypto-ec/mirage_crypto_ec.cmxa"
+    {"F:d4e6692fd81ba85030e830951f53aa64"}
+  "lib/mirage-crypto-ec/mirage_crypto_ec.cmxs"
+    {"F:8f665cb307f76aab16724a50cc3a039e"}
+  "lib/mirage-crypto-ec/mirage_crypto_ec.ml"
+    {"F:d2137c8bb4e9a7694d7743af324abc81"}
+  "lib/mirage-crypto-ec/mirage_crypto_ec.mli"
+    {"F:e2376ff68a76ae6d1f44af05c1daaf0d"}
+  "lib/mirage-crypto-ec/opam" {"F:56efa28f8a63e0e20169e179a8580d81"}
+  "lib/stublibs/dllmirage_crypto_ec_stubs.so"
+    {"F:36eb554cf1ca53d82cd279eb369288b4"}
+]

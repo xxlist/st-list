@@ -1,0 +1,35 @@
+opam-version: "2.0"
+added: [
+  "doc/conduit" {"D"}
+  "doc/conduit/CHANGES.md" {"F:ac3cde89b61194c4227ba2c6f0850da2"}
+  "doc/conduit/LICENSE.md" {"F:95e23278a1ff4de57d200bcae8234132"}
+  "doc/conduit/README.md" {"F:6b9410589439b41b89e04a69d5af0854"}
+  "doc/conduit/odoc-pages" {"D"}
+  "doc/conduit/odoc-pages/index.mld" {"F:f84a1abbd60fd7f865e33f3cda895a8e"}
+  "lib/conduit" {"D"}
+  "lib/conduit/META" {"F:b3e8223151601fa4b4cb10cf7f194e30"}
+  "lib/conduit/conduit.a" {"F:3b4b2d69ff322d49dff8282aac5d3289"}
+  "lib/conduit/conduit.cma" {"F:7a492ccd0812e86621cd63f208240d31"}
+  "lib/conduit/conduit.cmi" {"F:c775bb2ebb54f29e889c4050a0486b38"}
+  "lib/conduit/conduit.cmt" {"F:d3d993df4102f5add2abcfcff5268296"}
+  "lib/conduit/conduit.cmti" {"F:0b86ec8dcd534fcf9e0c7dc0a930733a"}
+  "lib/conduit/conduit.cmx" {"F:7edf218e6b3ede811599569e20668408"}
+  "lib/conduit/conduit.cmxa" {"F:942796745680aa596af3e91ead5b84ea"}
+  "lib/conduit/conduit.cmxs" {"F:060bd65a95ee8d6d9af55e6ecf2beae9"}
+  "lib/conduit/conduit.ml" {"F:7654f36b0b985c2ec29d2fa42c3dacae"}
+  "lib/conduit/conduit.mli" {"F:baa95c6175b1b12d43129d4a362b0424"}
+  "lib/conduit/conduit_trie.cmi" {"F:379e4685155849f3752901ff54154acc"}
+  "lib/conduit/conduit_trie.cmt" {"F:139104ca25334177490c31ec845f8173"}
+  "lib/conduit/conduit_trie.cmti" {"F:671bde74781331c8081b2a8530a4f4a5"}
+  "lib/conduit/conduit_trie.cmx" {"F:7ee7785b19bd27380db4af062f4c0aab"}
+  "lib/conduit/conduit_trie.ml" {"F:6de942e9ee97da8067af41cab098b664"}
+  "lib/conduit/conduit_trie.mli" {"F:8dbca75a025a907a2b0e3dd33df11243"}
+  "lib/conduit/dune-package" {"F:1bebd077d1483767d6ea6473464cc356"}
+  "lib/conduit/opam" {"F:21725ed4cb7be1ca35b118c111e1e376"}
+  "lib/conduit/resolver.cmi" {"F:c687b40ce2ecbbb830cc9382eb4d0a42"}
+  "lib/conduit/resolver.cmt" {"F:c81dd51244ff3e27ca7b53ebc587e917"}
+  "lib/conduit/resolver.cmti" {"F:dc55fc928c345f9e209887f0c90d4c03"}
+  "lib/conduit/resolver.cmx" {"F:f0c17e53d0845e30858d84fd4e81c7a7"}
+  "lib/conduit/resolver.ml" {"F:f979242fff228226dd8fc74d66897fe8"}
+  "lib/conduit/resolver.mli" {"F:4217d96ea81e3b2647a80fa27cebca97"}
+]

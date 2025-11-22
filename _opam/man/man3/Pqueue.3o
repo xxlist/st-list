@@ -1,0 +1,231 @@
+.TH "Pqueue" 3 2025-11-21 OCamldoc "OCaml library"
+.SH NAME
+Pqueue \- Priority queues.
+.SH Module
+Module   Pqueue
+.SH Documentation
+.sp
+Module
+.BI "Pqueue"
+ : 
+.B sig end
+
+.sp
+Priority queues\&.
+.sp
+The 
+.ft B
+Pqueue
+.ft R
+module implements a data structure of priority queues,
+given a totally ordered type for elements\&. This is a mutable
+data structure\&. Both min\- and max\-priority queues are provided\&.
+.sp
+The implementation uses a heap stored in a dynamic array, and is
+therefore reasonably efficient: accessing the minimum
+(resp\&. maximum) element takes constant time, and insertion and
+removal take time logarithmic in the size of the priority
+queue\&. Note that 
+.ft B
+of_array
+.ft R
+runs in linear time (and thus must be
+preferred to repeated insertions with 
+.ft B
+add
+.ft R
+)\&.
+.sp
+It is fine to have several elements with the same priority\&.
+Nothing is guaranteed regarding the order in which they will be
+popped\&.  However, it is guaranteed that the element returned by
+.ft B
+min_elt
+.ft R
+(or 
+.ft B
+get_min_elt
+.ft R
+) is the one that is removed from the
+priority queue by 
+.ft B
+pop_min
+.ft R
+(or 
+.ft B
+remove_min
+.ft R
+)\&. This is important
+in many algorithms, (e\&.g\&. when peeking at several priority queues
+and then selecting one to remove from)\&.
+
+.sp
+.B "Since"
+5.4
+
+.sp
+
+.sp
+.sp
+.I module type OrderedType = 
+.B sig end
+
+.sp
+Input signature of the functors 
+.ft B
+Pqueue\&.MakeMin
+.ft R
+and 
+.ft B
+Pqueue\&.MakeMax
+.ft R
+\&.
+
+.sp
+.I module type Min = 
+.B sig end
+
+.sp
+Output signature of the functor 
+.ft B
+Pqueue\&.MakeMin
+.ft R
+\&.
+
+.sp
+.I module MakeMin : 
+.B (E : OrderedType) -> sig end
+
+.sp
+Functor building an implementation of the min\-priority queue
+structure given a totally ordered type for elements\&.
+
+.sp
+.I module type Max = 
+.B sig end
+
+.sp
+Output signature of the functor 
+.ft B
+Pqueue\&.MakeMax
+.ft R
+\&.
+
+.sp
+.I module MakeMax : 
+.B (E : OrderedType) -> sig end
+
+.sp
+Functor building an implementation of the max\-priority queue
+structure given a totally ordered type for elements\&.
+
+.sp
+
+.PP
+.SS Polymorphic priority queues
+.sp
+The following, more complex functors create polymorphic queues of
+type 
+.ft B
+\&'a t
+.ft R
+, just like other polymorphic containers (lists,
+arrays\&.\&.\&.)\&. They require a notion of "polymorphic elements" 
+.ft B
+\&'a
+.br
+\&    elt
+.ft R
+that can be compared without depending on the values of 
+.ft B
+\&'a
+.ft R
+\&.
+.sp
+One usage scenario is when the user wants to pass priorities
+separately from the value stored in the queue\&. This is done by
+using pairs 
+.ft B
+priority * \&'a
+.ft R
+as elements\&.
+.EX
+.ft B
+.br
+\&      module Prio : OrderedType = \&.\&.\&.
+.br
+\&
+.br
+\&      module PrioQueue = Pqueue\&.MakeMinPoly(struct
+.br
+\&        type \&'a t = Prio\&.t * \&'a
+.br
+\&        let compare (p1, _) (p2, _) = Prio\&.compare p1 p2
+.br
+\&      end)
+.br
+\&
+.br
+\&      (* for example, we now have: *)
+.br
+\&      PrioQueue\&.add: \&'a PrioQueue\&.t \-> Prio\&.t * \&'a \-> unit
+.br
+\&      PrioQueue\&.min_elt: \&'a PrioQueue\&.t \-> (Prio\&.t * \&'a) option
+.br
+\&    
+.ft R
+.EE
+.PP
+.I module type OrderedPolyType = 
+.B sig end
+
+.sp
+Input signature of the functors 
+.ft B
+Pqueue\&.MakeMinPoly
+.ft R
+and 
+.ft B
+Pqueue\&.MakeMaxPoly
+.ft R
+\&.
+
+.sp
+.I module type MinPoly = 
+.B sig end
+
+.sp
+Output signature of the functor 
+.ft B
+Pqueue\&.MakeMinPoly
+.ft R
+\&.
+
+.sp
+.I module MakeMinPoly : 
+.B (E : OrderedPolyType) -> sig end
+
+.sp
+Functor building an implementation of min\-priority queues
+given a totally ordered type for the elements\&.
+
+.sp
+.I module type MaxPoly = 
+.B sig end
+
+.sp
+Output signature of the functor 
+.ft B
+Pqueue\&.MakeMaxPoly
+.ft R
+\&.
+
+.sp
+.I module MakeMaxPoly : 
+.B (E : OrderedPolyType) -> sig end
+
+.sp
+Functor building an implementation of max\-priority queues
+given a totally ordered type for the elements\&.
+
+.sp

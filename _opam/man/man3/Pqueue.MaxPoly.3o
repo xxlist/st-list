@@ -1,0 +1,151 @@
+.TH "Pqueue.MaxPoly" 3 2025-11-21 OCamldoc "OCaml library"
+.SH NAME
+Pqueue.MaxPoly \- Output signature of the functor Pqueue.MakeMaxPoly.
+.SH Module type
+Module type   Pqueue.MaxPoly
+.SH Documentation
+.sp
+Module type
+.BI "MaxPoly"
+ = 
+.B sig end
+
+.sp
+Output signature of the functor 
+.ft B
+Pqueue\&.MakeMaxPoly
+.ft R
+\&.
+
+.sp
+
+.sp
+.sp
+.I type 
+.B 'a
+.I t 
+
+.sp
+
+.sp
+.I type 
+.B 'a
+.I elt 
+
+.sp
+
+.sp
+
+.I val create 
+: 
+.B unit -> 'a t
+.sp
+
+.sp
+
+.I val length 
+: 
+.B 'a t -> int
+.sp
+
+.sp
+
+.I val is_empty 
+: 
+.B 'a t -> bool
+.sp
+
+.sp
+
+.I val add 
+: 
+.B 'a t -> 'a elt -> unit
+.sp
+
+.sp
+
+.I val add_iter 
+: 
+.B 'a t ->
+.B   (('a elt -> unit) -> 'x -> unit) -> 'x -> unit
+.sp
+
+.sp
+
+.I val max_elt 
+: 
+.B 'a t -> 'a elt option
+.sp
+
+.sp
+
+.I val get_max_elt 
+: 
+.B 'a t -> 'a elt
+.sp
+
+.sp
+
+.I val pop_max 
+: 
+.B 'a t -> 'a elt option
+.sp
+
+.sp
+
+.I val remove_max 
+: 
+.B 'a t -> unit
+.sp
+
+.sp
+
+.I val clear 
+: 
+.B 'a t -> unit
+.sp
+
+.sp
+
+.I val copy 
+: 
+.B 'a t -> 'a t
+.sp
+
+.sp
+
+.I val of_array 
+: 
+.B 'a elt array -> 'a t
+.sp
+
+.sp
+
+.I val of_list 
+: 
+.B 'a elt list -> 'a t
+.sp
+
+.sp
+
+.I val of_iter 
+: 
+.B (('a elt -> unit) -> 'x -> unit) -> 'x -> 'a t
+.sp
+
+.sp
+
+.I val iter_unordered 
+: 
+.B ('a elt -> unit) -> 'a t -> unit
+.sp
+
+.sp
+
+.I val fold_unordered 
+: 
+.B ('acc -> 'a elt -> 'acc) ->
+.B   'acc -> 'a t -> 'acc
+.sp
+
+.sp

@@ -1,0 +1,768 @@
+.TH "Fun" 3 2025-11-21 OCamldoc "OCaml library"
+.SH NAME
+Fun \- Function manipulation.
+.SH Module
+Module   Fun
+.SH Documentation
+.sp
+Module
+.BI "Fun"
+ : 
+.B sig end
+
+.sp
+Function manipulation\&.
+.sp
+See 
+.ft B
+Fun\&.examples
+.ft R
+below\&.
+
+.sp
+.B "Since"
+4.08
+
+.sp
+
+.sp
+.sp
+
+.PP
+.SS Combinators
+
+.PP
+
+.I val id 
+: 
+.B 'a -> 'a
+.sp
+
+.ft B
+id
+.ft R
+is the identity function\&. For any argument 
+.ft B
+x
+.ft R
+, 
+.ft B
+id x
+.ft R
+is 
+.ft B
+x
+.ft R
+\&.
+
+.sp
+
+.I val const 
+: 
+.B 'a -> 'b -> 'a
+.sp
+
+.ft B
+const c
+.ft R
+is a function that always returns the value 
+.ft B
+c
+.ft R
+\&. For any
+argument 
+.ft B
+x
+.ft R
+, 
+.ft B
+(const c) x
+.ft R
+is 
+.ft B
+c
+.ft R
+\&.
+
+.sp
+
+.I val compose 
+: 
+.B ('b -> 'c) -> ('a -> 'b) -> 'a -> 'c
+.sp
+
+.ft B
+compose f g
+.ft R
+is a function composition of applying 
+.ft B
+g
+.ft R
+then 
+.ft B
+f
+.ft R
+\&.
+For any arguments 
+.ft B
+f
+.ft R
+, 
+.ft B
+g
+.ft R
+, and 
+.ft B
+x
+.ft R
+, 
+.ft B
+compose f g x
+.ft R
+is 
+.ft B
+f (g x)
+.ft R
+\&.
+
+.sp
+.B "Since"
+5.2
+
+.sp
+
+.I val flip 
+: 
+.B ('a -> 'b -> 'c) -> 'b -> 'a -> 'c
+.sp
+
+.ft B
+flip f
+.ft R
+reverses the argument order of the binary function
+.ft B
+f
+.ft R
+\&. For any arguments 
+.ft B
+x
+.ft R
+and 
+.ft B
+y
+.ft R
+, 
+.ft B
+(flip f) x y
+.ft R
+is 
+.ft B
+f y x
+.ft R
+\&.
+
+.sp
+
+.I val negate 
+: 
+.B ('a -> bool) -> 'a -> bool
+.sp
+
+.ft B
+negate p
+.ft R
+is the negation of the predicate function 
+.ft B
+p
+.ft R
+\&. For any
+argument 
+.ft B
+x
+.ft R
+, 
+.ft B
+(negate p) x
+.ft R
+is 
+.ft B
+not (p x)
+.ft R
+\&.
+
+.sp
+
+.PP
+.SS Exception handling
+
+.PP
+
+.I val protect 
+: 
+.B finally:(unit -> unit) -> (unit -> 'a) -> 'a
+.sp
+
+.ft B
+protect ~finally work
+.ft R
+invokes 
+.ft B
+work ()
+.ft R
+and then 
+.ft B
+finally ()
+.ft R
+before 
+.ft B
+work ()
+.ft R
+returns with its value or an exception\&. In the
+latter case the exception is re\-raised after 
+.ft B
+finally ()
+.ft R
+\&. If
+.ft B
+finally ()
+.ft R
+raises an exception, then the exception
+.ft B
+Fun\&.Finally_raised
+.ft R
+is raised instead\&.
+.sp
+
+.ft B
+protect
+.ft R
+can be used to enforce local invariants whether 
+.ft B
+work ()
+.ft R
+returns normally or raises an exception\&. However, it does not
+protect against unexpected exceptions raised inside 
+.ft B
+finally ()
+.ft R
+such as 
+.ft B
+Out_of_memory
+.ft R
+, 
+.ft B
+Stack_overflow
+.ft R
+, or
+asynchronous exceptions raised by signal handlers
+(e\&.g\&. 
+.ft B
+Sys\&.Break
+.ft R
+)\&.
+.sp
+Note: It is a programming error if other kinds of exceptions
+are raised by 
+.ft B
+finally
+.ft R
+, as any exception raised in 
+.ft B
+work ()
+.ft R
+will
+be lost in the event of a 
+.ft B
+Fun\&.Finally_raised
+.ft R
+exception\&. Therefore,
+one should make sure to handle those inside the finally\&.
+
+.sp
+
+.I exception Finally_raised 
+.B of 
+.B exn
+
+.sp
+
+.ft B
+Finally_raised exn
+.ft R
+is raised by 
+.ft B
+protect ~finally work
+.ft R
+when
+.ft B
+finally
+.ft R
+raises an exception 
+.ft B
+exn
+.ft R
+\&. This exception denotes either
+an unexpected exception or a programming error\&. As a general rule,
+one should not catch a 
+.ft B
+Finally_raised
+.ft R
+exception except as part of
+a catch\-all handler\&.
+
+.sp
+
+.PP
+.SS Examples
+.sp
+.SS Combinators
+.sp
+
+.ft B
+Fun\&.combinators
+.ft R
+provide a lightweight and sometimes more readable
+way to create anonymous functions, best used as short\-lived arguments rather
+than standalone definitions\&. The examples below will demonstrate this mainly
+with the 
+.ft B
+List
+.ft R
+module\&.
+.sp
+.SS [id]
+.sp
+
+.ft B
+List\&.init
+.ft R
+with the index itself
+.EX
+.ft B
+.br
+\&  # List\&.init 3 Fun\&.id;;
+.br
+\&  \- : int list = [0; 1; 2]
+.br
+\&
+.ft R
+.EE
+.sp
+Using 
+.ft B
+List\&.filter_map
+.ft R
+on an 
+.ft B
+int option list
+.ft R
+to filter out
+.ft B
+Option\&.t\&.None
+.ft R
+elements
+.EX
+.ft B
+.br
+\&  # List\&.filter_map Fun\&.id [None; Some 2; Some 3; None; Some 5];;
+.br
+\&  \- : int list = [2; 3; 5]
+.br
+\&
+.ft R
+.EE
+.sp
+Conditionally dispatching functions of type 
+.ft B
+foo \-> foo
+.ft R
+or taking them as
+arguments is another place where 
+.ft B
+id
+.ft R
+may be useful\&. Consider a primitive
+logging function which prints a string but gives its user the option to
+preformat the string before printing, e\&.g\&. to insert a time\-stamp
+.EX
+.ft B
+.br
+\&  let log ?(preformat : string \-> string = Fun\&.id) message =
+.br
+\&    print_endline (preformat message)
+.br
+\&
+.ft R
+.EE
+Whenever we may build up closures, 
+.ft B
+id
+.ft R
+is often used for the base\-case as a
+no\-op\&. Consider a function which chains a list of unary functions:
+.EX
+.ft B
+.br
+\&  let rec chain = function
+.br
+\&    | [] \-> Fun\&.id
+.br
+\&    | f :: fs \-> fun x \-> f (chain fs x)
+.br
+\&
+.ft R
+.EE
+.sp
+.SS [const]
+.sp
+
+.ft B
+List\&.init
+.ft R
+a list of zeros
+.EX
+.ft B
+.br
+\&  # List\&.init 3 (Fun\&.const 0);;
+.br
+\&  \- : int list = [0; 0; 0]
+.br
+\&
+.ft R
+.EE
+.sp
+An allow\-all predicate that could be passed to any filtering function e\&.g\&.
+.ft B
+List\&.filter
+.ft R
+to disable filtration and get back all values
+.EX
+.ft B
+.br
+\&  # List\&.filter (Fun\&.const true) [1; 2; 3];;
+.br
+\&  \- : int list = [1; 2; 3]
+.br
+\&
+.ft R
+.EE
+.sp
+Note that applying 
+.ft B
+const (\&.\&.\&.)
+.ft R
+evaluates the expression 
+.ft B
+(\&.\&.\&.)
+.ft R
+once, and
+returns a function that only has the result of this evaluation\&. To demonstrate
+this, consider if 
+.ft B
+(\&.\&.\&.)
+.ft R
+was a call to 
+.ft B
+Random\&.bool
+.ft R
+.ft B
+()
+.ft R
+:
+.sp
+
+.ft B
+List\&.init n (Fun\&.const (Random\&.bool()))
+.ft R
+for any 
+.ft B
+n > 0
+.ft R
+will have exactly
+two possible outcomes,
+.sp
+\-
+.ft B
+[true; true; \&.\&.\&.; true]
+.ft R
+
+.sp
+\-
+.ft B
+[false; false; \&.\&.\&.; false]
+.ft R
+
+whereas 
+.ft B
+List\&.init n (fun _ \-> Random\&.bool())
+.ft R
+will have 2^n possible
+outcomes, because the randomness effect is performed with every element\&.
+.sp
+For more real\-world uses, consider 
+.ft B
+String\&.spellcheck
+.ft R
+with a constant max
+distance of 2, instead of the default variable max distance
+.EX
+.ft B
+.br
+\&  let spellcheck known_words word =
+.br
+\&    let dict_iter yield = List\&.iter yield known_words in
+.br
+\&    String\&.spellcheck ~max_dist:(Fun\&.const 2) dict_iter word
+.br
+\&
+.ft R
+.EE
+.sp
+.SS [flip]
+.sp
+Useing 
+.ft B
+flip
+.ft R
+to reverse the comparator passed to 
+.ft B
+List\&.sort
+.ft R
+, which sorts
+in the opposite order
+.EX
+.ft B
+.br
+\&  # List\&.sort (Fun\&.flip Int\&.compare) [5; 3; 9; 0; 1; 6; 8];;
+.br
+\&  \- : int list = [9; 8; 6; 5; 3; 1; 0]
+.br
+\&
+.ft R
+.EE
+.sp
+Reversing a list by accumulating a new list using 
+.ft B
+List\&.fold_left
+.ft R
+, which
+expects the accumulator to be the first argument of the function passed to it\&.
+We pass 
+.ft B
+List\&.cons
+.ft R
+which has the list as the second argument, so 
+.ft B
+flip
+.ft R
+is useful here
+.EX
+.ft B
+.br
+\&  # List\&.fold_left (Fun\&.flip List\&.cons) [] [1; 2; 3];;
+.br
+\&  \- : int list = [3; 2; 1]
+.br
+\&
+.ft R
+.EE
+.sp
+Interestingly, 
+.ft B
+flip
+.ft R
+can work with functions that aren\&'t binary, by flipping
+the first two arguments and leaving the rest in order\&. This is because a
+function that takes 
+.ft B
+n+2
+.ft R
+arguments is, conceptually, a binary function which
+returns a function that takes 
+.ft B
+n
+.ft R
+arguments\&.
+Given a function 
+.ft B
+f : a \-> b \-> c \-> d
+.ft R
+:
+.sp
+\-
+.ft B
+flip f
+.ft R
+will have type 
+.ft B
+b \-> a \-> c \-> d
+.ft R
+
+.sp
+\-
+.ft B
+fun x \-> flip (f x)
+.ft R
+will have type 
+.ft B
+a \-> c \-> b \-> d
+.ft R
+
+Using 
+.ft B
+flip
+.ft R
+with non\-binary functions like this is discouraged, for its
+negative impact on readability and reasoning\&.
+.sp
+.SS [negate]
+.sp
+Mainly used for reversing a predicate in a function which expects one, like
+.ft B
+List\&.find_all
+.ft R
+and similar functions
+.sp
+Finding all lists which are not empty using 
+.ft B
+List\&.is_empty
+.ft R
+
+.EX
+.ft B
+.br
+\&  # List\&.find_all (Fun\&.negate List\&.is_empty) [[0]; [1; 2; 3]; []; [4; 5]];;
+.br
+\&  \- : int list list = [[0]; [1; 2; 3]; [4; 5]]
+.br
+\&
+.ft R
+.EE
+.sp
+From a given list of paths, finding all paths which are not occupied using
+.ft B
+Sys\&.file_exists
+.ft R
+
+.EX
+.ft B
+.br
+\&  # List\&.find_all (Fun\&.negate Sys\&.file_exists);;
+.br
+\&  \- : string list \-> string list = <fun>
+.br
+\&
+.ft R
+.EE
+.sp
+.SS [compose]
+.sp
+
+.ft B
+List\&.map
+.ft R
+on pair elements with a function on the second element
+.EX
+.ft B
+.br
+\&  # List\&.map (Fun\&.compose String\&.length snd) [1, "one"; 2, "two"; 3, "three"];;
+.br
+\&  \- : int list = [3; 3; 5]
+.br
+\&
+.ft R
+.EE
+.sp
+A potential implementation of 
+.ft B
+Fun\&.negate
+.ft R
+
+.EX
+.ft B
+.br
+\&  let negate f = Fun\&.compose not f
+.br
+\&
+.ft R
+.EE
+.sp
+From the 
+.ft B
+Fun\&.hid
+.ft R
+, 
+.ft B
+compose
+.ft R
+could have been used in the
+recursive branch
+.EX
+.ft B
+.br
+\&  let rec chain = function
+.br
+\&    | [] \-> Fun\&.id
+.br
+\&    | f :: fs \-> Fun\&.compose f (chain fs)
+.br
+\&
+.ft R
+.EE
+Or even more concisely
+.EX
+.ft B
+.br
+\&  let chain fs = List\&.fold_right Fun\&.compose fs Fun\&.id
+.br
+\&
+.ft R
+.EE
+.sp
+From the 
+.ft B
+Fun\&.hflip
+.ft R
+, 
+.ft B
+compose
+.ft R
+and 
+.ft B
+flip
+.ft R
+could be used to
+condense the function definition so it becomes
+.EX
+.ft B
+.br
+\&  # Fun\&.compose
+.br
+\&      (String\&.spellcheck ~max_dist:(Fun\&.const 2))
+.br
+\&      (Fun\&.flip List\&.iter)
+.br
+\&    ;;
+.br
+\&  \- : string list \-> string \-> string list = <fun>
+.br
+\&
+.ft R
+.EE
+As can be seen here, this heavily impacts readability and the ability to reason
+about the function\&. Both 
+.ft B
+String\&.spellcheck
+.ft R
+and 
+.ft B
+Fun\&.flip
+.ft R
+are not unary, so
+there is a non\-trivial interaction with partial\-application in this definition\&.
+.sp
+Heavy use of these combinators in OCaml is generally discouraged, not only
+because they can quickly impact readability and reasoning, but also because the
+produced functions are often in value form, thus subject to the Value
+Restriction (see the manual section 6\&.1\&.2)\&.
+.PP

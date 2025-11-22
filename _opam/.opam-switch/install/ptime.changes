@@ -1,0 +1,50 @@
+opam-version: "2.0"
+added: [
+  "doc/ptime" {"D"}
+  "doc/ptime/CHANGES.md" {"F:f2466722c8523924c0a55a069070d8c1"}
+  "doc/ptime/LICENSE.md" {"F:b18866182bd49298327bf245b814e581"}
+  "doc/ptime/README.md" {"F:9f0cd37a9a4d257c64f8cacc43fa4575"}
+  "doc/ptime/min_clock.ml" {"F:601cc7c1d276c030791e021ba080bfd7"}
+  "doc/ptime/odoc-pages" {"D"}
+  "doc/ptime/odoc-pages/index.mld" {"F:fa9d1e264f13b361b149945620ea36a9"}
+  "lib/ptime" {"D"}
+  "lib/ptime/META" {"F:a739cf39737d5830f00dc7d0563d1876"}
+  "lib/ptime/clock" {"D"}
+  "lib/ptime/clock/libptime_clock_stubs.a"
+    {"F:882f320c02f02728875462cd48001001"}
+  "lib/ptime/clock/ptime_clock.a" {"F:dd28692d773985f5b4073a3d5b053e55"}
+  "lib/ptime/clock/ptime_clock.cma" {"F:bd2cbc3baeeb7d61559341f609e03ec8"}
+  "lib/ptime/clock/ptime_clock.cmi" {"F:0a8e1a421d1772b1826d4fda95f897cd"}
+  "lib/ptime/clock/ptime_clock.cmt" {"F:32d0ab42bc90802a20c444380ccd595b"}
+  "lib/ptime/clock/ptime_clock.cmti" {"F:a1fa23150474daf2b0840d74f9607810"}
+  "lib/ptime/clock/ptime_clock.cmx" {"F:cded649eeca54ee8dc993046f34ba338"}
+  "lib/ptime/clock/ptime_clock.cmxa" {"F:196acbc86d8d17d757e06abe484302a7"}
+  "lib/ptime/clock/ptime_clock.cmxs" {"F:d2f09db040012bed0910e2130b8eb51b"}
+  "lib/ptime/clock/ptime_clock.ml" {"F:9d6ab950fff336ef73a666b7b063355b"}
+  "lib/ptime/clock/ptime_clock.mli" {"F:f8346f52879ee8f5888ecca40121eb9a"}
+  "lib/ptime/clock/ptime_clock_stubs.c"
+    {"F:04071371550f2f1e212261c0bf03eae0"}
+  "lib/ptime/clock/runtime.js" {"F:8d966c73e1d70cfc1030a1f601ab5ae0"}
+  "lib/ptime/opam" {"F:4369e9a164102d0d3c38cd509b8123dc"}
+  "lib/ptime/ptime.a" {"F:5eed6be97eb3d68609a410b81eb86437"}
+  "lib/ptime/ptime.cma" {"F:46ef1999829d4327419671b0a3f3721f"}
+  "lib/ptime/ptime.cmi" {"F:7bd5b9de239355cd28d8a5e55062728d"}
+  "lib/ptime/ptime.cmt" {"F:acf74f38fff7ce84c1e359d957298feb"}
+  "lib/ptime/ptime.cmti" {"F:74a97a7fdb32026553add703ef212198"}
+  "lib/ptime/ptime.cmx" {"F:755a25d26dd580805fc1bf8e8595abdb"}
+  "lib/ptime/ptime.cmxa" {"F:548ffd121a1a8d03a00d96e159e47ba3"}
+  "lib/ptime/ptime.cmxs" {"F:182ff962b7f1f14642956a22e51a18e2"}
+  "lib/ptime/ptime.ml" {"F:f38a645ac9f8770468b4758b05be4895"}
+  "lib/ptime/ptime.mli" {"F:2b35f91d20bb49d37c8f2e742c57ca76"}
+  "lib/ptime/ptime_top_init.ml" {"F:a6091a02eacc5aaa3201517bb88943a7"}
+  "lib/ptime/top" {"D"}
+  "lib/ptime/top/ptime_top.a" {"F:c8d7caacb1a99da7f140ba9ab5678227"}
+  "lib/ptime/top/ptime_top.cma" {"F:cc0bb546a518dd080b086e2516ed06ab"}
+  "lib/ptime/top/ptime_top.cmt" {"F:4f29b4b7c6ee57f144edd5713fdc42dd"}
+  "lib/ptime/top/ptime_top.cmx" {"F:4bbb503e7e3623f0f489bb84500e3a4d"}
+  "lib/ptime/top/ptime_top.cmxa" {"F:ae6c795c87416f2427f322b58e1a66e3"}
+  "lib/ptime/top/ptime_top.cmxs" {"F:e934623041fee0e3a65a8c27c12afe14"}
+  "lib/ptime/top/ptime_top.ml" {"F:5aa7362c08be589f628743d02a485d08"}
+  "lib/stublibs/dllptime_clock_stubs.so"
+    {"F:df42445560f3c9c86569a86ffd50a360"}
+]

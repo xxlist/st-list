@@ -1,0 +1,108 @@
+(lang dune 3.20)
+(name cohttp-lwt-unix)
+(version v6.1.1)
+(sections (lib .) (libexec .) (doc ../../doc/cohttp-lwt-unix))
+(files
+ (lib
+  (META
+   cohttp_lwt_unix.a
+   cohttp_lwt_unix.cma
+   cohttp_lwt_unix.cmi
+   cohttp_lwt_unix.cmt
+   cohttp_lwt_unix.cmx
+   cohttp_lwt_unix.cmxa
+   cohttp_lwt_unix.ml
+   cohttp_lwt_unix__.cmi
+   cohttp_lwt_unix__.cmt
+   cohttp_lwt_unix__.cmx
+   cohttp_lwt_unix__.ml
+   cohttp_lwt_unix__Debug.cmi
+   cohttp_lwt_unix__Debug.cmt
+   cohttp_lwt_unix__Debug.cmti
+   cohttp_lwt_unix__Debug.cmx
+   cohttp_lwt_unix__Input_channel.cmi
+   cohttp_lwt_unix__Input_channel.cmt
+   cohttp_lwt_unix__Input_channel.cmx
+   cohttp_lwt_unix__Io.cmi
+   cohttp_lwt_unix__Io.cmt
+   cohttp_lwt_unix__Io.cmti
+   cohttp_lwt_unix__Io.cmx
+   cohttp_lwt_unix__Net.cmi
+   cohttp_lwt_unix__Net.cmt
+   cohttp_lwt_unix__Net.cmti
+   cohttp_lwt_unix__Net.cmx
+   cohttp_lwt_unix__Server.cmi
+   cohttp_lwt_unix__Server.cmt
+   cohttp_lwt_unix__Server.cmti
+   cohttp_lwt_unix__Server.cmx
+   debug.ml
+   debug.mli
+   dune-package
+   input_channel.ml
+   io.ml
+   io.mli
+   net.ml
+   net.mli
+   opam
+   server.ml
+   server.mli))
+ (libexec (cohttp_lwt_unix.cmxs))
+ (doc (CHANGES.md LICENSE.md README.md)))
+(library
+ (name cohttp-lwt-unix)
+ (kind normal)
+ (synopsis "Lwt/Unix backend for Cohttp")
+ (archives (byte cohttp_lwt_unix.cma) (native cohttp_lwt_unix.cmxa))
+ (plugins (byte cohttp_lwt_unix.cma) (native cohttp_lwt_unix.cmxs))
+ (native_archives cohttp_lwt_unix.a)
+ (requires
+  fmt
+  logs
+  logs.lwt
+  conduit-lwt
+  magic-mime
+  lwt.unix
+  conduit-lwt-unix
+  http
+  cohttp
+  cohttp-lwt
+  logs.fmt
+  ppx_sexp_conv.runtime-lib
+  sexplib0)
+ (main_module_name Cohttp_lwt_unix)
+ (modes byte native)
+ (modules
+  (wrapped
+   (group
+    (alias
+     (obj_name cohttp_lwt_unix__)
+     (visibility public)
+     (kind alias)
+     (source (path Cohttp_lwt_unix__) (impl (path cohttp_lwt_unix__.ml-gen))))
+    (name Cohttp_lwt_unix)
+    (modules
+     (module
+      (obj_name cohttp_lwt_unix)
+      (visibility public)
+      (source (path Cohttp_lwt_unix) (impl (path cohttp_lwt_unix.ml))))
+     (module
+      (obj_name cohttp_lwt_unix__Debug)
+      (visibility public)
+      (source (path Debug) (intf (path debug.mli)) (impl (path debug.ml))))
+     (module
+      (obj_name cohttp_lwt_unix__Input_channel)
+      (visibility public)
+      (source (path Input_channel) (impl (path input_channel.ml))))
+     (module
+      (obj_name cohttp_lwt_unix__Io)
+      (visibility public)
+      (source (path Io) (intf (path io.mli)) (impl (path io.ml))))
+     (module
+      (obj_name cohttp_lwt_unix__Net)
+      (visibility public)
+      (source (path Net) (intf (path net.mli)) (impl (path net.ml))))
+     (module
+      (obj_name cohttp_lwt_unix__Server)
+      (visibility public)
+      (source (path Server) (intf (path server.mli)) (impl (path server.ml))))))
+   (wrapped true))))

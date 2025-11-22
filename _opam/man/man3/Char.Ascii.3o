@@ -1,0 +1,733 @@
+.TH "Char.Ascii" 3 2025-11-21 OCamldoc "OCaml library"
+.SH NAME
+Char.Ascii \- ASCII character set support.
+.SH Module
+Module   Char.Ascii
+.SH Documentation
+.sp
+Module
+.BI "Ascii"
+ : 
+.B sig end
+
+.sp
+ASCII character set support\&.
+.sp
+These functions give meaning to the integers [
+.ft B
+0x00
+.ft R
+;
+.ft B
+0x7F
+.ft R
+] of the
+ASCII
+character set\&.
+.sp
+Since the UTF\-8 encoding of Unicode has the same encoding and
+character semantics (U+0000 to U+001F) for these bytes, the
+functions can be safely used on elements of UTF\-8 encoded 
+.ft B
+string
+.ft R
+and 
+.ft B
+bytes
+.ft R
+values\&. However the functions only deal with ASCII
+related matters\&. For example the notion of Unicode whitespace is
+much larger than the ASCII whitespace determined by
+.ft B
+Char\&.Ascii\&.is_white
+.ft R
+\&.
+
+.sp
+.B "Since"
+5.4
+
+.sp
+
+.sp
+.sp
+
+.PP
+.SS Characters
+
+.PP
+
+.I val min 
+: 
+.B char
+.sp
+
+.ft B
+min
+.ft R
+is 
+.ft B
+\&'\(rsx00\&'
+.ft R
+\&.
+
+.sp
+
+.I val max 
+: 
+.B char
+.sp
+
+.ft B
+max
+.ft R
+is 
+.ft B
+\&'\(rsx7F\&'
+.ft R
+\&.
+
+.sp
+
+.PP
+.SS Predicates
+
+.PP
+
+.I val is_valid 
+: 
+.B char -> bool
+.sp
+
+.ft B
+is_valid c
+.ft R
+is 
+.ft B
+true
+.ft R
+if and only if 
+.ft B
+c
+.ft R
+is an ASCII character,
+that is a byte in the range [
+.ft B
+Char\&.Ascii\&.min
+.ft R
+;
+.ft B
+Char\&.Ascii\&.max
+.ft R
+]\&.
+
+.sp
+
+.I val is_upper 
+: 
+.B char -> bool
+.sp
+
+.ft B
+is_upper c
+.ft R
+is 
+.ft B
+true
+.ft R
+if and only if 
+.ft B
+c
+.ft R
+is an ASCII uppercase letter
+.ft B
+\&'A\&'
+.ft R
+to 
+.ft B
+\&'Z\&'
+.ft R
+, that is a byte in the range [
+.ft B
+0x41
+.ft R
+;
+.ft B
+0x5A
+.ft R
+]\&.
+
+.sp
+
+.I val is_lower 
+: 
+.B char -> bool
+.sp
+
+.ft B
+is_lower c
+.ft R
+is 
+.ft B
+true
+.ft R
+if and only if 
+.ft B
+c
+.ft R
+is an ASCII lowercase letter
+.ft B
+\&'a\&'
+.ft R
+to 
+.ft B
+\&'z\&'
+.ft R
+, that is a byte in the range [
+.ft B
+0x61
+.ft R
+;
+.ft B
+0x7A
+.ft R
+]\&.
+
+.sp
+
+.I val is_letter 
+: 
+.B char -> bool
+.sp
+
+.ft B
+is_letter c
+.ft R
+is 
+.ft B
+Char\&.Ascii\&.is_lower
+.ft R
+.ft B
+c || 
+.ft R
+.ft B
+Char\&.Ascii\&.is_upper
+.ft R
+.ft B
+c
+.ft R
+\&.
+
+.sp
+
+.I val is_alphanum 
+: 
+.B char -> bool
+.sp
+
+.ft B
+is_alphanum c
+.ft R
+is 
+.ft B
+Char\&.Ascii\&.is_letter
+.ft R
+.ft B
+c || 
+.ft R
+.ft B
+Char\&.Ascii\&.is_digit
+.ft R
+.ft B
+c
+.ft R
+\&.
+
+.sp
+
+.I val is_white 
+: 
+.B char -> bool
+.sp
+
+.ft B
+is_white c
+.ft R
+is 
+.ft B
+true
+.ft R
+if and only if 
+.ft B
+c
+.ft R
+is an ASCII white space
+character, that is one of
+tab 
+.ft B
+\&'\(rst\&'
+.ft R
+(
+.ft B
+0x09
+.ft R
+), newline 
+.ft B
+\&'\(rsn\&'
+.ft R
+(
+.ft B
+0x0A
+.ft R
+),
+vertical tab (
+.ft B
+0x0B
+.ft R
+), form feed (
+.ft B
+0x0C
+.ft R
+),
+carriage return 
+.ft B
+\&'\(rsr\&'
+.ft R
+(
+.ft B
+0x0D
+.ft R
+) or space 
+.ft B
+\&' \&'
+.ft R
+(
+.ft B
+0x20
+.ft R
+),
+
+.sp
+
+.I val is_blank 
+: 
+.B char -> bool
+.sp
+
+.ft B
+is_blank c
+.ft R
+is 
+.ft B
+true
+.ft R
+if and only if 
+.ft B
+c
+.ft R
+is an ASCII blank character,
+that is either space 
+.ft B
+\&' \&'
+.ft R
+(
+.ft B
+0x20
+.ft R
+) or tab 
+.ft B
+\&'\(rst\&'
+.ft R
+(
+.ft B
+0x09
+.ft R
+)\&.
+
+.sp
+
+.I val is_graphic 
+: 
+.B char -> bool
+.sp
+
+.ft B
+is_graphic c
+.ft R
+is 
+.ft B
+true
+.ft R
+if and only if 
+.ft B
+c
+.ft R
+is an ASCII graphic
+character, that is a byte in the range [
+.ft B
+0x21
+.ft R
+;
+.ft B
+0x7E
+.ft R
+]\&.
+
+.sp
+
+.I val is_print 
+: 
+.B char -> bool
+.sp
+
+.ft B
+is_print c
+.ft R
+is 
+.ft B
+Char\&.Ascii\&.is_graphic
+.ft R
+.ft B
+c || c = \&' \&'
+.ft R
+\&.
+
+.sp
+
+.I val is_control 
+: 
+.B char -> bool
+.sp
+
+.ft B
+is_control c
+.ft R
+is 
+.ft B
+true
+.ft R
+if and only if 
+.ft B
+c
+.ft R
+is an ASCII control character,
+that is a byte in the range [
+.ft B
+0x00
+.ft R
+;
+.ft B
+0x1F
+.ft R
+] or 
+.ft B
+0x7F
+.ft R
+\&.
+
+.sp
+
+.PP
+.SS Decimal digits
+
+.PP
+
+.I val is_digit 
+: 
+.B char -> bool
+.sp
+
+.ft B
+is_digit c
+.ft R
+is 
+.ft B
+true
+.ft R
+if and only if 
+.ft B
+c
+.ft R
+is an ASCII decimal digit
+.ft B
+\&'0\&'
+.ft R
+to 
+.ft B
+\&'9\&'
+.ft R
+, that is a byte in the range [
+.ft B
+0x30
+.ft R
+;
+.ft B
+0x39
+.ft R
+]\&.
+
+.sp
+
+.I val digit_to_int 
+: 
+.B char -> int
+.sp
+
+.ft B
+digit_to_int c
+.ft R
+is the numerical value of a digit
+that satisfies 
+.ft B
+Char\&.Ascii\&.is_digit
+.ft R
+\&. Raises 
+.ft B
+Invalid_argument
+.ft R
+if
+.ft B
+Char\&.Ascii\&.is_digit
+.ft R
+.ft B
+c
+.ft R
+is 
+.ft B
+false
+.ft R
+\&.
+
+.sp
+
+.I val digit_of_int 
+: 
+.B int -> char
+.sp
+
+.ft B
+digit_of_int n
+.ft R
+is an ASCII decimal digit for the decimal
+value 
+.ft B
+abs (n mod 10)
+.ft R
+\&.
+
+.sp
+
+.PP
+.SS Hexadecimal digits
+
+.PP
+
+.I val is_hex_digit 
+: 
+.B char -> bool
+.sp
+
+.ft B
+is_hex_digit c
+.ft R
+is 
+.ft B
+true
+.ft R
+if and only if 
+.ft B
+c
+.ft R
+is an ASCII hexadecimal
+digit 
+.ft B
+\&'0\&'
+.ft R
+to 
+.ft B
+\&'9\&'
+.ft R
+, 
+.ft B
+\&'a\&'
+.ft R
+to 
+.ft B
+\&'f\&'
+.ft R
+or 
+.ft B
+\&'A\&'
+.ft R
+to 
+.ft B
+\&'F\&'
+.ft R
+,
+that is a byte in one of the ranges [
+.ft B
+0x30
+.ft R
+;
+.ft B
+0x39
+.ft R
+],
+[
+.ft B
+0x41
+.ft R
+;
+.ft B
+0x46
+.ft R
+], [
+.ft B
+0x61
+.ft R
+;
+.ft B
+0x66
+.ft R
+]\&.
+
+.sp
+
+.I val hex_digit_to_int 
+: 
+.B char -> int
+.sp
+
+.ft B
+hex_digit_to_int c
+.ft R
+is the numerical value of a digit that
+satisfies 
+.ft B
+Char\&.Ascii\&.is_hex_digit
+.ft R
+\&. Raises 
+.ft B
+Invalid_argument
+.ft R
+if
+.ft B
+Char\&.Ascii\&.is_hex_digit
+.ft R
+.ft B
+c
+.ft R
+is 
+.ft B
+false
+.ft R
+\&.
+
+.sp
+
+.I val lower_hex_digit_of_int 
+: 
+.B int -> char
+.sp
+
+.ft B
+lower_hex_digit_of_int n
+.ft R
+is a lowercase ASCII hexadecimal digit for
+the hexadecimal value 
+.ft B
+abs (n mod 16)
+.ft R
+\&.
+
+.sp
+
+.I val upper_hex_digit_of_int 
+: 
+.B int -> char
+.sp
+
+.ft B
+upper_hex_digit_of_int n
+.ft R
+is an uppercase ASCII hexadecimal
+digit for the hexadecimal value 
+.ft B
+abs (n mod 16)
+.ft R
+\&.
+
+.sp
+
+.PP
+.SS Casing transforms
+
+.PP
+
+.I val uppercase 
+: 
+.B char -> char
+.sp
+
+.ft B
+uppercase c
+.ft R
+is 
+.ft B
+c
+.ft R
+with ASCII characters 
+.ft B
+\&'a\&'
+.ft R
+to 
+.ft B
+\&'z\&'
+.ft R
+respectively
+mapped to uppercase characters 
+.ft B
+\&'A\&'
+.ft R
+to 
+.ft B
+\&'Z\&'
+.ft R
+\&. Other characters are left
+untouched\&.
+
+.sp
+
+.I val lowercase 
+: 
+.B char -> char
+.sp
+
+.ft B
+lowercase c
+.ft R
+is 
+.ft B
+c
+.ft R
+with ASCII characters 
+.ft B
+\&'A\&'
+.ft R
+to 
+.ft B
+\&'Z\&'
+.ft R
+respectively
+mapped to lowercase characters 
+.ft B
+\&'a\&'
+.ft R
+to 
+.ft B
+\&'z\&'
+.ft R
+\&. Other characters are
+left untouched\&.
+
+.sp

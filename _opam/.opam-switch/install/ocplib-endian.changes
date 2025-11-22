@@ -1,0 +1,51 @@
+opam-version: "2.0"
+added: [
+  "doc/ocplib-endian" {"D"}
+  "doc/ocplib-endian/CHANGES.md" {"F:fda384df2026d8271badc81a2737ffeb"}
+  "doc/ocplib-endian/README.md" {"F:a33937dc6911c3dc5af47631c61fdf36"}
+  "lib/ocplib-endian" {"D"}
+  "lib/ocplib-endian/META" {"F:6b1d146028246e5494e1dd63aef1707e"}
+  "lib/ocplib-endian/bigstring" {"D"}
+  "lib/ocplib-endian/bigstring/endianBigstring.cmi"
+    {"F:9a00ed126e606669c14a58594e03989e"}
+  "lib/ocplib-endian/bigstring/endianBigstring.cmt"
+    {"F:f74ed25f2f58a1820ad2cc2c758ab8b5"}
+  "lib/ocplib-endian/bigstring/endianBigstring.cmti"
+    {"F:601a9b2e7b997661fac9b0492e2ec6ae"}
+  "lib/ocplib-endian/bigstring/endianBigstring.cmx"
+    {"F:f4747b409a6ba36f3d92f6a8dffd63b3"}
+  "lib/ocplib-endian/bigstring/endianBigstring.ml"
+    {"F:3844499e7d33216157efa31a4dcd217b"}
+  "lib/ocplib-endian/bigstring/endianBigstring.mli"
+    {"F:5003cd1ad66a47ae2969ad6ae1fae4eb"}
+  "lib/ocplib-endian/bigstring/ocplib_endian_bigstring.a"
+    {"F:10cb1c6dac0ba6b1df2dfb31a5d83918"}
+  "lib/ocplib-endian/bigstring/ocplib_endian_bigstring.cma"
+    {"F:b1cd41393c059eee31f3c49946ec97d0"}
+  "lib/ocplib-endian/bigstring/ocplib_endian_bigstring.cmxa"
+    {"F:32fc7d5021d8d4f69c824818dddf4828"}
+  "lib/ocplib-endian/bigstring/ocplib_endian_bigstring.cmxs"
+    {"F:9ab29bdcdaa3ae5dab9c74a20f2ede45"}
+  "lib/ocplib-endian/dune-package" {"F:0f030ebcdb8365681b7cf77842e8f581"}
+  "lib/ocplib-endian/endianBytes.cmi" {"F:3f39409a03eb999d41d27e735c77d1cc"}
+  "lib/ocplib-endian/endianBytes.cmt" {"F:17e9c7de2892166c5eeb24b4ddb7df11"}
+  "lib/ocplib-endian/endianBytes.cmti" {"F:fc352e0c45b988451a3865d7533cf810"}
+  "lib/ocplib-endian/endianBytes.cmx" {"F:ec96f4ac3f92ae542e656830e0d56005"}
+  "lib/ocplib-endian/endianBytes.ml" {"F:d5d2901894e2db1b06ec7cd84fea8ce2"}
+  "lib/ocplib-endian/endianBytes.mli" {"F:ad8eadffcca21f59db64cc86b3ced64b"}
+  "lib/ocplib-endian/endianString.cmi" {"F:5f3f85dfea2374505dfd7e62fc73af26"}
+  "lib/ocplib-endian/endianString.cmt" {"F:9b8f82f1cf989cf39d2b4cfe2ba08034"}
+  "lib/ocplib-endian/endianString.cmti"
+    {"F:7e8a30feb0afd79130a14d75d9f1a0d0"}
+  "lib/ocplib-endian/endianString.cmx" {"F:ab349cae4ff6bd631cc5a82293260de5"}
+  "lib/ocplib-endian/endianString.ml" {"F:d1e31ca4ed8c137d2bdfbd3cc7e53105"}
+  "lib/ocplib-endian/endianString.mli" {"F:2b29bfffe72ca74e5d272eb6b1dff0b8"}
+  "lib/ocplib-endian/ocplib_endian.a" {"F:5e149c288ad64f3d3112b95651677c43"}
+  "lib/ocplib-endian/ocplib_endian.cma"
+    {"F:0c29934f5e5d5fcabf259261f68323e8"}
+  "lib/ocplib-endian/ocplib_endian.cmxa"
+    {"F:209af46404cf74eccba12c80be38b984"}
+  "lib/ocplib-endian/ocplib_endian.cmxs"
+    {"F:624c369b323a5166bf3506e32cf32dd0"}
+  "lib/ocplib-endian/opam" {"F:060bffe7c1e3e92c1117fde5e5e201e2"}
+]

@@ -1,0 +1,28 @@
+opam-version: "2.0"
+added: [
+  "doc/fpath" {"D"}
+  "doc/fpath/CHANGES.md" {"F:e7ea3bc0cb8915935ca9e4896de60fa2"}
+  "doc/fpath/LICENSE.md" {"F:ea8b9c548021da3422f66162b6a2d677"}
+  "doc/fpath/README.md" {"F:5c94c03246e68c283fb61d0160c9c1d8"}
+  "lib/fpath" {"D"}
+  "lib/fpath/META" {"F:c5521e44612be4a8bd7377ea34e70c39"}
+  "lib/fpath/fpath.a" {"F:5ddb9a450f4f1856a04924f87b3783b1"}
+  "lib/fpath/fpath.cma" {"F:5bffd463e7d7ea3b29b665c148e6f9af"}
+  "lib/fpath/fpath.cmi" {"F:7828ab4210905cf779737e5d6a115f3a"}
+  "lib/fpath/fpath.cmt" {"F:adaf7e15e224ee49969deba8d3d96072"}
+  "lib/fpath/fpath.cmti" {"F:6a2616b35528053224763467b2b725d9"}
+  "lib/fpath/fpath.cmx" {"F:7512f2d110653892f989c0eb33baa2fb"}
+  "lib/fpath/fpath.cmxa" {"F:696188676e97028ecee6ab1ac2a8c9cd"}
+  "lib/fpath/fpath.cmxs" {"F:97d86fb66142a5b03d316649f2980475"}
+  "lib/fpath/fpath.ml" {"F:71fdad0ef3513c4670845d6ab9a3ba1b"}
+  "lib/fpath/fpath.mli" {"F:c4cb4176eab3bdb853f7e4338e132ec4"}
+  "lib/fpath/fpath_top.a" {"F:0d02c17a20ab7f2a67c70576bbd8d566"}
+  "lib/fpath/fpath_top.cma" {"F:0af2281d36112b535d3ce73abe6bbb75"}
+  "lib/fpath/fpath_top.cmt" {"F:8557bd8276386ee0018f30d92817cd7d"}
+  "lib/fpath/fpath_top.cmx" {"F:fa270991ac4585f280d0db725d83a15d"}
+  "lib/fpath/fpath_top.cmxa" {"F:e13cc8ed37ae2aae8d3a8e19b496cac3"}
+  "lib/fpath/fpath_top.cmxs" {"F:e77468d0237dc095185599ae88d35315"}
+  "lib/fpath/fpath_top.ml" {"F:e3a5f2ea4d25365f074d9a4d3fdcd41c"}
+  "lib/fpath/fpath_top_init.ml" {"F:06439021e160b782659d418892095591"}
+  "lib/fpath/opam" {"F:2eed633c6fc8c968f6475aaea3835d93"}
+]

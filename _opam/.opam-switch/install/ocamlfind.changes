@@ -1,0 +1,45 @@
+opam-version: "2.0"
+added: [
+  "bin/ocamlfind" {"F:ab1d09d3a4d18575782b6c4ec9a1b6d5"}
+  "bin/safe_camlp4" {"F:97ac2288fbd059597c4add4a163c0960"}
+  "lib/bytes" {"D"}
+  "lib/bytes/META" {"F:577ad0669c261d3eb3cbe3f9b7788734"}
+  "lib/findlib" {"D"}
+  "lib/findlib.conf" {"F:0a3c0347697563385234446d5426f9b0"}
+  "lib/findlib/META" {"F:e44f3cbb0193288a29f2ffa8aaae2dfc"}
+  "lib/findlib/Makefile.config" {"F:f9b0fc992f9ee67b5350cf6cb06e22b0"}
+  "lib/findlib/Makefile.packages" {"F:4db52587f787b97eaf6623f6ed0e81f9"}
+  "lib/findlib/findlib.a" {"F:255adcffe01356b59b38eb9cfc0d4cda"}
+  "lib/findlib/findlib.cma" {"F:c05486bb13cdd3d5ed714cd80ff99e47"}
+  "lib/findlib/findlib.cmi" {"F:24522b06a0cc9bcdba827394a1300bd1"}
+  "lib/findlib/findlib.cmxa" {"F:d98bbc386b83ea46569d47b85e768737"}
+  "lib/findlib/findlib.cmxs" {"F:f17347ce3cb2102635b48f77839cedbe"}
+  "lib/findlib/findlib.mli" {"F:2b91ee98f05f9cf89dd19a397d782e5f"}
+  "lib/findlib/findlib_config.cmi" {"F:675f4d39699171a7ed03e5861159e1a7"}
+  "lib/findlib/findlib_config.ml" {"F:b9e66d18e1f59963fd5c5362c129b953"}
+  "lib/findlib/findlib_dynload.a" {"F:8b768902e4eb88fb71aa80f629dfe376"}
+  "lib/findlib/findlib_dynload.cma" {"F:d4bc14bb9bac721c65ada44208eaa37d"}
+  "lib/findlib/findlib_dynload.cmxa" {"F:d606b58bb37e70c6a1772eb0c2390e3a"}
+  "lib/findlib/findlib_dynload.cmxs" {"F:9217885a98ab95379e8cf290808fc464"}
+  "lib/findlib/findlib_top.a" {"F:69ff9851c82c6e35dbf6183cf26d0b88"}
+  "lib/findlib/findlib_top.cma" {"F:2f57c32bdca310b906cb0ca8b23f2ea6"}
+  "lib/findlib/findlib_top.cmxa" {"F:e4fd92950f1ccafdabff8b0336a4201a"}
+  "lib/findlib/findlib_top.cmxs" {"F:5835c1429e5830a3789cbc26287f8daa"}
+  "lib/findlib/fl_args.cmi" {"F:4de80d5e9ab15a75f6a3ce3695cd19b6"}
+  "lib/findlib/fl_dynload.cmi" {"F:157af68e67d90c99f9cc29c2b286deca"}
+  "lib/findlib/fl_dynload.mli" {"F:fab786a0d52061dd01fc34b9a71df38e"}
+  "lib/findlib/fl_lint.cmi" {"F:e6e0fbe5e7d9c40f516b122105f18d94"}
+  "lib/findlib/fl_meta.cmi" {"F:1971799b077a36f4bab0939f7ddf6259"}
+  "lib/findlib/fl_metascanner.cmi" {"F:126cd1f691813dce264acf0e6c7ca84e"}
+  "lib/findlib/fl_metascanner.mli" {"F:f6c9ff6b3ebab18cc46afb53a0669720"}
+  "lib/findlib/fl_metatoken.cmi" {"F:2a93185e96b607350a6d3cd3eac91f56"}
+  "lib/findlib/fl_package_base.cmi" {"F:30501fa15c1a1ebc9358bb49a7c72bf5"}
+  "lib/findlib/fl_package_base.mli" {"F:83821b002c79635b8f4a8fede7a4142c"}
+  "lib/findlib/fl_split.cmi" {"F:94b54b2483c508f064ff39410d9167b3"}
+  "lib/findlib/fl_topo.cmi" {"F:318e569c98104c13020d4f8509eac791"}
+  "lib/findlib/ocaml_args.cmi" {"F:0ffbf9b8c6f99f0cb2162ccc24191976"}
+  "lib/findlib/topfind.cmi" {"F:ba99a5332d6e7a86e8ba0cf1c40644d9"}
+  "lib/findlib/topfind.mli" {"F:ccdb5eaf8538d3af2327f85b4b9a6a25"}
+  "lib/ocaml/topfind" {"F:a497e02545c73915d3241bb546063aec"}
+  "lib/toplevel/topfind" {"F:a497e02545c73915d3241bb546063aec"}
+]

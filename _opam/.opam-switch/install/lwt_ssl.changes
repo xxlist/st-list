@@ -1,0 +1,20 @@
+opam-version: "2.0"
+added: [
+  "doc/lwt_ssl" {"D"}
+  "doc/lwt_ssl/CHANGES" {"F:034860daea365f59e41638e63043709c"}
+  "doc/lwt_ssl/README.md" {"F:759b7203359f17ada7de4008e5221074"}
+  "lib/lwt_ssl" {"D"}
+  "lib/lwt_ssl/META" {"F:efcf3d2313fef308841710bebc048085"}
+  "lib/lwt_ssl/dune-package" {"F:0eaa80f1525c2f8828023acb3d36fd47"}
+  "lib/lwt_ssl/lwt_ssl.a" {"F:86beef2d7bf4fd0fb13936fca9ec31d8"}
+  "lib/lwt_ssl/lwt_ssl.cma" {"F:95033a1ead504fff61b8718203b9bace"}
+  "lib/lwt_ssl/lwt_ssl.cmi" {"F:722a24f2248a6677331ae65c34d32421"}
+  "lib/lwt_ssl/lwt_ssl.cmt" {"F:f2e57b8e3a5fca69050171e3c6c71058"}
+  "lib/lwt_ssl/lwt_ssl.cmti" {"F:8f675a7e8d049dd13a473b1fc2f75db6"}
+  "lib/lwt_ssl/lwt_ssl.cmx" {"F:61617a988ed1e56e66dcdb322b00d48d"}
+  "lib/lwt_ssl/lwt_ssl.cmxa" {"F:96eb774ef30f88d087f63a81fa87f9ec"}
+  "lib/lwt_ssl/lwt_ssl.cmxs" {"F:7c32d1725e8c6679433d8e3f49056e73"}
+  "lib/lwt_ssl/lwt_ssl.ml" {"F:2d60ba7a3e20009bdce8116416943714"}
+  "lib/lwt_ssl/lwt_ssl.mli" {"F:9512b0a305692572c769f4a1c4dc51ad"}
+  "lib/lwt_ssl/opam" {"F:4beccbee07b82583c472cbfc06a1885f"}
+]

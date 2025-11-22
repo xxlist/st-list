@@ -1,0 +1,8 @@
+OPAM_SWITCH_PREFIX	=	/home/runner/work/st-list/st-list/_opam	:	target	Prefix\ of\ the\ current\ opam\ switch
+CAML_LD_LIBRARY_PATH	=	/home/runner/work/st-list/st-list/_opam/lib/stublibs	:	target	Updated\ by\ package\ ocaml-compiler
+OCAMLTOP_INCLUDE_PATH	+=	/home/runner/work/st-list/st-list/_opam/lib/toplevel	:	target	Updated\ by\ package\ ocaml
+CAML_LD_LIBRARY_PATH	=	/home/runner/work/st-list/st-list/_opam/lib/ocaml/stublibs:/home/runner/work/st-list/st-list/_opam/lib/ocaml	:	target	Updated\ by\ package\ ocaml
+CAML_LD_LIBRARY_PATH	+=	/home/runner/work/st-list/st-list/_opam/lib/stublibs	:	target	Updated\ by\ package\ ocaml
+OCAML_TOPLEVEL_PATH	=	/home/runner/work/st-list/st-list/_opam/lib/toplevel	Updated\ by\ package\ ocaml
+MANPATH	=:	/home/runner/work/st-list/st-list/_opam/man	:	host	Current\ opam\ switch\ man\ dir
+PATH	=+=	/home/runner/work/st-list/st-list/_opam/bin	:	target	Binary\ dir\ for\ opam\ switch\ /home/runner/work/st-list/st-list

@@ -1,0 +1,3 @@
+opam-version: "2.0"
+added:
+  ".opam-switch/config/ocaml.config" {"F:4532400739bf9d99a2f93779d93c434e"}

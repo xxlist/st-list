@@ -1,0 +1,224 @@
+opam-version: "2.0"
+added: [
+  "doc/digestif" {"D"}
+  "doc/digestif/CHANGES.md" {"F:3ce0e12bb0f24b15a35f365120f9f9f0"}
+  "doc/digestif/LICENSE.md" {"F:97cb7f12a9b8d2df2d7cec44bc3c273b"}
+  "doc/digestif/README.md" {"F:f11dcf55857f226229d3b9958bcab547"}
+  "lib/digestif" {"D"}
+  "lib/digestif/META" {"F:75e9a8c8584f3e0cf8757ea42b2f7c91"}
+  "lib/digestif/c" {"D"}
+  "lib/digestif/c/.private" {"D"}
+  "lib/digestif/c/.private/digestif_bi.cmi"
+    {"F:5a92555785d613e8ef94149a7b717b80"}
+  "lib/digestif/c/.private/digestif_bi.cmt"
+    {"F:02dc9041a295fa4d1b55a4f050534583"}
+  "lib/digestif/c/.private/digestif_by.cmi"
+    {"F:4890daa2a285e75056483f65b463f252"}
+  "lib/digestif/c/.private/digestif_by.cmt"
+    {"F:6c6105a2fe62462982571862453d41eb"}
+  "lib/digestif/c/.private/digestif_conv.cmi"
+    {"F:7bbd128af70c9cdb0cb2824059b8cb67"}
+  "lib/digestif/c/.private/digestif_conv.cmt"
+    {"F:121e125ae481f76c23c1cf8dd9669cd1"}
+  "lib/digestif/c/.private/digestif_eq.cmi"
+    {"F:31c43c557282eec69dd02f6a76fd6f50"}
+  "lib/digestif/c/.private/digestif_eq.cmt"
+    {"F:b60a69f12586e6f03241cd3592abf50c"}
+  "lib/digestif/c/.private/digestif_native.cmi"
+    {"F:683bf556a23dd08464f8eb7acc065d43"}
+  "lib/digestif/c/.private/digestif_native.cmt"
+    {"F:0a527208647cfe061a89865ec1afded3"}
+  "lib/digestif/c/digestif.cmi" {"F:12be2b7df153bb6a39795b72a8356571"}
+  "lib/digestif/c/digestif.cmt" {"F:647b4cf26b2bf32369d61f7a9e9eca94"}
+  "lib/digestif/c/digestif.cmx" {"F:a94f589a8bd4b6699113946c2a809fde"}
+  "lib/digestif/c/digestif.ml" {"F:e8fcaf7de2fa8b373755f92325a90d65"}
+  "lib/digestif/c/digestif_bi.cmx" {"F:6022aa9757d711b94e5af1c5c47ed454"}
+  "lib/digestif/c/digestif_bi.ml" {"F:b37edcde0ce8a04a994529042ecc18a9"}
+  "lib/digestif/c/digestif_by.cmx" {"F:4f7cd24c880a4c22553c8edc6c9a0bcd"}
+  "lib/digestif/c/digestif_by.ml" {"F:ed6d479858478d3a88f7c4cb0bf40914"}
+  "lib/digestif/c/digestif_c.a" {"F:183c00e4259ee1b3028beb08e638ce4d"}
+  "lib/digestif/c/digestif_c.cma" {"F:7d43e1cba5f1c6be4e220d0471bb04ce"}
+  "lib/digestif/c/digestif_c.cmxa" {"F:dfb1b4244268a68305315ba51de46e09"}
+  "lib/digestif/c/digestif_c.cmxs" {"F:44ae1afaca65390ee37274299b315e0a"}
+  "lib/digestif/c/digestif_conv.cmx" {"F:3ce9e6a84e9fca2338230a56d016b501"}
+  "lib/digestif/c/digestif_conv.ml" {"F:24d28ff9b2c8b5d5a2ba5f2f826b3626"}
+  "lib/digestif/c/digestif_eq.cmx" {"F:99df9a365a5c7db1738566e831203910"}
+  "lib/digestif/c/digestif_eq.ml" {"F:81b02073d7d993ae1994865db874526c"}
+  "lib/digestif/c/digestif_native.cmx" {"F:8c313c485923ee7bfb7a0c2b855568cc"}
+  "lib/digestif/c/digestif_native.ml" {"F:5eac0a25e2eba9ed67894e5040d1a336"}
+  "lib/digestif/c/libdigestif_c_stubs.a"
+    {"F:8044e87514f8d0cf212bceb8e81be7bc"}
+  "lib/digestif/digestif.cmi" {"F:12be2b7df153bb6a39795b72a8356571"}
+  "lib/digestif/digestif.cmti" {"F:2cd059694d7d83de832987366449d419"}
+  "lib/digestif/digestif.mli" {"F:a37293b235add0a59f9c79e836325efc"}
+  "lib/digestif/dune-package" {"F:4259d4af7116eab02017022c1fe516cf"}
+  "lib/digestif/ocaml" {"D"}
+  "lib/digestif/ocaml/.private" {"D"}
+  "lib/digestif/ocaml/.private/baijiu_blake2b.cmi"
+    {"F:1cd64982b99c4dd00ffef4795a3464df"}
+  "lib/digestif/ocaml/.private/baijiu_blake2b.cmt"
+    {"F:1f95313a08d8c9a468a18d69fb6b3ba0"}
+  "lib/digestif/ocaml/.private/baijiu_blake2s.cmi"
+    {"F:ef711dbac8b4d26d9177e95158a32ecf"}
+  "lib/digestif/ocaml/.private/baijiu_blake2s.cmt"
+    {"F:1a6c853f58ccdbfe06ff918bdba6c9e4"}
+  "lib/digestif/ocaml/.private/baijiu_md5.cmi"
+    {"F:b09908c0fa904f4b1cd32ace9c1f3613"}
+  "lib/digestif/ocaml/.private/baijiu_md5.cmt"
+    {"F:e9ca537b7dbc1d0792654fbe6ad8c204"}
+  "lib/digestif/ocaml/.private/baijiu_rmd160.cmi"
+    {"F:dcfa1d85325575ab5291897183cba659"}
+  "lib/digestif/ocaml/.private/baijiu_rmd160.cmt"
+    {"F:df85ee44229ff49e5c376f7ff29de6be"}
+  "lib/digestif/ocaml/.private/baijiu_sha1.cmi"
+    {"F:9c5455312b4646248631268f00866462"}
+  "lib/digestif/ocaml/.private/baijiu_sha1.cmt"
+    {"F:9bbbfe7725e9521652fd00d871e89fe1"}
+  "lib/digestif/ocaml/.private/baijiu_sha224.cmi"
+    {"F:b4ef0eb240a00789551e8b220a9c3b4f"}
+  "lib/digestif/ocaml/.private/baijiu_sha224.cmt"
+    {"F:c81bb03ca4474ec1863cc7112d3e55dd"}
+  "lib/digestif/ocaml/.private/baijiu_sha256.cmi"
+    {"F:82e18e43a3d395dfcf9f515914895014"}
+  "lib/digestif/ocaml/.private/baijiu_sha256.cmt"
+    {"F:284fb3388c69f4a7def29f073d0ebc2b"}
+  "lib/digestif/ocaml/.private/baijiu_sha384.cmi"
+    {"F:f91f133b8bcf1f1a1d2dea700d8eef9d"}
+  "lib/digestif/ocaml/.private/baijiu_sha384.cmt"
+    {"F:4f2c6f88b7e112240ea6344ddc514cd4"}
+  "lib/digestif/ocaml/.private/baijiu_sha3_224.cmi"
+    {"F:6817b7a7275e40a0b03618add695032c"}
+  "lib/digestif/ocaml/.private/baijiu_sha3_224.cmt"
+    {"F:db1bc8f535af81ee08eb3d97e593fbe8"}
+  "lib/digestif/ocaml/.private/baijiu_sha3_384.cmi"
+    {"F:89bf664881ec74fb8b419ddb03327415"}
+  "lib/digestif/ocaml/.private/baijiu_sha3_384.cmt"
+    {"F:e1775ccc46f75e6ca00fd275ee0898ef"}
+  "lib/digestif/ocaml/.private/baijiu_sha3_512.cmi"
+    {"F:14db314741de161efeacd92e60ad6e33"}
+  "lib/digestif/ocaml/.private/baijiu_sha3_512.cmt"
+    {"F:6e52343b569aa936d46352360eabcd27"}
+  "lib/digestif/ocaml/.private/baijiu_sha512.cmi"
+    {"F:f65631c140f88d0345adb687286d2287"}
+  "lib/digestif/ocaml/.private/baijiu_sha512.cmt"
+    {"F:6ab2b51d795042f7657fbed23469582d"}
+  "lib/digestif/ocaml/.private/baijiu_whirlpool.cmi"
+    {"F:64f04dc87f23afeb393e7e06e4a3494a"}
+  "lib/digestif/ocaml/.private/baijiu_whirlpool.cmt"
+    {"F:68063cd395ae86db47a10f323e97f74b"}
+  "lib/digestif/ocaml/.private/digestif_bi.cmi"
+    {"F:5a92555785d613e8ef94149a7b717b80"}
+  "lib/digestif/ocaml/.private/digestif_bi.cmt"
+    {"F:e59ac72828c3b8966c67ba5f6168032f"}
+  "lib/digestif/ocaml/.private/digestif_by.cmi"
+    {"F:4890daa2a285e75056483f65b463f252"}
+  "lib/digestif/ocaml/.private/digestif_by.cmt"
+    {"F:c0f26d6db6963cba77d5b816c0af1773"}
+  "lib/digestif/ocaml/.private/digestif_conv.cmi"
+    {"F:7bbd128af70c9cdb0cb2824059b8cb67"}
+  "lib/digestif/ocaml/.private/digestif_conv.cmt"
+    {"F:bb605548fc987ede3cb04dfb35c5499c"}
+  "lib/digestif/ocaml/.private/digestif_eq.cmi"
+    {"F:31c43c557282eec69dd02f6a76fd6f50"}
+  "lib/digestif/ocaml/.private/digestif_eq.cmt"
+    {"F:8b0005e3cf806d5e62f43a5a27e431b4"}
+  "lib/digestif/ocaml/.private/xor.cmi"
+    {"F:21ee22a5a93c8740df3edabcda7e3b93"}
+  "lib/digestif/ocaml/.private/xor.cmt"
+    {"F:f0402e6d7bf8d1d92d888c6a04184412"}
+  "lib/digestif/ocaml/baijiu_blake2b.cmx"
+    {"F:da76983286101bdea95a19dfa5b0ca93"}
+  "lib/digestif/ocaml/baijiu_blake2b.ml"
+    {"F:97881f587fd72cb600d95539b53a586a"}
+  "lib/digestif/ocaml/baijiu_blake2s.cmx"
+    {"F:7d879a739565376c971eff88f14ea724"}
+  "lib/digestif/ocaml/baijiu_blake2s.ml"
+    {"F:fc840f51c1c276ef243ff2f580d36fac"}
+  "lib/digestif/ocaml/baijiu_keccak_256.cmi"
+    {"F:fa73fe4ef29bcddc4c9006452999d150"}
+  "lib/digestif/ocaml/baijiu_keccak_256.cmt"
+    {"F:e79259255ff6ce5649d5091f6ad22ba7"}
+  "lib/digestif/ocaml/baijiu_keccak_256.cmx"
+    {"F:7552d4ccee056b48bd96598b1648c655"}
+  "lib/digestif/ocaml/baijiu_keccak_256.ml"
+    {"F:c082aa0a494ccb1e549f5f021f0ada21"}
+  "lib/digestif/ocaml/baijiu_md5.cmx" {"F:2a20923c2b472a4c64d688837f664e66"}
+  "lib/digestif/ocaml/baijiu_md5.ml" {"F:58f9bcd520136c915856ec070e65b237"}
+  "lib/digestif/ocaml/baijiu_rmd160.cmx"
+    {"F:c5d90357130e07c8933113727b3e6bb9"}
+  "lib/digestif/ocaml/baijiu_rmd160.ml"
+    {"F:b4c8065f3ac8c1ff12050899892fb9f6"}
+  "lib/digestif/ocaml/baijiu_sha1.cmx" {"F:d5182b86310095286ebea35994788a8a"}
+  "lib/digestif/ocaml/baijiu_sha1.ml" {"F:240438a10ebac8e1743980c02ff41529"}
+  "lib/digestif/ocaml/baijiu_sha224.cmx"
+    {"F:5d21a5e03cf6a216e2aa0e58d31b9e98"}
+  "lib/digestif/ocaml/baijiu_sha224.ml"
+    {"F:451539abf0d36bd48a0962d6c972e49e"}
+  "lib/digestif/ocaml/baijiu_sha256.cmx"
+    {"F:3228c0c9c0b30eb03ba3e0a89ec24f2c"}
+  "lib/digestif/ocaml/baijiu_sha256.ml"
+    {"F:904a3ab11c85cdba45d8dcac9a0cabb4"}
+  "lib/digestif/ocaml/baijiu_sha3.cmi" {"F:00296acf65a8bc6b6b71cdff0fe12e03"}
+  "lib/digestif/ocaml/baijiu_sha3.cmt" {"F:5059e9bee390dc25f175768735af4bab"}
+  "lib/digestif/ocaml/baijiu_sha3.cmx" {"F:43fc149425d877c2d2f250c802b8cea0"}
+  "lib/digestif/ocaml/baijiu_sha3.ml" {"F:6d7259cbfea7a9d423026443aaa886bc"}
+  "lib/digestif/ocaml/baijiu_sha384.cmx"
+    {"F:b54fc41890bff1656b26c5c893c89ffb"}
+  "lib/digestif/ocaml/baijiu_sha384.ml"
+    {"F:ed1cc3f201643cb12a31ec1c6f35fdf7"}
+  "lib/digestif/ocaml/baijiu_sha3_224.cmx"
+    {"F:2d5f706ce0c3d15f835f9a8a57d4ad89"}
+  "lib/digestif/ocaml/baijiu_sha3_224.ml"
+    {"F:c9075fbb09dc9f7be6ec2c5471c8c3cb"}
+  "lib/digestif/ocaml/baijiu_sha3_256.cmi"
+    {"F:f862c1cc1779b31b69209460b94dfd21"}
+  "lib/digestif/ocaml/baijiu_sha3_256.cmt"
+    {"F:8e5418c6c42a80377bd1268c9f5abe2f"}
+  "lib/digestif/ocaml/baijiu_sha3_256.cmx"
+    {"F:f8a979be5f75c86efafa52611ffa6fc3"}
+  "lib/digestif/ocaml/baijiu_sha3_256.ml"
+    {"F:3c6ad8362f084240990b24f9b014bc82"}
+  "lib/digestif/ocaml/baijiu_sha3_384.cmx"
+    {"F:d10eab218e393a15973afa9ec521d582"}
+  "lib/digestif/ocaml/baijiu_sha3_384.ml"
+    {"F:c1ee0ec45fd23b3abc7994757e59e71a"}
+  "lib/digestif/ocaml/baijiu_sha3_512.cmx"
+    {"F:1aef6a3ae47a0b4b0e9bf5697c90fd62"}
+  "lib/digestif/ocaml/baijiu_sha3_512.ml"
+    {"F:1c111e325d20213fac4d17f13831fc90"}
+  "lib/digestif/ocaml/baijiu_sha512.cmx"
+    {"F:5b2dad492c327f3cc5b55cf82f5c7157"}
+  "lib/digestif/ocaml/baijiu_sha512.ml"
+    {"F:ac2081f2b22381217aad9497eb658e51"}
+  "lib/digestif/ocaml/baijiu_whirlpool.cmx"
+    {"F:5c231ca0a53fe9a9ccea2b2a3d0ba793"}
+  "lib/digestif/ocaml/baijiu_whirlpool.ml"
+    {"F:39345140ed0831f30f0d60e534178a7f"}
+  "lib/digestif/ocaml/digestif.cmi" {"F:12be2b7df153bb6a39795b72a8356571"}
+  "lib/digestif/ocaml/digestif.cmt" {"F:063dccc592f777a80d1a11ac16acc941"}
+  "lib/digestif/ocaml/digestif.cmx" {"F:b72b153051ce7d7a715371e8b2352f10"}
+  "lib/digestif/ocaml/digestif.ml" {"F:ee4de42ff5793a540cc60ddf5d1ccc43"}
+  "lib/digestif/ocaml/digestif_bi.cmx" {"F:6022aa9757d711b94e5af1c5c47ed454"}
+  "lib/digestif/ocaml/digestif_bi.ml" {"F:b37edcde0ce8a04a994529042ecc18a9"}
+  "lib/digestif/ocaml/digestif_by.cmx" {"F:4f7cd24c880a4c22553c8edc6c9a0bcd"}
+  "lib/digestif/ocaml/digestif_by.ml" {"F:ed6d479858478d3a88f7c4cb0bf40914"}
+  "lib/digestif/ocaml/digestif_conv.cmx"
+    {"F:3ce9e6a84e9fca2338230a56d016b501"}
+  "lib/digestif/ocaml/digestif_conv.ml"
+    {"F:24d28ff9b2c8b5d5a2ba5f2f826b3626"}
+  "lib/digestif/ocaml/digestif_eq.cmx" {"F:99df9a365a5c7db1738566e831203910"}
+  "lib/digestif/ocaml/digestif_eq.ml" {"F:81b02073d7d993ae1994865db874526c"}
+  "lib/digestif/ocaml/digestif_ocaml.a"
+    {"F:921f016ab1c187a3de3fe564d7b92e38"}
+  "lib/digestif/ocaml/digestif_ocaml.cma"
+    {"F:d78c9af3d61bff9f0d48b41ae0d31210"}
+  "lib/digestif/ocaml/digestif_ocaml.cmxa"
+    {"F:374bfc3bdd8f6069365100eed26a9bd1"}
+  "lib/digestif/ocaml/digestif_ocaml.cmxs"
+    {"F:65825c78464da0040d27f1028efd10c7"}
+  "lib/digestif/ocaml/xor.cmx" {"F:8b522aa3c8a4448ba71b89fec3bbeaa0"}
+  "lib/digestif/ocaml/xor.ml" {"F:601a259a0de509bf9f745d4b9d4e4eb2"}
+  "lib/digestif/opam" {"F:2756d8b69c0f6177253ac04c51ab48ab"}
+  "lib/stublibs/dlldigestif_c_stubs.so"
+    {"F:2880b842e67c3cbfa922220e1204360f"}
+]

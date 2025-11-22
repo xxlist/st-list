@@ -1,0 +1,21 @@
+opam-version: "2.0"
+added: [
+  "doc/csexp" {"D"}
+  "doc/csexp/CHANGES.md" {"F:5d96b53ce7919e5264aa4cb003d179fc"}
+  "doc/csexp/LICENSE.md" {"F:3b903cfeb2c8b8e55d6912f183cdea5b"}
+  "doc/csexp/README.md" {"F:8d68472c05894253634f320a31eb0c43"}
+  "lib/csexp" {"D"}
+  "lib/csexp/META" {"F:95161e4b2e0e9a6e1d3eefa449647a63"}
+  "lib/csexp/csexp.a" {"F:b5f79b938196fe6b4f8b86a88b749ba3"}
+  "lib/csexp/csexp.cma" {"F:1dbf20eb0cc9695b381bd4097e9bc618"}
+  "lib/csexp/csexp.cmi" {"F:89ad738f7bfe57a2aa0f7d9ad4179549"}
+  "lib/csexp/csexp.cmt" {"F:00da3fe5997ce0e0631ef9d6f7640e84"}
+  "lib/csexp/csexp.cmti" {"F:a2315f3012f04f26153c222b16889f56"}
+  "lib/csexp/csexp.cmx" {"F:63c950a91ac516046a5eba3618cc4d4c"}
+  "lib/csexp/csexp.cmxa" {"F:e0820660599940462a022694ff475063"}
+  "lib/csexp/csexp.cmxs" {"F:0ae5541de806ef7a9b20abfd3910f2c4"}
+  "lib/csexp/csexp.ml" {"F:f751b26a395871f31272261ec1125699"}
+  "lib/csexp/csexp.mli" {"F:727e89c979f0d132ea797a77a2eb3d37"}
+  "lib/csexp/dune-package" {"F:510b6ae6754b491f14e0b9e964593b7c"}
+  "lib/csexp/opam" {"F:4c6e7ad0f3995beab006fbd8ae4b15e5"}
+]

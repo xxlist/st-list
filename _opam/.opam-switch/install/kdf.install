@@ -1,0 +1,46 @@
+opam-version: "2.0"
+lib: [
+  "_build/install/default/lib/kdf/META"
+  "_build/install/default/lib/kdf/dune-package"
+  "_build/install/default/lib/kdf/hkdf/hkdf.a" {"hkdf/hkdf.a"}
+  "_build/install/default/lib/kdf/hkdf/hkdf.cma" {"hkdf/hkdf.cma"}
+  "_build/install/default/lib/kdf/hkdf/hkdf.cmi" {"hkdf/hkdf.cmi"}
+  "_build/install/default/lib/kdf/hkdf/hkdf.cmt" {"hkdf/hkdf.cmt"}
+  "_build/install/default/lib/kdf/hkdf/hkdf.cmti" {"hkdf/hkdf.cmti"}
+  "_build/install/default/lib/kdf/hkdf/hkdf.cmx" {"hkdf/hkdf.cmx"}
+  "_build/install/default/lib/kdf/hkdf/hkdf.cmxa" {"hkdf/hkdf.cmxa"}
+  "_build/install/default/lib/kdf/hkdf/hkdf.ml" {"hkdf/hkdf.ml"}
+  "_build/install/default/lib/kdf/hkdf/hkdf.mli" {"hkdf/hkdf.mli"}
+  "_build/install/default/lib/kdf/opam"
+  "_build/install/default/lib/kdf/pbkdf/pbkdf.a" {"pbkdf/pbkdf.a"}
+  "_build/install/default/lib/kdf/pbkdf/pbkdf.cma" {"pbkdf/pbkdf.cma"}
+  "_build/install/default/lib/kdf/pbkdf/pbkdf.cmi" {"pbkdf/pbkdf.cmi"}
+  "_build/install/default/lib/kdf/pbkdf/pbkdf.cmt" {"pbkdf/pbkdf.cmt"}
+  "_build/install/default/lib/kdf/pbkdf/pbkdf.cmti" {"pbkdf/pbkdf.cmti"}
+  "_build/install/default/lib/kdf/pbkdf/pbkdf.cmx" {"pbkdf/pbkdf.cmx"}
+  "_build/install/default/lib/kdf/pbkdf/pbkdf.cmxa" {"pbkdf/pbkdf.cmxa"}
+  "_build/install/default/lib/kdf/pbkdf/pbkdf.ml" {"pbkdf/pbkdf.ml"}
+  "_build/install/default/lib/kdf/pbkdf/pbkdf.mli" {"pbkdf/pbkdf.mli"}
+  "_build/install/default/lib/kdf/scrypt/libscrypt_stubs.a"
+    {"scrypt/libscrypt_stubs.a"}
+  "_build/install/default/lib/kdf/scrypt/scrypt.a" {"scrypt/scrypt.a"}
+  "_build/install/default/lib/kdf/scrypt/scrypt.cma" {"scrypt/scrypt.cma"}
+  "_build/install/default/lib/kdf/scrypt/scrypt.cmi" {"scrypt/scrypt.cmi"}
+  "_build/install/default/lib/kdf/scrypt/scrypt.cmt" {"scrypt/scrypt.cmt"}
+  "_build/install/default/lib/kdf/scrypt/scrypt.cmti" {"scrypt/scrypt.cmti"}
+  "_build/install/default/lib/kdf/scrypt/scrypt.cmx" {"scrypt/scrypt.cmx"}
+  "_build/install/default/lib/kdf/scrypt/scrypt.cmxa" {"scrypt/scrypt.cmxa"}
+  "_build/install/default/lib/kdf/scrypt/scrypt.ml" {"scrypt/scrypt.ml"}
+  "_build/install/default/lib/kdf/scrypt/scrypt.mli" {"scrypt/scrypt.mli"}
+]
+stublibs: "_build/install/default/lib/stublibs/dllscrypt_stubs.so"
+doc: [
+  "_build/install/default/doc/kdf/CHANGES.md"
+  "_build/install/default/doc/kdf/LICENSE.md"
+  "_build/install/default/doc/kdf/README.md"
+]
+libexec: [
+  "_build/install/default/lib/kdf/hkdf/hkdf.cmxs" {"hkdf/hkdf.cmxs"}
+  "_build/install/default/lib/kdf/pbkdf/pbkdf.cmxs" {"pbkdf/pbkdf.cmxs"}
+  "_build/install/default/lib/kdf/scrypt/scrypt.cmxs" {"scrypt/scrypt.cmxs"}
+]

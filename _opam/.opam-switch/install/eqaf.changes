@@ -1,0 +1,61 @@
+opam-version: "2.0"
+added: [
+  "doc/eqaf" {"D"}
+  "doc/eqaf/CHANGES.md" {"F:e0ad809d9148566dfb4a6cfa1c785954"}
+  "doc/eqaf/LICENSE.md" {"F:719e93063e9f55f5357fcaa45300a327"}
+  "doc/eqaf/README.md" {"F:87050eb3db6458adc4e8945eb355221e"}
+  "lib/eqaf" {"D"}
+  "lib/eqaf/META" {"F:c92afd2e930e6c1b7d741f9c0a602d7c"}
+  "lib/eqaf/bigstring" {"D"}
+  "lib/eqaf/bigstring/eqaf_bigstring.a"
+    {"F:2494f11e7b2b24b2e675b651ae69149f"}
+  "lib/eqaf/bigstring/eqaf_bigstring.cma"
+    {"F:499fed98e851308ebd2a3caad1409f72"}
+  "lib/eqaf/bigstring/eqaf_bigstring.cmi"
+    {"F:69821e1ac0eb785b3d26ca17150201d8"}
+  "lib/eqaf/bigstring/eqaf_bigstring.cmt"
+    {"F:1b2c9fac9058f0227a0209e172de5880"}
+  "lib/eqaf/bigstring/eqaf_bigstring.cmti"
+    {"F:bacca4a747a3376e2afc6d2a246e55b9"}
+  "lib/eqaf/bigstring/eqaf_bigstring.cmx"
+    {"F:4bfe38923fbecd028c50b031712daff6"}
+  "lib/eqaf/bigstring/eqaf_bigstring.cmxa"
+    {"F:be9ea29e680db6d39f43df3b293d85f5"}
+  "lib/eqaf/bigstring/eqaf_bigstring.cmxs"
+    {"F:791f0b32c27b794dd6e7f47a35a9d76d"}
+  "lib/eqaf/bigstring/eqaf_bigstring.ml"
+    {"F:8eb9c8c85f4a609b8cbe95bfc9b10176"}
+  "lib/eqaf/bigstring/eqaf_bigstring.mli"
+    {"F:708c24b8f23f25e550d1291daa786ade"}
+  "lib/eqaf/bytes" {"D"}
+  "lib/eqaf/bytes/eqaf_bytes.a" {"F:6e81371fd61c3739c67b776b6d5d7846"}
+  "lib/eqaf/bytes/eqaf_bytes.cma" {"F:a9c35eff01b8e4fc0c5bc51ac2badfb7"}
+  "lib/eqaf/bytes/eqaf_bytes.cmi" {"F:c6159321459637fce5d8c5c5aaa13895"}
+  "lib/eqaf/bytes/eqaf_bytes.cmt" {"F:773fbaab5b1e0f31beb404c48424c1fc"}
+  "lib/eqaf/bytes/eqaf_bytes.cmti" {"F:d928adeac4a9fe919d11a70fea78d703"}
+  "lib/eqaf/bytes/eqaf_bytes.cmx" {"F:1d471fdb0a02939831dc861b1d3f8e79"}
+  "lib/eqaf/bytes/eqaf_bytes.cmxa" {"F:4ae7d077ec28b1b0cd7a1d30f5de8453"}
+  "lib/eqaf/bytes/eqaf_bytes.cmxs" {"F:e087ba231a96ba66dd82e1375538965d"}
+  "lib/eqaf/bytes/eqaf_bytes.ml" {"F:e30f948b2a0a49823cb56c67925b567b"}
+  "lib/eqaf/bytes/eqaf_bytes.mli" {"F:d3f2414de325ce3e2e45d46d8ea8589e"}
+  "lib/eqaf/dune-package" {"F:6dcac77875859a7f148a9363301a83e4"}
+  "lib/eqaf/eqaf.a" {"F:8b41fc3044204d1b5af079b94540fdd0"}
+  "lib/eqaf/eqaf.cma" {"F:3c676cc60a44c7b80e66e1fca9035cd7"}
+  "lib/eqaf/eqaf.cmi" {"F:2608b01a665701a194af82ffa0cdf59a"}
+  "lib/eqaf/eqaf.cmt" {"F:b87f873df772843cd831722949b7a60d"}
+  "lib/eqaf/eqaf.cmti" {"F:560f07ad55938c097dd9e6ff400d55f1"}
+  "lib/eqaf/eqaf.cmx" {"F:6c750e161b126c03df2277cdbf3f0896"}
+  "lib/eqaf/eqaf.cmxa" {"F:ecbbda010c862be2f59d3fef03e0473b"}
+  "lib/eqaf/eqaf.cmxs" {"F:5e2f6e350bb97a0e6a6e29496f61cc07"}
+  "lib/eqaf/eqaf.ml" {"F:ce501bf7df4486a047148a45356bcf2f"}
+  "lib/eqaf/eqaf.mli" {"F:23e0a1d1bc6bcba8570460aed2df1b4c"}
+  "lib/eqaf/eqaf__.cmi" {"F:095bda302832514edbe4dcb925989498"}
+  "lib/eqaf/eqaf__.cmt" {"F:2a582d1592d3aff8094eb26301210c19"}
+  "lib/eqaf/eqaf__.cmx" {"F:0548396ffb617fa7a6c843742215bc12"}
+  "lib/eqaf/eqaf__.ml" {"F:9c7e0db6408e097ef4ff00ba4ad1c01a"}
+  "lib/eqaf/eqaf__Unsafe.cmi" {"F:dede2cef793ecd93d6745acd0d8c6472"}
+  "lib/eqaf/eqaf__Unsafe.cmt" {"F:31d5a026f0e8dd238b4587937b0be0ed"}
+  "lib/eqaf/eqaf__Unsafe.cmx" {"F:a95137e61840b6634ece925e20ee4a88"}
+  "lib/eqaf/opam" {"F:04b0ed61be2ae2dbdb2568600e8b3a10"}
+  "lib/eqaf/unsafe.ml" {"F:5d60209d717dd96793cb4c262e8f9cc4"}
+]

@@ -1,0 +1,277 @@
+.TH "Stdlib.Pair" 3 2025-11-21 OCamldoc "OCaml library"
+.SH NAME
+Stdlib.Pair \- no description
+.SH Module
+Module   Stdlib.Pair
+.SH Documentation
+.sp
+Module
+.BI "Pair"
+ : 
+.B (module Stdlib__Pair)
+
+.sp
+
+.sp
+
+.sp
+.sp
+
+.PP
+.SS Pairs
+
+.PP
+.I type 
+.B ('a, 'b)
+.I t 
+= 
+.B 'a * 'b
+
+.sp
+The type for pairs\&.
+
+.sp
+
+.I val make 
+: 
+.B 'a -> 'b -> 'a * 'b
+.sp
+
+.ft B
+make a b
+.ft R
+is the pair 
+.ft B
+(a, b)
+.ft R
+\&.
+
+.sp
+
+.I val fst 
+: 
+.B 'a * 'b -> 'a
+.sp
+
+.ft B
+fst (a, b)
+.ft R
+is 
+.ft B
+a
+.ft R
+\&.
+
+.sp
+
+.I val snd 
+: 
+.B 'a * 'b -> 'b
+.sp
+
+.ft B
+snd (a, b)
+.ft R
+is 
+.ft B
+b
+.ft R
+\&.
+
+.sp
+
+.I val swap 
+: 
+.B 'a * 'b -> 'b * 'a
+.sp
+
+.ft B
+swap (a, b)
+.ft R
+is 
+.ft B
+(b, a)
+.ft R
+\&.
+
+.sp
+
+.PP
+.SS Iterators
+
+.PP
+
+.I val fold 
+: 
+.B ('a -> 'b -> 'c) -> 'a * 'b -> 'c
+.sp
+
+.ft B
+fold f (a, b)
+.ft R
+applies 
+.ft B
+f
+.ft R
+to 
+.ft B
+a
+.ft R
+and 
+.ft B
+b
+.ft R
+\&.
+
+.sp
+
+.I val map 
+: 
+.B ('a -> 'c) -> ('b -> 'd) -> 'a * 'b -> 'c * 'd
+.sp
+
+.ft B
+map f g (a, b)
+.ft R
+applies 
+.ft B
+f
+.ft R
+to 
+.ft B
+a
+.ft R
+and 
+.ft B
+g
+.ft R
+to 
+.ft B
+b
+.ft R
+\&.
+
+.sp
+
+.I val iter 
+: 
+.B ('a -> unit) -> ('b -> unit) -> 'a * 'b -> unit
+.sp
+
+.ft B
+iter f g (a, b)
+.ft R
+first applies 
+.ft B
+f
+.ft R
+to 
+.ft B
+a
+.ft R
+, and then 
+.ft B
+g
+.ft R
+to 
+.ft B
+b
+.ft R
+\&.
+
+.sp
+
+.I val map_fst 
+: 
+.B ('a -> 'c) -> 'a * 'b -> 'c * 'b
+.sp
+
+.ft B
+map_fst f p
+.ft R
+applies 
+.ft B
+f
+.ft R
+to 
+.ft B
+p
+.ft R
+\&'s first component\&.
+
+.sp
+
+.I val map_snd 
+: 
+.B ('b -> 'c) -> 'a * 'b -> 'a * 'c
+.sp
+
+.ft B
+map_snd f p
+.ft R
+applies 
+.ft B
+f
+.ft R
+to 
+.ft B
+p
+.ft R
+\&'s second component\&.
+
+.sp
+
+.PP
+.SS Predicates and comparisons
+
+.PP
+
+.I val equal 
+: 
+.B ('a -> 'a -> bool) -> ('b -> 'b -> bool) -> 'a * 'b -> 'a * 'b -> bool
+.sp
+
+.ft B
+equal eqa eqb (a1, b1) (a2, b2)
+.ft R
+is 
+.ft B
+true
+.ft R
+if and only if 
+.ft B
+eqa a1 a2
+.ft R
+and
+.ft B
+eqb b1 b2
+.ft R
+are both 
+.ft B
+true
+.ft R
+\&.
+
+.sp
+
+.I val compare 
+: 
+.B ('a -> 'a -> int) -> ('b -> 'b -> int) -> 'a * 'b -> 'a * 'b -> int
+.sp
+
+.ft B
+compare cmpa cmpb
+.ft R
+is a total order on pairs using 
+.ft B
+cmpa
+.ft R
+to compare the
+first component, and 
+.ft B
+cmpb
+.ft R
+to compare the second component\&. It is
+implemented by a lexicographic order\&.
+
+.sp

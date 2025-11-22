@@ -1,0 +1,90 @@
+.TH "Result.Syntax" 3 2025-11-21 OCamldoc "OCaml library"
+.SH NAME
+Result.Syntax \- Binding operators.
+.SH Module
+Module   Result.Syntax
+.SH Documentation
+.sp
+Module
+.BI "Syntax"
+ : 
+.B sig end
+
+.sp
+Binding operators\&.
+
+.sp
+.B "Since"
+5.4
+
+.sp
+
+.sp
+.sp
+
+.I val ( let* ) 
+: 
+.B ('a, 'e) result ->
+.B   ('a -> ('b, 'e) result) -> ('b, 'e) result
+.sp
+
+.ft B
+( let* )
+.ft R
+is 
+.ft B
+Result\&.bind
+.ft R
+\&.
+
+.sp
+
+.I val ( and* ) 
+: 
+.B ('a, 'e) result ->
+.B   ('b, 'e) result -> ('a * 'b, 'e) result
+.sp
+
+.ft B
+( and* )
+.ft R
+is 
+.ft B
+Result\&.product
+.ft R
+\&.
+
+.sp
+
+.I val let+ 
+: 
+.B ('a, 'e) result -> ('a -> 'b) -> ('b, 'e) result
+.sp
+
+.ft B
+( let+ )
+.ft R
+is 
+.ft B
+Result\&.map
+.ft R
+\&.
+
+.sp
+
+.I val and+ 
+: 
+.B ('a, 'e) result ->
+.B   ('b, 'e) result -> ('a * 'b, 'e) result
+.sp
+
+.ft B
+( and+ )
+.ft R
+is 
+.ft B
+Result\&.product
+.ft R
+\&.
+
+.sp

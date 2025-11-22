@@ -1,0 +1,42 @@
+opam-version: "2.0"
+synopsis: "a m3u generator for stripchat"
+description: "a m3u generator for stripchat"
+maintainer: ["Maintainer xxlist"]
+authors: ["Author xxlist"]
+license: "LICENSE"
+tags: ["stripchat" "m3u"]
+homepage: "https://github.com/xxlist/st-list"
+doc: "https://url/to/documentation"
+bug-reports: "https://github.com/xxlist/st-list/issues"
+depends: [
+  "dune" {>= "3.19"}
+  "ocaml"
+  "odoc" {with-doc}
+  "cohttp-lwt-unix"
+  "cohttp"                     
+  "lwt"
+  "lwt_ssl"
+  "ppx_deriving" {build} 
+  "ppx_deriving_yojson" {build}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo: "git+https://github.com/xxlist/st-list.git"
+x-maintenance-intent: ["(latest)"]
+name: "st-list"
+version: "dev"
+url {
+  src: "git+file:///home/runner/work/st-list/st-list#main"
+}

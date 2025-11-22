@@ -1,0 +1,23 @@
+opam-version: "2.0"
+added: [
+  "doc/ca-certs" {"D"}
+  "doc/ca-certs/CHANGES.md" {"F:281a7a641b29fdf452de8e15c419ff81"}
+  "doc/ca-certs/LICENSE.md" {"F:78fab6dbb902ca7459f999c28ae1e90d"}
+  "doc/ca-certs/README.md" {"F:b27050d0767c2ff30ed3361573f3aa0f"}
+  "lib/ca-certs" {"D"}
+  "lib/ca-certs/META" {"F:d1dd47d8263f909af3890315c1bfd4a9"}
+  "lib/ca-certs/ca_certs.a" {"F:8dddd43c3ed7309f43465436f1f95040"}
+  "lib/ca-certs/ca_certs.cma" {"F:27f222f49419e1a2f008f40793a359af"}
+  "lib/ca-certs/ca_certs.cmi" {"F:31eb0d98946143902b9e718a89f950e6"}
+  "lib/ca-certs/ca_certs.cmt" {"F:5cdb5cd0576f5856299da4e5a4672d8e"}
+  "lib/ca-certs/ca_certs.cmti" {"F:a76c5a9c596ccb16c29b39f7dc52894a"}
+  "lib/ca-certs/ca_certs.cmx" {"F:62ef92c0a8df24104417e4ac24a0a4eb"}
+  "lib/ca-certs/ca_certs.cmxa" {"F:9f957d62709533468dded44a3c54fd1f"}
+  "lib/ca-certs/ca_certs.cmxs" {"F:ca8ec540132e4256f150e057c650d35a"}
+  "lib/ca-certs/ca_certs.ml" {"F:69b3bd19da62e0d609e38706a518a6b1"}
+  "lib/ca-certs/ca_certs.mli" {"F:c99f2b3a1e0080e4766d2dcadff58944"}
+  "lib/ca-certs/dune-package" {"F:84c80ce72859dd958812259dc39956d5"}
+  "lib/ca-certs/libca_certs_stubs.a" {"F:130525127071d7d44c76dc44cd80c496"}
+  "lib/ca-certs/opam" {"F:eb19ac8ca79f7c75c48b55d4c658efc3"}
+  "lib/stublibs/dllca_certs_stubs.so" {"F:502dcc4b0c47c7c3b5642102aaaf865d"}
+]

@@ -1,0 +1,30 @@
+opam-version: "2.0"
+added: [
+  "doc/rresult" {"D"}
+  "doc/rresult/CHANGES.md" {"F:700c4bc3a761e6095018401b86f5658e"}
+  "doc/rresult/LICENSE.md" {"F:3a4b424d5e56d80ec399166688bdc404"}
+  "doc/rresult/README.md" {"F:24dd1261981f9c6c849c48f68f992256"}
+  "doc/rresult/odoc-pages" {"D"}
+  "doc/rresult/odoc-pages/index.mld" {"F:17fe4c1dc7a49f039a9c32277fd50a0a"}
+  "lib/rresult" {"D"}
+  "lib/rresult/META" {"F:573c064e83e1765c8b395c0284247771"}
+  "lib/rresult/opam" {"F:964e712dda1a8a94f8c0bbc39b33e32b"}
+  "lib/rresult/rresult.a" {"F:8ee618f81b242e89fcfacf731239d05b"}
+  "lib/rresult/rresult.cma" {"F:a1a089ef3280b4686e66b3b5c9e656b1"}
+  "lib/rresult/rresult.cmi" {"F:14d76c31474ce05a317b090b63e6d736"}
+  "lib/rresult/rresult.cmt" {"F:6853cd50dc3392d4d059d55ed62637f8"}
+  "lib/rresult/rresult.cmti" {"F:ae3a020f4898db91897cdd3cf01f78f0"}
+  "lib/rresult/rresult.cmx" {"F:9353d119a5a5ddb9866dec75214b44f8"}
+  "lib/rresult/rresult.cmxa" {"F:3996fb37eb014aa137d3d0b38cc0fb18"}
+  "lib/rresult/rresult.cmxs" {"F:face931beafafab7b8379e6d56a937b4"}
+  "lib/rresult/rresult.ml" {"F:572e344fc677cbbf1a89151fbe1f3eed"}
+  "lib/rresult/rresult.mli" {"F:b9e4abb2ba6a62fcf79ee0dabe9f2306"}
+  "lib/rresult/rresult_top.a" {"F:4f3abba94c8c46187e6cb9d772dd9ea0"}
+  "lib/rresult/rresult_top.cma" {"F:712f763cba1a8fe182a5dba4251969fc"}
+  "lib/rresult/rresult_top.cmt" {"F:b7881668a16b8a95605fe75269e77e67"}
+  "lib/rresult/rresult_top.cmx" {"F:7e4de19fb113851a2669d64af32f7215"}
+  "lib/rresult/rresult_top.cmxa" {"F:639a016858eb0efa91f2d9abf800e493"}
+  "lib/rresult/rresult_top.cmxs" {"F:102fde27e44edf5938b9065b713ab096"}
+  "lib/rresult/rresult_top.ml" {"F:0d50ea064942c800b40487d78192fbfd"}
+  "lib/rresult/rresult_top_init.ml" {"F:297505211499df701e11236ff57b4701"}
+]

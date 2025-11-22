@@ -1,0 +1,46 @@
+opam-version: "2.0"
+added: [
+  "doc/kdf" {"D"}
+  "doc/kdf/CHANGES.md" {"F:4a1917bbec48169eae313ac3109b04aa"}
+  "doc/kdf/LICENSE.md" {"F:c3c682b50ffe4f9de3871f6e53063857"}
+  "doc/kdf/README.md" {"F:7d2665c44e9be4eb4511eb8a178f28db"}
+  "lib/kdf" {"D"}
+  "lib/kdf/META" {"F:537c4612a8ea6998fc8f27ab7f2ce430"}
+  "lib/kdf/dune-package" {"F:2a1388c64435b1c3b73fb1b63d96c2fc"}
+  "lib/kdf/hkdf" {"D"}
+  "lib/kdf/hkdf/hkdf.a" {"F:0d525e67856677ec7a6c0aafbbd0a43b"}
+  "lib/kdf/hkdf/hkdf.cma" {"F:884447b72dd035ebbcf2f8c1021b3bcc"}
+  "lib/kdf/hkdf/hkdf.cmi" {"F:76a277f13225f0d3141bcbbe37b13f95"}
+  "lib/kdf/hkdf/hkdf.cmt" {"F:f7fbc653912cfaf588f9bc25ab5341e7"}
+  "lib/kdf/hkdf/hkdf.cmti" {"F:f4ffe47f96f96b7255a2613570727b03"}
+  "lib/kdf/hkdf/hkdf.cmx" {"F:0a81c18d2b5b45db3bb06f157dd7eefa"}
+  "lib/kdf/hkdf/hkdf.cmxa" {"F:33c759347185ace496451116ec24612e"}
+  "lib/kdf/hkdf/hkdf.cmxs" {"F:1a6e864bbb7dd63584c7d6af3a75d38b"}
+  "lib/kdf/hkdf/hkdf.ml" {"F:ab2931e998683e0b91d434bad6919f52"}
+  "lib/kdf/hkdf/hkdf.mli" {"F:083aeeae68385c2420ff77154954b0a0"}
+  "lib/kdf/opam" {"F:8c47fdc33e1eb7f3fd199f3e26eb4ce9"}
+  "lib/kdf/pbkdf" {"D"}
+  "lib/kdf/pbkdf/pbkdf.a" {"F:bfd5ee749dec70e8810f864506b94723"}
+  "lib/kdf/pbkdf/pbkdf.cma" {"F:ed5c12dd8eb3aba8f48a079f1b5542c6"}
+  "lib/kdf/pbkdf/pbkdf.cmi" {"F:e7586e208e501eb5d9991270d7869b52"}
+  "lib/kdf/pbkdf/pbkdf.cmt" {"F:ea32e3e9aa0a451bc0afd6206b798c05"}
+  "lib/kdf/pbkdf/pbkdf.cmti" {"F:bd341fa59fdb6049166df91bc61ccd0d"}
+  "lib/kdf/pbkdf/pbkdf.cmx" {"F:446692c8a1d0de3c6788a10f112f04ee"}
+  "lib/kdf/pbkdf/pbkdf.cmxa" {"F:1846ed68e81e255a0e0cf5f2e08cff67"}
+  "lib/kdf/pbkdf/pbkdf.cmxs" {"F:707bf1e8e52d2b90e08b55a4e4b16395"}
+  "lib/kdf/pbkdf/pbkdf.ml" {"F:f646da2fb8c307496b848549ac64c532"}
+  "lib/kdf/pbkdf/pbkdf.mli" {"F:b7ead2c5d0622173c0f47bc10faa5d0f"}
+  "lib/kdf/scrypt" {"D"}
+  "lib/kdf/scrypt/libscrypt_stubs.a" {"F:e89595ea0df829e415db0d4af8e6c8cb"}
+  "lib/kdf/scrypt/scrypt.a" {"F:6e2d5671a216444a14051804c247ab51"}
+  "lib/kdf/scrypt/scrypt.cma" {"F:7794bb4280535d72940e3cd53b174317"}
+  "lib/kdf/scrypt/scrypt.cmi" {"F:eaf3b3f57232753557001a77afe3b9ca"}
+  "lib/kdf/scrypt/scrypt.cmt" {"F:e4bf61ee76dcaa77178b00511caca63f"}
+  "lib/kdf/scrypt/scrypt.cmti" {"F:a422ad628eedb9f3ee19ad41fc3557df"}
+  "lib/kdf/scrypt/scrypt.cmx" {"F:fe39b07956228143b1256d7a5ee0ffa9"}
+  "lib/kdf/scrypt/scrypt.cmxa" {"F:b4d12b44495799bf4a923c6d699291ac"}
+  "lib/kdf/scrypt/scrypt.cmxs" {"F:ac7c4daa6b0f34ae22b770887b054e6c"}
+  "lib/kdf/scrypt/scrypt.ml" {"F:882d59ff6be230d7d4a3c23d815ed6d4"}
+  "lib/kdf/scrypt/scrypt.mli" {"F:105228a429896a714a35a92ebf4fa678"}
+  "lib/stublibs/dllscrypt_stubs.so" {"F:55f180b9de57ae8a09cc496fd0be10da"}
+]

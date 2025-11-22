@@ -1,0 +1,21 @@
+opam-version: "2.0"
+added: [
+  "doc/gmap" {"D"}
+  "doc/gmap/CHANGES.md" {"F:04e6c8101dc71075d148ee1efa6eb3b8"}
+  "doc/gmap/LICENSE.md" {"F:8622c771d57f358dd8efd8cdc6634143"}
+  "doc/gmap/README.md" {"F:754817bfccee9a7ed03e66d7b107b653"}
+  "lib/gmap" {"D"}
+  "lib/gmap/META" {"F:a88eada44845f8130921edb72a69cbc0"}
+  "lib/gmap/dune-package" {"F:929e19a1e013245186055a854bbc4d91"}
+  "lib/gmap/gmap.a" {"F:a7d8e1a04f65572d2e48e486b1200ad3"}
+  "lib/gmap/gmap.cma" {"F:8604a7deb6cd024e2baa9a56bdd45ceb"}
+  "lib/gmap/gmap.cmi" {"F:decb9047e5af23454cf5557c4ea616d9"}
+  "lib/gmap/gmap.cmt" {"F:879b1cbbe941097f6f2cb59894d653a5"}
+  "lib/gmap/gmap.cmti" {"F:a707f062952d1e2f33059f4adf6f4e77"}
+  "lib/gmap/gmap.cmx" {"F:dd063a196f69590b01396aac30686612"}
+  "lib/gmap/gmap.cmxa" {"F:792c478b39ca01cd80d35126ed722717"}
+  "lib/gmap/gmap.cmxs" {"F:06dd2a9bc1c292593c199b4c620673cc"}
+  "lib/gmap/gmap.ml" {"F:8725cef375c4fa8a86fee053140ceb2a"}
+  "lib/gmap/gmap.mli" {"F:315f323a5b02aa49cad41d5dbb069f65"}
+  "lib/gmap/opam" {"F:eb7faef5cba9e5999b0a950f8f8d6338"}
+]

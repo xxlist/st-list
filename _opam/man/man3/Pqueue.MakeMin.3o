@@ -1,0 +1,407 @@
+.TH "Pqueue.MakeMin" 3 2025-11-21 OCamldoc "OCaml library"
+.SH NAME
+Pqueue.MakeMin \- Functor building an implementation of the min-priority queue structure given a totally ordered type for elements.
+.SH Module
+Module   Pqueue.MakeMin
+.SH Documentation
+.sp
+Module
+.BI "MakeMin"
+ : 
+.B (E : OrderedType) -> sig end
+
+.sp
+Functor building an implementation of the min\-priority queue
+structure given a totally ordered type for elements\&.
+
+.sp
+.B "Parameters:"
+.sp
+"E"
+
+.B Pqueue.OrderedType
+
+
+
+
+
+.sp
+.sp
+
+.PP
+.SS Min-priority queues
+
+.PP
+.I type t 
+
+.sp
+The type of priority queues\&.
+
+.sp
+.I type elt 
+
+.sp
+The type of priority queue elements\&.
+
+.sp
+
+.I val create 
+: 
+.B unit -> t
+.sp
+Return a new priority queue, initially empty\&.
+
+.sp
+
+.I val length 
+: 
+.B t -> int
+.sp
+Return the number of elements in a priority queue\&.
+
+.sp
+
+.I val is_empty 
+: 
+.B t -> bool
+.sp
+
+.ft B
+is_empty q
+.ft R
+is 
+.ft B
+true
+.ft R
+iff 
+.ft B
+q
+.ft R
+is empty, that is, iff 
+.ft B
+length q = 0
+.ft R
+\&.
+
+.sp
+
+.I val add 
+: 
+.B t -> elt -> unit
+.sp
+
+.ft B
+add q x
+.ft R
+adds the element 
+.ft B
+x
+.ft R
+in the priority queue 
+.ft B
+q
+.ft R
+\&.
+
+.sp
+
+.I val add_iter 
+: 
+.B t -> ((elt -> unit) -> 'x -> unit) -> 'x -> unit
+.sp
+
+.ft B
+add_iter q iter x
+.ft R
+adds each element of 
+.ft B
+x
+.ft R
+to the end of 
+.ft B
+q
+.ft R
+\&.
+This is 
+.ft B
+iter (add q) x
+.ft R
+\&.
+
+.sp
+
+.I val min_elt 
+: 
+.B t -> elt option
+.sp
+
+.ft B
+min_elt q
+.ft R
+is an element of 
+.ft B
+q
+.ft R
+with minimal priority or
+.ft B
+None
+.ft R
+if the queue is empty\&. The queue is not modified\&.
+
+.sp
+
+.I val get_min_elt 
+: 
+.B t -> elt
+.sp
+
+.ft B
+get_min_elt q
+.ft R
+returns an element of 
+.ft B
+q
+.ft R
+with minimal
+priority, or raises 
+.ft B
+Invalid_argument
+.ft R
+if the queue is
+empty\&. The queue is not modified\&.
+
+.sp
+
+.I val pop_min 
+: 
+.B t -> elt option
+.sp
+
+.ft B
+pop_min q
+.ft R
+removes and returns an element in queue 
+.ft B
+q
+.ft R
+with
+minimal priority, or returns 
+.ft B
+None
+.ft R
+if the queue is empty\&.
+
+.sp
+
+.I val remove_min 
+: 
+.B t -> unit
+.sp
+
+.ft B
+remove_min q
+.ft R
+removes an element in queue 
+.ft B
+q
+.ft R
+with minimal
+priority\&. It does nothing if 
+.ft B
+q
+.ft R
+is empty\&.
+
+.sp
+
+.I val clear 
+: 
+.B t -> unit
+.sp
+
+.ft B
+clear q
+.ft R
+removes all elements from 
+.ft B
+q
+.ft R
+\&.
+
+.sp
+
+.I val copy 
+: 
+.B t -> t
+.sp
+
+.ft B
+copy q
+.ft R
+is a new priority queue with the same elements 
+.ft B
+q
+.ft R
+has\&.
+
+.sp
+
+.PP
+.SS Conversions from other data structures
+
+.PP
+
+.I val of_array 
+: 
+.B elt array -> t
+.sp
+
+.ft B
+of_array a
+.ft R
+returns a new priority queue containing the
+elements of array 
+.ft B
+a
+.ft R
+\&. Runs in linear time\&.
+
+.sp
+
+.I val of_list 
+: 
+.B elt list -> t
+.sp
+
+.ft B
+of_list l
+.ft R
+returns a new priority queue containing the
+elements of list 
+.ft B
+l
+.ft R
+\&. Runs in linear time\&.
+
+.sp
+
+.I val of_iter 
+: 
+.B ((elt -> unit) -> 'x -> unit) -> 'x -> t
+.sp
+
+.ft B
+of_iter iter x
+.ft R
+returns a new priority queue containing the
+elements of 
+.ft B
+x
+.ft R
+, obtained from 
+.ft B
+iter
+.ft R
+\&.
+.sp
+For example, 
+.ft B
+of_iter Seq\&.iter s
+.ft R
+returns a new priority queue
+containing all the elements of the sequence 
+.ft B
+s
+.ft R
+(provided it
+is finite)\&.
+.sp
+Runs in linear time (excluding the time spent in 
+.ft B
+iter
+.ft R
+)\&.
+
+.sp
+
+.PP
+.SS Iteration
+.sp
+The order in which the elements of a priority queue are
+traversed is unspecified\&.
+.sp
+It is a programming error to mutate a priority queue (by
+adding or removing elements) during an iteration of the queue\&.
+Such an error may be detected and signaled by the backing dynamic
+array implementation, but this is not guaranteed\&.
+.PP
+
+.I val iter_unordered 
+: 
+.B (elt -> unit) -> t -> unit
+.sp
+
+.ft B
+iter_unordered f q
+.ft R
+applies 
+.ft B
+f
+.ft R
+to all elements in 
+.ft B
+q
+.ft R
+\&.  The
+order in which the elements are passed to 
+.ft B
+f
+.ft R
+is unspecified\&.
+.sp
+The behavior is not specified if the priority queue is modified
+by 
+.ft B
+f
+.ft R
+during the iteration\&.
+
+.sp
+
+.I val fold_unordered 
+: 
+.B ('acc -> elt -> 'acc) -> 'acc -> t -> 'acc
+.sp
+
+.ft B
+fold_unordered f accu q
+.ft R
+is 
+.ft B
+(f (\&.\&.\&. (f (f accu x1) x2) \&.\&.\&.)
+.br
+\&        xn)
+.ft R
+where 
+.ft B
+x1,x2,\&.\&.\&.,xn
+.ft R
+are the elements of 
+.ft B
+q
+.ft R
+\&. The order
+in which the elements are passed to 
+.ft B
+f
+.ft R
+is unspecified\&.
+.sp
+The behavior is not specified if the priority queue is modified
+by 
+.ft B
+f
+.ft R
+during the iteration\&.
+
+.sp

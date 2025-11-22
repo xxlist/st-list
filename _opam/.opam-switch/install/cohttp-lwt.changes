@@ -1,0 +1,99 @@
+opam-version: "2.0"
+added: [
+  "doc/cohttp-lwt" {"D"}
+  "doc/cohttp-lwt/CHANGES.md" {"F:d599dd13fd2935d9060dd8335e8bd8c7"}
+  "doc/cohttp-lwt/LICENSE.md" {"F:b7faefc7f19d1dc3891d3179aa4c88e2"}
+  "doc/cohttp-lwt/README.md" {"F:f13a80a497e665af8efa4e408ae53c22"}
+  "lib/cohttp-lwt" {"D"}
+  "lib/cohttp-lwt/META" {"F:036faa270e57459e5792d565b3f4add4"}
+  "lib/cohttp-lwt/body.ml" {"F:8cb36f425f7cca88c0c7d6915cc51cc4"}
+  "lib/cohttp-lwt/body.mli" {"F:aeb023b31402766c45f21bdc973cabd0"}
+  "lib/cohttp-lwt/bytebuffer.ml" {"F:c192010c820f2da53d996105ba20ae33"}
+  "lib/cohttp-lwt/client.ml" {"F:77f730088af3fb7b73a21e69c465e2d0"}
+  "lib/cohttp-lwt/client.mli" {"F:9cbb5c62c2a5138d27992e68eebb4bb6"}
+  "lib/cohttp-lwt/cohttp_lwt.a" {"F:a70fa313d6d4a88ff3c0fa0fe51be3d6"}
+  "lib/cohttp-lwt/cohttp_lwt.cma" {"F:12ffacaf036b518525b265fb85937e29"}
+  "lib/cohttp-lwt/cohttp_lwt.cmi" {"F:2304a2541891b2ee73414fe292cfd889"}
+  "lib/cohttp-lwt/cohttp_lwt.cmt" {"F:a9f40d6d3427ce63113ccde7bbca86db"}
+  "lib/cohttp-lwt/cohttp_lwt.cmx" {"F:44b4463cab9b945a689511764fe84641"}
+  "lib/cohttp-lwt/cohttp_lwt.cmxa" {"F:8d34eb1176586fafa77e2e342a9ace83"}
+  "lib/cohttp-lwt/cohttp_lwt.cmxs" {"F:2bde7ca848b78c7ec4863b29ea671828"}
+  "lib/cohttp-lwt/cohttp_lwt.ml" {"F:3da057c9009320da3d9ded1b82c6bf54"}
+  "lib/cohttp-lwt/cohttp_lwt__.cmi" {"F:99b10c310060698205029721b421c891"}
+  "lib/cohttp-lwt/cohttp_lwt__.cmt" {"F:3d20f4e7081dc70036152e55e7178851"}
+  "lib/cohttp-lwt/cohttp_lwt__.cmx" {"F:5788e005f86d93126e6640e70bf2913c"}
+  "lib/cohttp-lwt/cohttp_lwt__.ml" {"F:c14fe2d4d883aeaf2635bda505186f42"}
+  "lib/cohttp-lwt/cohttp_lwt__Body.cmi"
+    {"F:a5cf6010ebd43177f1fd9f376ec655cd"}
+  "lib/cohttp-lwt/cohttp_lwt__Body.cmt"
+    {"F:5b4a32b017d9bfd8ca1a5be5c41001aa"}
+  "lib/cohttp-lwt/cohttp_lwt__Body.cmti"
+    {"F:73752fec6d687b1f7c871e50a2ca4573"}
+  "lib/cohttp-lwt/cohttp_lwt__Body.cmx"
+    {"F:aebb477cff204aa9f17bc456033d4e91"}
+  "lib/cohttp-lwt/cohttp_lwt__Bytebuffer.cmi"
+    {"F:d9dfe88fb4dd9cec002dd8969e1ea373"}
+  "lib/cohttp-lwt/cohttp_lwt__Bytebuffer.cmt"
+    {"F:2f1fdb3851af668b2a4f35bcad394cb1"}
+  "lib/cohttp-lwt/cohttp_lwt__Bytebuffer.cmx"
+    {"F:550beccc56fcbc1754edeea3ddd8197d"}
+  "lib/cohttp-lwt/cohttp_lwt__Client.cmi"
+    {"F:40ff54a8abb189c06b22890a3ccaff0f"}
+  "lib/cohttp-lwt/cohttp_lwt__Client.cmt"
+    {"F:051d23150cc577c7681b14675b394650"}
+  "lib/cohttp-lwt/cohttp_lwt__Client.cmti"
+    {"F:41184292ed1495a97b1c7a5d95df331d"}
+  "lib/cohttp-lwt/cohttp_lwt__Client.cmx"
+    {"F:fe079be9adfd6bc522d02c5e5eb08c58"}
+  "lib/cohttp-lwt/cohttp_lwt__Connection.cmi"
+    {"F:92f6e5c53ab663dcc5bbd6584eebb90a"}
+  "lib/cohttp-lwt/cohttp_lwt__Connection.cmt"
+    {"F:9210c9b35535ad1d42ea3843da70a6d5"}
+  "lib/cohttp-lwt/cohttp_lwt__Connection.cmx"
+    {"F:c2a6c7c0eb0c403520392372c01faa06"}
+  "lib/cohttp-lwt/cohttp_lwt__Connection_cache.cmi"
+    {"F:d50cddc57c4c02ae3a2ca1581ab88869"}
+  "lib/cohttp-lwt/cohttp_lwt__Connection_cache.cmt"
+    {"F:4d9e0e00cf75d4c9fbba50c2bf44e009"}
+  "lib/cohttp-lwt/cohttp_lwt__Connection_cache.cmti"
+    {"F:a8c10165c9979cd2af5608ac973e8088"}
+  "lib/cohttp-lwt/cohttp_lwt__Connection_cache.cmx"
+    {"F:f5552ab0468714ca7e6050178c350f6d"}
+  "lib/cohttp-lwt/cohttp_lwt__Make.cmi"
+    {"F:1a3805149af3f6334e3879c48e2c7dcc"}
+  "lib/cohttp-lwt/cohttp_lwt__Make.cmt"
+    {"F:42195c8f98e2bc5dac94967d03af1f14"}
+  "lib/cohttp-lwt/cohttp_lwt__Make.cmx"
+    {"F:bc8a65aa7234f451d3c29a724e56eebe"}
+  "lib/cohttp-lwt/cohttp_lwt__S.cmi" {"F:b54470f6d7f937f8ccace242a42a3c2b"}
+  "lib/cohttp-lwt/cohttp_lwt__S.cmt" {"F:878cbc8e411f16d148fb34759ef69572"}
+  "lib/cohttp-lwt/cohttp_lwt__S.cmx" {"F:5e3b07ade8b6fc289d9b1b1564274b73"}
+  "lib/cohttp-lwt/cohttp_lwt__Server.cmi"
+    {"F:24e81568554e9a386e9818ac2a2b6dae"}
+  "lib/cohttp-lwt/cohttp_lwt__Server.cmt"
+    {"F:16419a5b41860d7cf25102425cc1ce55"}
+  "lib/cohttp-lwt/cohttp_lwt__Server.cmti"
+    {"F:2a27849729d252adde514efd1e12c8fb"}
+  "lib/cohttp-lwt/cohttp_lwt__Server.cmx"
+    {"F:b88d7cd427acd0ed21c280cf4367293a"}
+  "lib/cohttp-lwt/cohttp_lwt__String_io.cmi"
+    {"F:b0c6e88f775440022b1eaf770cfff94e"}
+  "lib/cohttp-lwt/cohttp_lwt__String_io.cmt"
+    {"F:4a70392ea0624ac3a4ccd81123bfd618"}
+  "lib/cohttp-lwt/cohttp_lwt__String_io.cmti"
+    {"F:52729cb9d940a1e6d6bc962dde79ffc0"}
+  "lib/cohttp-lwt/cohttp_lwt__String_io.cmx"
+    {"F:d3fceed4bdb0a197f943f7a5990c3441"}
+  "lib/cohttp-lwt/connection.ml" {"F:58145884e89d5128c60c601cc0bc3de7"}
+  "lib/cohttp-lwt/connection_cache.ml" {"F:536bcdaf2c9d1bb528699aef7fec5259"}
+  "lib/cohttp-lwt/connection_cache.mli"
+    {"F:acfa715d029956e70675f0db1d94bc09"}
+  "lib/cohttp-lwt/dune-package" {"F:4fc7b417dd470d242d526f1eb7ab685d"}
+  "lib/cohttp-lwt/make.ml" {"F:277c133cf65bd95a22e62f0e60b61781"}
+  "lib/cohttp-lwt/opam" {"F:80ee66d779edf72c10c54e1fd6f1be6a"}
+  "lib/cohttp-lwt/s.ml" {"F:7fd975743eac22ee66074528494f7d81"}
+  "lib/cohttp-lwt/server.ml" {"F:eb0150bb69a58d9c364e7d8afe2ec754"}
+  "lib/cohttp-lwt/server.mli" {"F:a52f4a09ce9e19fbda961aca3835fa81"}
+  "lib/cohttp-lwt/string_io.ml" {"F:a35f96fa8c5dedb5897f0e02164c4773"}
+  "lib/cohttp-lwt/string_io.mli" {"F:a246f517f75e31a2c3bfb30da16f39cc"}
+]

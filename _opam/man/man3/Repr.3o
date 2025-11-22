@@ -1,0 +1,265 @@
+.TH "Repr" 3 2025-11-21 OCamldoc "OCaml library"
+.SH NAME
+Repr \- Functions defined on the low-level representations of values.
+.SH Module
+Module   Repr
+.SH Documentation
+.sp
+Module
+.BI "Repr"
+ : 
+.B sig end
+
+.sp
+Functions defined on the low\-level representations of values\&.
+
+.sp
+.B "Since"
+5.4
+
+.sp
+
+.sp
+.sp
+
+.PP
+.SS Physical comparison
+
+.PP
+
+.I val phys_equal 
+: 
+.B 'a -> 'a -> bool
+.sp
+
+.ft B
+phys_equal e1 e2
+.ft R
+tests for physical equality of 
+.ft B
+e1
+.ft R
+and 
+.ft B
+e2
+.ft R
+\&.
+On mutable types such as references, arrays, byte sequences, records with
+mutable fields and objects with mutable instance variables,
+.ft B
+phys_equal e1 e2
+.ft R
+is true if and only if physical modification of 
+.ft B
+e1
+.ft R
+also affects 
+.ft B
+e2
+.ft R
+\&.
+On non\-mutable types, the behavior of 
+.ft B
+phys_equal
+.ft R
+is
+implementation\-dependent; however, it is guaranteed that
+.ft B
+phys_equal e1 e2
+.ft R
+implies 
+.ft B
+compare e1 e2 = 0
+.ft R
+\&.
+
+.sp
+
+.PP
+.SS Polymorphic comparison
+
+.PP
+
+.I val equal 
+: 
+.B 'a -> 'a -> bool
+.sp
+
+.ft B
+equal e1 e2
+.ft R
+tests for structural equality of 
+.ft B
+e1
+.ft R
+and 
+.ft B
+e2
+.ft R
+\&.
+Mutable structures (e\&.g\&. references and arrays) are equal
+if and only if their current contents are structurally equal,
+even if the two mutable objects are not the same physical object\&.
+Equality between functional values raises 
+.ft B
+Invalid_argument
+.ft R
+\&.
+Equality between cyclic data structures may not terminate\&.
+
+.sp
+
+.I val compare 
+: 
+.B 'a -> 'a -> int
+.sp
+
+.ft B
+compare x y
+.ft R
+returns 
+.ft B
+0
+.ft R
+if 
+.ft B
+x
+.ft R
+is equal to 
+.ft B
+y
+.ft R
+,
+a negative integer if 
+.ft B
+x
+.ft R
+is less than 
+.ft B
+y
+.ft R
+, and a positive integer
+if 
+.ft B
+x
+.ft R
+is greater than 
+.ft B
+y
+.ft R
+\&.  The ordering implemented by 
+.ft B
+compare
+.ft R
+is compatible with the comparison predicates 
+.ft B
+(=)
+.ft R
+,
+.ft B
+(<)
+.ft R
+and 
+.ft B
+(>)
+.ft R
+, as well as the 
+.ft B
+equal
+.ft R
+function
+defined above,  with one difference on the treatment of the float value
+.ft B
+nan
+.ft R
+\&.  Namely, the comparison predicates treat 
+.ft B
+nan
+.ft R
+as different from any other float value, including itself;
+while 
+.ft B
+compare
+.ft R
+treats 
+.ft B
+nan
+.ft R
+as equal to itself and less than any
+other float value\&.  This treatment of 
+.ft B
+nan
+.ft R
+ensures that 
+.ft B
+compare
+.ft R
+defines a total ordering relation\&.
+.sp
+
+.ft B
+compare
+.ft R
+applied to functional values may raise 
+.ft B
+Invalid_argument
+.ft R
+\&.
+.ft B
+compare
+.ft R
+applied to cyclic structures may not terminate\&.
+.sp
+The 
+.ft B
+compare
+.ft R
+function can be used as the comparison function
+required by the 
+.ft B
+Set\&.Make
+.ft R
+and 
+.ft B
+Map\&.Make
+.ft R
+functors, as well as
+the 
+.ft B
+List\&.sort
+.ft R
+and 
+.ft B
+Array\&.sort
+.ft R
+functions\&.
+
+.sp
+
+.I val min 
+: 
+.B 'a -> 'a -> 'a
+.sp
+Return the smaller of the two arguments\&.
+The result is unspecified if one of the arguments contains
+the float value 
+.ft B
+nan
+.ft R
+\&.
+
+.sp
+
+.I val max 
+: 
+.B 'a -> 'a -> 'a
+.sp
+Return the greater of the two arguments\&.
+The result is unspecified if one of the arguments contains
+the float value 
+.ft B
+nan
+.ft R
+\&.
+
+.sp

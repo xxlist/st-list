@@ -1,0 +1,259 @@
+.TH "Stdlib.Char" 3 2025-11-21 OCamldoc "OCaml library"
+.SH NAME
+Stdlib.Char \- no description
+.SH Module
+Module   Stdlib.Char
+.SH Documentation
+.sp
+Module
+.BI "Char"
+ : 
+.B (module Stdlib__Char)
+
+.sp
+
+.sp
+
+.sp
+.sp
+
+.PP
+.SS Characters
+
+.PP
+.I type t 
+= 
+.B char
+
+.sp
+An alias for the type of characters\&.
+
+.sp
+
+.I val code 
+: 
+.B char -> int
+.sp
+Return the integer code of the argument\&.
+
+.sp
+
+.I val chr 
+: 
+.B int -> char
+.sp
+Return the character with the given integer code\&.
+
+.sp
+.B "Raises Invalid_argument"
+if the argument is
+outside the range [
+.ft B
+0x00
+.ft R
+;
+.ft B
+0xFF
+.ft R
+]\&.
+
+.sp
+
+.I val escaped 
+: 
+.B char -> string
+.sp
+Return a string representing the given character,
+with special characters escaped following the lexical conventions
+of OCaml\&.
+All characters outside the ASCII printable range [
+.ft B
+0x20
+.ft R
+;
+.ft B
+0x7E
+.ft R
+] are
+escaped, as well as backslash, double\-quote, and single\-quote\&.
+
+.sp
+
+.PP
+.SS Predicates and comparisons
+.sp
+See also the 
+.ft B
+Char\&.Ascii
+.ft R
+module\&.
+.PP
+
+.I val compare 
+: 
+.B t -> t -> int
+.sp
+The comparison function for characters, with the same specification as
+.ft B
+compare
+.ft R
+\&.  Along with the type 
+.ft B
+t
+.ft R
+, this function 
+.ft B
+compare
+.ft R
+allows the module 
+.ft B
+Char
+.ft R
+to be passed as argument to the functors
+.ft B
+Set\&.Make
+.ft R
+and 
+.ft B
+Map\&.Make
+.ft R
+\&.
+
+.sp
+
+.I val equal 
+: 
+.B t -> t -> bool
+.sp
+The equal function for chars\&.
+
+.sp
+.B "Since"
+4.03
+
+.sp
+
+.PP
+.SS ASCII characters
+
+.PP
+.I module Ascii : 
+.B sig end
+
+.sp
+ASCII character set support\&.
+.sp
+These functions give meaning to the integers [
+.ft B
+0x00
+.ft R
+;
+.ft B
+0x7F
+.ft R
+] of the
+ASCII
+character set\&.
+.sp
+Since the UTF\-8 encoding of Unicode has the same encoding and
+character semantics (U+0000 to U+001F) for these bytes, the
+functions can be safely used on elements of UTF\-8 encoded 
+.ft B
+string
+.ft R
+and 
+.ft B
+bytes
+.ft R
+values\&. However the functions only deal with ASCII
+related matters\&. For example the notion of Unicode whitespace is
+much larger than the ASCII whitespace determined by
+.ft B
+Char\&.Ascii\&.is_white
+.ft R
+\&.
+
+.sp
+.B "Since"
+5.4
+
+.sp
+
+.I val lowercase_ascii 
+: 
+.B char -> char
+.sp
+Use the equivalent 
+.ft B
+Char\&.Ascii\&.lowercase
+.ft R
+instead\&.
+
+.sp
+.B "Since"
+4.03
+
+.sp
+
+.I val uppercase_ascii 
+: 
+.B char -> char
+.sp
+Use the equivalent 
+.ft B
+Char\&.Ascii\&.uppercase
+.ft R
+instead\&.
+
+.sp
+.B "Since"
+4.03
+
+.sp
+
+.PP
+.SS Hashing
+
+.PP
+
+.I val seeded_hash 
+: 
+.B int -> t -> int
+.sp
+A seeded hash function for characters, with the same output value as
+.ft B
+Hashtbl\&.seeded_hash
+.ft R
+\&. This function allows this module to be passed as
+argument to the functor 
+.ft B
+Hashtbl\&.MakeSeeded
+.ft R
+\&.
+
+.sp
+.B "Since"
+5.1
+
+.sp
+
+.I val hash 
+: 
+.B t -> int
+.sp
+An unseeded hash function for characters, with the same output value as
+.ft B
+Hashtbl\&.hash
+.ft R
+\&. This function allows this module to be passed as argument
+to the functor 
+.ft B
+Hashtbl\&.Make
+.ft R
+\&.
+
+.sp
+.B "Since"
+5.1
+
+.sp

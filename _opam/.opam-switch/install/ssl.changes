@@ -1,0 +1,28 @@
+opam-version: "2.0"
+added: [
+  "doc/ssl" {"D"}
+  "doc/ssl/CHANGES.md" {"F:62ae979ec21fe19a9b8a438f5b3e4ade"}
+  "doc/ssl/README.md" {"F:d6ff781a19f80155154edf892882f2f9"}
+  "lib/ssl" {"D"}
+  "lib/ssl/META" {"F:07fbec747b80ba1797d3ca453a7d8415"}
+  "lib/ssl/dune-package" {"F:83e3f4ae1e749f13f5fc1ca483245559"}
+  "lib/ssl/libssl_stubs.a" {"F:d1141d6c0b6a4f5bca50306e0e19c766"}
+  "lib/ssl/opam" {"F:7a75eff125dc8685b77b9bcd0d43111d"}
+  "lib/ssl/ssl.a" {"F:f6c518f2c8ecc0780dcff45bfd4e902a"}
+  "lib/ssl/ssl.cma" {"F:129e8a27d5d81d5f3793b64a410c13f6"}
+  "lib/ssl/ssl.cmi" {"F:5c2e8a1647846cfe2104235a11a2c471"}
+  "lib/ssl/ssl.cmt" {"F:c7adfa9c05b0acfd437e3b37ccdaf46a"}
+  "lib/ssl/ssl.cmti" {"F:b84419902f9145b96417572aaeeee415"}
+  "lib/ssl/ssl.cmx" {"F:8df87104451fe8c2ac947ed241514352"}
+  "lib/ssl/ssl.cmxa" {"F:03ea009b3f3c7bfde09843c39d4d82d3"}
+  "lib/ssl/ssl.cmxs" {"F:c823cc4cae08823204a4ee08f1ffeda2"}
+  "lib/ssl/ssl.ml" {"F:718a4c568cbff8ef7215c172364903f9"}
+  "lib/ssl/ssl.mli" {"F:13e6c9fe3baae37672a7b1b4806ed79c"}
+  "lib/ssl/ssl_threads.cmi" {"F:db8cd6003ed434bae7dcd73677f7cc32"}
+  "lib/ssl/ssl_threads.cmt" {"F:ebc9e47e2bbeb775767bd8947e4748e0"}
+  "lib/ssl/ssl_threads.cmti" {"F:fca448e0f756a7e86af2d16bee9a5948"}
+  "lib/ssl/ssl_threads.cmx" {"F:24dab836420e83c64f04293b92dc94e3"}
+  "lib/ssl/ssl_threads.ml" {"F:08c7a6f1946c28af7f63bebbb375da6a"}
+  "lib/ssl/ssl_threads.mli" {"F:73bb18e50b47fa1e00b7a16e375fa2fe"}
+  "lib/stublibs/dllssl_stubs.so" {"F:b1e18d5f1f81f78d1f9199896c3d5f36"}
+]

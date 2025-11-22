@@ -1,0 +1,87 @@
+opam-version: "2.0"
+added: [
+  "doc/conduit-lwt-unix" {"D"}
+  "doc/conduit-lwt-unix/CHANGES.md" {"F:ac3cde89b61194c4227ba2c6f0850da2"}
+  "doc/conduit-lwt-unix/LICENSE.md" {"F:95e23278a1ff4de57d200bcae8234132"}
+  "doc/conduit-lwt-unix/README.md" {"F:6b9410589439b41b89e04a69d5af0854"}
+  "lib/conduit-lwt-unix" {"D"}
+  "lib/conduit-lwt-unix/META" {"F:36e162c41677e5575b24c7bcede46935"}
+  "lib/conduit-lwt-unix/conduit_lwt_launchd.cmi"
+    {"F:5941514a36bcba0f21ecec2d425b874a"}
+  "lib/conduit-lwt-unix/conduit_lwt_launchd.cmt"
+    {"F:4cd64b8732ebc7379d5752365acc143b"}
+  "lib/conduit-lwt-unix/conduit_lwt_launchd.cmx"
+    {"F:b65c4bff91965af4afb92166ed5379af"}
+  "lib/conduit-lwt-unix/conduit_lwt_launchd.ml"
+    {"F:7a5b00401c9deaf459502075c478bf24"}
+  "lib/conduit-lwt-unix/conduit_lwt_server.cmi"
+    {"F:96cf32f28ceaea474681132f879f149e"}
+  "lib/conduit-lwt-unix/conduit_lwt_server.cmt"
+    {"F:5e9ecc723960827ab39e94d762f55175"}
+  "lib/conduit-lwt-unix/conduit_lwt_server.cmti"
+    {"F:753885e1a19f1ee6dccb99eef4621815"}
+  "lib/conduit-lwt-unix/conduit_lwt_server.cmx"
+    {"F:5ab06fa1b7d8eeece2e9b3d66030d520"}
+  "lib/conduit-lwt-unix/conduit_lwt_server.ml"
+    {"F:864ec7eee28340d119847ebe9482860b"}
+  "lib/conduit-lwt-unix/conduit_lwt_server.mli"
+    {"F:65011c20f4168ee60e58218c751a3c35"}
+  "lib/conduit-lwt-unix/conduit_lwt_tls.cmi"
+    {"F:e1310971b39aeecc1590bfaeb23389f7"}
+  "lib/conduit-lwt-unix/conduit_lwt_tls.cmt"
+    {"F:a0bed2ae23f81d65b5a64115b818fe53"}
+  "lib/conduit-lwt-unix/conduit_lwt_tls.cmti"
+    {"F:8d44826dd7bd03e8feb7232164d19d24"}
+  "lib/conduit-lwt-unix/conduit_lwt_tls.cmx"
+    {"F:924ba1ddacc2f71c39f6a6b0e23e00c1"}
+  "lib/conduit-lwt-unix/conduit_lwt_tls.ml"
+    {"F:e4f9176d7c35d9b8de15bb5dabca78e3"}
+  "lib/conduit-lwt-unix/conduit_lwt_tls.mli"
+    {"F:2102af4df0af88112cd0b8cca50e32e7"}
+  "lib/conduit-lwt-unix/conduit_lwt_unix.a"
+    {"F:11f66dc4d740fddf6aa9e746da27731e"}
+  "lib/conduit-lwt-unix/conduit_lwt_unix.cma"
+    {"F:efca9891c72facf18d9b4282a4407e2f"}
+  "lib/conduit-lwt-unix/conduit_lwt_unix.cmi"
+    {"F:d1747ee494205b1dc8ce9d460f848642"}
+  "lib/conduit-lwt-unix/conduit_lwt_unix.cmt"
+    {"F:080c2f57115702b454684af8b4ce169d"}
+  "lib/conduit-lwt-unix/conduit_lwt_unix.cmti"
+    {"F:a7020548633d76cb8e031394c11b4b46"}
+  "lib/conduit-lwt-unix/conduit_lwt_unix.cmx"
+    {"F:3c6d0ee6e7b5c1acb8bca0ad76e94dfc"}
+  "lib/conduit-lwt-unix/conduit_lwt_unix.cmxa"
+    {"F:50afb1c44e475e6a0e37a9625854acde"}
+  "lib/conduit-lwt-unix/conduit_lwt_unix.cmxs"
+    {"F:1a03a09542bc7e10df241b258de71d10"}
+  "lib/conduit-lwt-unix/conduit_lwt_unix.ml"
+    {"F:a7261860471a9767d54d7252525c4279"}
+  "lib/conduit-lwt-unix/conduit_lwt_unix.mli"
+    {"F:7257b87090e7f483eaebfa3ae4cb0ec1"}
+  "lib/conduit-lwt-unix/conduit_lwt_unix_ssl.cmi"
+    {"F:53fcf1a3a7b45fa798e6b6d31b7b1ee7"}
+  "lib/conduit-lwt-unix/conduit_lwt_unix_ssl.cmt"
+    {"F:e8c103e38f943af1dc06f4e5d9bb309c"}
+  "lib/conduit-lwt-unix/conduit_lwt_unix_ssl.cmti"
+    {"F:ffbdc17567629a5bcacc1b442d9eb2f6"}
+  "lib/conduit-lwt-unix/conduit_lwt_unix_ssl.cmx"
+    {"F:20cdff39150470ca8b732d7ce0eb23ec"}
+  "lib/conduit-lwt-unix/conduit_lwt_unix_ssl.ml"
+    {"F:502cb9b39b173aa9b049210c68bc6f15"}
+  "lib/conduit-lwt-unix/conduit_lwt_unix_ssl.mli"
+    {"F:a10ceb51e26fbbfad278c40ff9e94c7b"}
+  "lib/conduit-lwt-unix/dune-package" {"F:6363b701219fb1094205ef5306690859"}
+  "lib/conduit-lwt-unix/opam" {"F:bd19026b2c75fa47ea152b3ef4fdf4d8"}
+  "lib/conduit-lwt-unix/resolver_lwt_unix.cmi"
+    {"F:3ec0da2ecde36109b10239c26cf67c84"}
+  "lib/conduit-lwt-unix/resolver_lwt_unix.cmt"
+    {"F:74c4de5711f30502619fcffeb1bf2dd5"}
+  "lib/conduit-lwt-unix/resolver_lwt_unix.cmti"
+    {"F:291c4e9ad19168a43f95272f7f29c824"}
+  "lib/conduit-lwt-unix/resolver_lwt_unix.cmx"
+    {"F:3194b75101a9c825907a4dc073add933"}
+  "lib/conduit-lwt-unix/resolver_lwt_unix.ml"
+    {"F:4cc05f62d775138e73add58539958d86"}
+  "lib/conduit-lwt-unix/resolver_lwt_unix.mli"
+    {"F:439ec4e65c72328bb472287f9675c867"}
+]

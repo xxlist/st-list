@@ -2,14 +2,14 @@
 
 (name st-list)
 
-(generate_opam_files true)
+(generate_opam_files false)
 
 (source
- (github username/reponame))
+ (github xxlist/st-list))
 
-(authors "Author Name <author@example.com>")
+(authors "Author xxlist")
 
-(maintainers "Maintainer Name <maintainer@example.com>")
+(maintainers "Maintainer xxlist")
 
 (license LICENSE)
 
@@ -17,10 +17,10 @@
 
 (package
  (name st-list)
- (synopsis "A short synopsis")
- (description "A longer description")
+ (synopsis "a m3u generator for stripchat")
+ (description "a m3u generator for stripchat")
  (depends ocaml)
  (tags
-  ("add topics" "to describe" your project)))
+  ("stripchat" "m3u")))
 
 ; See the complete stanza docs at https://dune.readthedocs.io/en/stable/reference/dune-project/index.html

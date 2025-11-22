@@ -127,4 +127,4 @@ let () =
   Logs.info (fun m -> m "Begin");
   let main = main () in
   let em =  Lwt_main.run main in
-  save_ext_m3u "st.m3u" em
+  save_ext_m3u "./st.m3u" em

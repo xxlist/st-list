@@ -1,13 +1,13 @@
 opam-version: "2.0"
-synopsis: "A short synopsis"
-description: "A longer description"
-maintainer: ["Maintainer Name <maintainer@example.com>"]
-authors: ["Author Name <author@example.com>"]
+synopsis: "a m3u generator for stripchat"
+description: "a m3u generator for stripchat"
+maintainer: ["Maintainer xxlist"]
+authors: ["Author xxlist"]
 license: "LICENSE"
-tags: ["add topics" "to describe" "your" "project"]
-homepage: "https://github.com/username/reponame"
+tags: ["stripchat" "m3u"]
+homepage: "https://github.com/xxlist/st-list"
 doc: "https://url/to/documentation"
-bug-reports: "https://github.com/username/reponame/issues"
+bug-reports: "https://github.com/xxlist/st-list/issues"
 depends: [
   "dune" {>= "3.19"}
   "ocaml"
@@ -33,5 +33,5 @@ build: [
     "@doc" {with-doc}
   ]
 ]
-dev-repo: "git+https://github.com/username/reponame.git"
+dev-repo: "git+https://github.com/xxlist/st-list.git"
 x-maintenance-intent: ["(latest)"]

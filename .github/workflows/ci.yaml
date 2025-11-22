@@ -23,8 +23,6 @@ jobs:
 
       - run: opam install . --deps-only --with-test
 
-      # - run: opam install cohttp-lwt-unix ppx_deriving_yojson logs fmt
-
       - run: opam exec -- dune exec st-list
 
       - name: Git auto commit and push all changes

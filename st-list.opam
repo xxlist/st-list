@@ -16,8 +16,8 @@ depends: [
   "cohttp"                     
   "lwt"
   "lwt_ssl"
-  "ppx_deriving_yojson" {build}
   "ppx_deriving" {build} 
+  "ppx_deriving_yojson" {build}
 ]
 build: [
   ["dune" "subst"] {dev}

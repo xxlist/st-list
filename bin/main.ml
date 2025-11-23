@@ -34,11 +34,11 @@ type ext_inf = {
   title : string;
   logo_link : string;
   play_link : string;
-}
+} [@@deriving yojson {strict=false}]
 
 type ext_m3u = {
   ext_inf_list : ext_inf list;
-}
+} [@@deriving yojson {strict=false}]
 
 let ext_inf_of_info info = 
   let model_id = (string_of_int info.modelId) in
@@ -124,7 +124,10 @@ let save_ext_m3u file em =
     
 let () = 
   setup_logs ();
-  Logs.info (fun m -> m "Begin");
+  Logs.info (fun m -> m "=== Begin ===");
   let main = main () in
   let em =  Lwt_main.run main in
-  save_ext_m3u "./st.m3u" em
+  Logs.info (fun m -> m "%s" (em |> ext_m3u_to_yojson |> Yojson.Safe.to_string));
+  Logs.info (fun m -> m "save st.m3u");
+  save_ext_m3u "./st.m3u" em;
+  Logs.info (fun m -> m "=== End ===")

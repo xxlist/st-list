@@ -141,7 +141,7 @@ let fetch_info_list name_list =
   |> List.map fetch_info_wtih_retry
   |> Lwt.all
 
-let main () = 
+let run () = 
   read_lines "./st.txt" 
   >>= fun name_list -> fetch_info_list name_list 
   >>= fun result_list ->
@@ -153,16 +153,18 @@ let save_ext_m3u file em =
     let fmt = Format.formatter_of_out_channel out_c in
     print_ext_m3u fmt em;
   )
-
+    
 let setup_logs () = 
   Logs.set_level (Some Logs.Info);
   Logs.set_reporter (Logs_fmt.reporter ())
   
+(* === main === *)
+
 let () = 
   setup_logs ();
   Logs.info (fun m -> m "=== Begin ===");
-  let main = main () in
-  let em =  Lwt_main.run main in
+  let run = run () in
+  let em =  Lwt_main.run run in
   Logs.info (fun m -> m "%s" (em |> ext_m3u_to_yojson |> Yojson.Safe.to_string));
   Logs.info (fun m -> m "save st.m3u");
   save_ext_m3u "./st.m3u" em;

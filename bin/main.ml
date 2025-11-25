@@ -4,10 +4,16 @@ open Cohttp
 open Cohttp_lwt
 open Cohttp_lwt_unix
 
-let setup_logs () = 
-  Logs.set_level (Some Logs.Info);
-  Logs.set_reporter (Logs_fmt.reporter ())
+let with_out_file path f =
+    let out_c = open_out path in
+    Fun.protect ~finally:(fun () -> close_out out_c)
+    (fun () -> f out_c)
 
+let read_lines path =
+    Lwt_io.with_file ~mode:Lwt_io.Input path (fun in_c ->
+      Lwt_io.read_lines in_c |> Lwt_stream.to_list
+    )
+  
 (* let retry ?(limit=1) f =  *)
 (*   let rec aux count =  *)
 (*     Lwt.catch *)
@@ -133,11 +139,6 @@ let fetch_info_list name_list =
   name_list 
   |> List.map fetch_info_wtih_retry
   |> Lwt.all
-  
-let read_lines path =
-    Lwt_io.with_file ~mode:Lwt_io.Input path (fun in_c ->
-      Lwt_io.read_lines in_c |> Lwt_stream.to_list
-    )
 
 let main () = 
   read_lines "./st.txt" 
@@ -145,18 +146,17 @@ let main () =
   >>= fun result_list ->
   let info_list = result_list |> List.filter_map Result.to_option in
   ext_m3u_of_info_list info_list |> Lwt.return
-  
-let with_out_file path f =
-    let out_c = open_out path in
-    Fun.protect ~finally:(fun () -> close_out out_c)
-    (fun () -> f out_c)
 
 let save_ext_m3u file em =
   with_out_file file (fun out_c ->
     let fmt = Format.formatter_of_out_channel out_c in
     print_ext_m3u fmt em;
   )
-    
+
+let setup_logs () = 
+  Logs.set_level (Some Logs.Info);
+  Logs.set_reporter (Logs_fmt.reporter ())
+  
 let () = 
   setup_logs ();
   Logs.info (fun m -> m "=== Begin ===");

@@ -102,9 +102,11 @@ let print_ext_m3u fmt em =
   |> List.iter (print_ext_inf fmt)
  
 let decode_response json_str = 
-  json_str 
-  |> Yojson.Safe.from_string 
-  |> response_of_yojson 
+  try
+    json_str 
+    |> Yojson.Safe.from_string 
+    |> response_of_yojson 
+  with exn -> Error (Printexc.to_string exn)
 
 let fetch_response name =
   let link = ("https://zh.stripchat.com/api/front/v1/broadcasts/" ^ name) in
@@ -124,7 +126,6 @@ let fetch_response name =
     Body.to_string body >>= fun data ->
     (* Logs.debug (fun m ->  m "Http Body length: %d" (String.length data)); *)
     Lwt.return_ok data
-    
 
 let fetch_info name = 
   Logs.info (fun m -> m "Fetch info: name=%S" name);

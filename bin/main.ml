@@ -1,5 +1,4 @@
 open Printf
-open Lwt.Infix
 open Cohttp
 open Cohttp_lwt
 open Cohttp_lwt_unix
@@ -12,26 +11,25 @@ let read_lines path =
   Lwt_io.with_file ~mode:Lwt_io.Input path (fun in_c ->
       Lwt_io.read_lines in_c |> Lwt_stream.to_list)
 
-(* let retry ?(limit=1) f =  *)
-(*   let rec aux count =  *)
-(*     Lwt.catch *)
-(*       f *)
-(*       (fun exn ->  *)
-(*           if count = limit then Lwt.fail exn *)
-(*           else *)
-(*             let jitter_ms = Random.int 2000 in *)
-(*             let sleep_ms = 200 + jitter_ms in *)
-(*             let sleep_s = (float_of_int sleep_ms) /. 1000. in *)
-(*             Logs.warn (fun m -> m "Retry %d after %dms" count sleep_ms); *)
-(*             Lwt_unix.sleep sleep_s  *)
-(*             >>= fun () -> aux (count + 1)) *)
+(* let retry ?(limit = 1) f = *)
+(*   let rec aux count = *)
+(*     try%lwt f () *)
+(*     with exn -> *)
+(*       if count = limit then Lwt.fail exn *)
+(*       else *)
+(*         let jitter_ms = Random.int 2000 in *)
+(*         let sleep_ms = 200 + jitter_ms in *)
+(*         let sleep_s = float_of_int sleep_ms /. 1000. in *)
+(*         Logs.warn (fun m -> m "Retry %d after %dms" (count + 1) sleep_ms); *)
+(*         let%lwt () = Lwt_unix.sleep sleep_s in *)
+(*         aux (count + 1) *)
 (*   in *)
 (*   aux 0 *)
 
 let retry_result ?(limit = 1) f =
   assert (limit >= 0);
   let rec aux count =
-    f () >>= function
+    match%lwt f () with
     | Ok v -> Lwt.return_ok v
     | Error ex ->
         if count = limit then Lwt.return_error ex
@@ -40,7 +38,8 @@ let retry_result ?(limit = 1) f =
           let sleep_ms = 200 + jitter_ms in
           let sleep_s = float_of_int sleep_ms /. 1000. in
           Logs.warn (fun m -> m "Retry #%d after %dms" (count + 1) sleep_ms);
-          Lwt_unix.sleep sleep_s >>= fun () -> aux (count + 1)
+          let%lwt () = Lwt_unix.sleep sleep_s in
+          aux (count + 1)
   in
   aux 0
 
@@ -102,7 +101,7 @@ let decode_response json_str =
 let fetch_response name =
   let link = "https://zh.stripchat.com/api/front/v1/broadcasts/" ^ name in
   let url = Uri.of_string link in
-  Client.get url >>= fun (resp, body) ->
+  let%lwt resp, body = Client.get url in
   let code = resp |> Response.status |> Code.code_of_status in
   (* Logs.debug (fun m -> m "Http Code: %d" code); *)
   if code <> 200 then
@@ -113,19 +112,19 @@ let fetch_response name =
     (* let header = resp |> Response.headers in *)
     (* Logs.debug (fun m -> m "Http Header:\n%s" (header |> Header.to_string)); *)
     (* body *)
-    Body.to_string body >>= fun data ->
+    let%lwt data = Body.to_string body in
     (* Logs.debug (fun m ->  m "Http Body length: %d" (String.length data)); *)
     Lwt.return_ok data
 
 let fetch_info name =
   Logs.info (fun m -> m "Fetching %S" name);
-  fetch_response name >>= function
+  match%lwt fetch_response name with
   | Ok str ->
       decode_response str |> Result.map (fun res -> res.item) |> Lwt.return
   | Error ex -> Error ex |> Lwt.return
 
 let fetch_info_wtih_retry name =
-  retry_result ~limit:3 (fun () -> fetch_info name) >>= function
+  match%lwt retry_result ~limit:3 (fun () -> fetch_info name) with
   | Ok v ->
       Logs.info (fun m -> m "Fetched %S" name);
       Lwt.return_ok v
@@ -137,8 +136,8 @@ let fetch_info_list name_list =
   name_list |> List.map fetch_info_wtih_retry |> Lwt.all
 
 let run () =
-  read_lines "./st.txt" >>= fun name_list ->
-  fetch_info_list name_list >>= fun result_list ->
+  let%lwt name_list = read_lines "./st.txt" in
+  let%lwt result_list = fetch_info_list name_list in
   let info_list = result_list |> List.filter_map Result.to_option in
   ext_m3u_of_info_list info_list |> Lwt.return
 

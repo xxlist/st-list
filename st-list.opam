@@ -16,6 +16,7 @@ depends: [
   "cohttp"                     
   "lwt"
   "lwt_ssl"
+  "lwt_ppx" {build}
   "ppx_deriving" {build} 
   "ppx_deriving_yojson" {build}
 ]

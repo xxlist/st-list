@@ -5,11 +5,11 @@ open Cohttp_lwt_unix
 
 let with_out_file path f =
   let out_c = open_out path in
-  Fun.protect ~finally:(fun () -> close_out out_c) (fun () -> f out_c)
+  Fun.protect ~finally:(fun () -> close_out out_c) @@ fun () -> f out_c
 
 let read_lines path =
-  Lwt_io.with_file ~mode:Lwt_io.Input path (fun in_c ->
-      Lwt_io.read_lines in_c |> Lwt_stream.to_list)
+  Lwt_io.with_file ~mode:Lwt_io.Input path @@ fun in_c ->
+  Lwt_io.read_lines in_c |> Lwt_stream.to_list
 
 (* let retry ?(limit = 1) f = *)
 (*   let rec aux count = *)
@@ -92,7 +92,7 @@ let print_ext_inf fmt ei =
 
 let print_ext_m3u fmt em =
   Format.pp_print_string fmt "#EXTM3U\n";
-  em.ext_inf_list |> List.iter (print_ext_inf fmt)
+  em.ext_inf_list |> List.iter @@ print_ext_inf fmt
 
 let decode_response json_str =
   try json_str |> Yojson.Safe.from_string |> response_of_yojson
@@ -106,7 +106,7 @@ let fetch_response name =
   (* Logs.debug (fun m -> m "Http Code: %d" code); *)
   if code <> 200 then
     Lwt.return_error
-      (sprintf "Error fetch response: name=%S http-status-code=%d" name code)
+    @@ sprintf "Error fetch response: name=%S http-status-code=%d" name code
   else
     (* header *)
     (* let header = resp |> Response.headers in *)
@@ -124,7 +124,7 @@ let fetch_info name =
   | Error ex -> Error ex |> Lwt.return
 
 let fetch_info_wtih_retry name =
-  match%lwt retry_result ~limit:3 (fun () -> fetch_info name) with
+  match%lwt retry_result ~limit:3 @@ fun () -> fetch_info name with
   | Ok v ->
       Logs.info (fun m -> m "Fetched %S" name);
       Lwt.return_ok v
@@ -142,13 +142,13 @@ let run () =
   ext_m3u_of_info_list info_list |> Lwt.return
 
 let save_ext_m3u file em =
-  with_out_file file (fun out_c ->
-      let fmt = Format.formatter_of_out_channel out_c in
-      print_ext_m3u fmt em)
+  with_out_file file @@ fun out_c ->
+  let fmt = Format.formatter_of_out_channel out_c in
+  print_ext_m3u fmt em
 
 let setup_logs () =
-  Logs.set_level (Some Logs.Info);
-  Logs.set_reporter (Logs_fmt.reporter ())
+  Logs.set_level @@ Some Logs.Info;
+  Logs.set_reporter @@ Logs_fmt.reporter ()
 
 (* === main === *)
 

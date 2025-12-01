@@ -11,22 +11,7 @@ let read_lines path =
   Lwt_io.with_file ~mode:Lwt_io.Input path @@ fun in_c ->
   Lwt_io.read_lines in_c |> Lwt_stream.to_list
 
-(* let retry ?(limit = 1) f = *)
-(*   let rec aux count = *)
-(*     try%lwt f () *)
-(*     with exn -> *)
-(*       if count = limit then Lwt.fail exn *)
-(*       else *)
-(*         let jitter_ms = Random.int 2000 in *)
-(*         let sleep_ms = 200 + jitter_ms in *)
-(*         let sleep_s = float_of_int sleep_ms /. 1000. in *)
-(*         Logs.warn (fun m -> m "Retry %d after %dms" (count + 1) sleep_ms); *)
-(*         let%lwt () = Lwt_unix.sleep sleep_s in *)
-(*         aux (count + 1) *)
-(*   in *)
-(*   aux 0 *)
-
-let retry_result ?(limit = 1) f =
+let retry ?(limit = 1) f =
   assert (limit >= 0);
   let rec aux count =
     match%lwt f () with
@@ -129,7 +114,7 @@ let fetch_info name =
   | Error ex -> Error ex |> Lwt.return
 
 let fetch_info_wtih_retry name =
-  match%lwt retry_result ~limit:3 @@ fun () -> fetch_info name with
+  match%lwt retry ~limit:3 @@ fun () -> fetch_info name with
   | Ok v ->
       Logs.info (fun m -> m "Fetched %S" name);
       Lwt.return_ok v
@@ -152,8 +137,8 @@ let save_ext_m3u file em =
   print_ext_m3u fmt em
 
 let setup_logs () =
-  Logs.set_level @@ Some Logs.Info;
-  Logs.set_reporter @@ Logs_fmt.reporter ()
+  Logs.set_reporter @@ Logs_fmt.reporter ();
+  Logs.set_level @@ Some Logs.Info
 
 (* === main === *)
 

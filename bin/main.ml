@@ -101,20 +101,25 @@ let decode_response json_str =
 let fetch_response name =
   let link = "https://zh.stripchat.com/api/front/v1/broadcasts/" ^ name in
   let url = Uri.of_string link in
-  let%lwt resp, body = Client.get url in
-  let code = resp |> Response.status |> Code.code_of_status in
-  (* Logs.debug (fun m -> m "Http Code: %d" code); *)
-  if code <> 200 then
+  try%lwt
+    let%lwt resp, body = Client.get url in
+    let code = resp |> Response.status |> Code.code_of_status in
+    (* Logs.debug (fun m -> m "Http Code: %d" code); *)
+    if code <> 200 then
+      Lwt.return_error
+      @@ sprintf "Error fetch response: name=%S http-status-code=%d" name code
+    else
+      (* header *)
+      (* let header = resp |> Response.headers in *)
+      (* Logs.debug (fun m -> m "Http Header:\n%s" (header |> Header.to_string)); *)
+      (* body *)
+      let%lwt data = Body.to_string body in
+      (* Logs.debug (fun m ->  m "Http Body length: %d" (String.length data)); *)
+      Lwt.return_ok data
+  with exn ->
     Lwt.return_error
-    @@ sprintf "Error fetch response: name=%S http-status-code=%d" name code
-  else
-    (* header *)
-    (* let header = resp |> Response.headers in *)
-    (* Logs.debug (fun m -> m "Http Header:\n%s" (header |> Header.to_string)); *)
-    (* body *)
-    let%lwt data = Body.to_string body in
-    (* Logs.debug (fun m ->  m "Http Body length: %d" (String.length data)); *)
-    Lwt.return_ok data
+    @@ sprintf "Error fetch response: name=%S exn=%s" name
+    @@ Printexc.to_string exn
 
 let fetch_info name =
   Logs.info (fun m -> m "Fetching %S" name);
@@ -129,7 +134,7 @@ let fetch_info_wtih_retry name =
       Logs.info (fun m -> m "Fetched %S" name);
       Lwt.return_ok v
   | Error ex ->
-      Logs.err (fun m -> m "Failed to fetch %S" name);
+      Logs.err (fun m -> m "Failed to fetch %S: %s" name ex);
       Lwt.return_error ex
 
 let fetch_info_list name_list =
